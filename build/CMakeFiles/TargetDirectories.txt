@@ -1,0 +1,3 @@
+/home/dawid/Projects/C_C++/Aoc_2020/build/CMakeFiles/rebuild_cache.dir
+/home/dawid/Projects/C_C++/Aoc_2020/build/CMakeFiles/edit_cache.dir
+/home/dawid/Projects/C_C++/Aoc_2020/build/CMakeFiles/main.dir
