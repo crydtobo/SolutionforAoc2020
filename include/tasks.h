@@ -18,7 +18,7 @@
 int task2(std::fstream &file);
 int task2_prim(std::fstream &file);
 int task3(std::fstream &file);
-int task3_prim(std::fstream &file, int option = 1);
+int task3_prim(std::fstream &file, const int &option = 1);
 int task4(std::fstream &file);
 int task4_prim(std::fstream &file);
 int task5(std::fstream &file);

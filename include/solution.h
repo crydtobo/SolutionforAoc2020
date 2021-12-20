@@ -20,5 +20,7 @@ std::tuple<int, int> solutionTask2(std::fstream &File2);
 std::tuple<int, int> solutionTask2Prim(std::fstream &File2);
 
 int soultionTask3(std::fstream &File);
+int soultionTask3prim(std::fstream &File, const int &option);
+int solutionTask4(std::fstream &File);
 
 #endif //INCLUDE_SOLUTION_H_

@@ -95,7 +95,6 @@ bool isCorrectHgtForIn(const int &value){
 
 bool isCorrectHgtForSizeBiggerThanThree(const std::string &hgt)
 {
-	bool h1 = false;
 	int value;
 	std::string hgt_t, unit;
 
@@ -105,11 +104,11 @@ bool isCorrectHgtForSizeBiggerThanThree(const std::string &hgt)
 
 	if (unit == "cm")
 	{
-		return h1 = isCorrectHgtForCm(value);
+		return isCorrectHgtForCm(value);
 	}
 	else if (unit == "in")
 	{
-		return h1 = isCorrectHgtForIn(value);
+		return isCorrectHgtForIn(value);
 	}
 	else {
 		return false;

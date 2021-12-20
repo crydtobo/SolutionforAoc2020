@@ -53,13 +53,13 @@ bool everyNumberHash(const std::string &line, const size_t &step, const int &n){
 }
 
 bool findHashFirst(const std::string &line, const size_t &step){
-    if (line.size() - 1 >= 1 * step)
+    if (line.size() - 1 >= step)
         return true;
     return false;
 }
 
 bool findHashSecond(const std::string &line, const size_t &step){
-    if (line.size() < 1 * step + 1)
+    if (line.size() < step + 1)
         return true;
     return false;
 }
@@ -68,6 +68,19 @@ bool isEven(const int &count){
     if (count % 2 == 0)
         return true;
     return false;
+}
+
+bool isCorrectPassportForHeaders(const std::size_t &found, const std::string &pass){
+	if (std::count(pass.begin(), pass.end(), ':') == 7
+	 && (found == std::string::npos))
+		return true;
+	return false;
+}
+
+bool isCorrectBasicPassport(const std::string &passport){
+	if (std::count(passport.begin(), passport.end(), ':') == 8)
+		return true;
+	return false;
 }
 
 std::tuple<int, int> solutionTask2(std::fstream &File2)
@@ -189,4 +202,54 @@ int soultionTask3(std::fstream &File)
         count++;
     }
     return tree;
+}
+
+int soultionTask3prim(std::fstream &File, const int &option){
+    int count = 0, tree = 0;
+	size_t step = 0;
+	size_t traverse = 0;
+	std::string line;
+	while (File >> line)
+	{
+		//zmiana opcji przechodzenia
+		traverse = option * step;
+		if (count > 0)
+		{
+			if (findHashFirst(line, traverse) && line[traverse] == '#')
+			{
+				tree++;
+			}
+			else
+			{
+				countCorrectTree(line, tree, traverse);
+			}
+		}
+		step++;
+		count++;
+	}
+    return tree;
+}
+
+int solutionTask4(std::fstream &File)
+{
+    int count_correct = 0;
+    std::string line, passport = "";
+
+    while (getline(File, line))
+    {
+        if (!line.empty())
+        {
+            passport = passport + " " + line;
+        }
+        else 
+        {
+            std::size_t found = passport.find("cid");
+            if (isCorrectBasicPassport(passport) || isCorrectPassportForHeaders(found, passport))
+            {
+                count_correct++;
+            }
+            passport = "";
+        }
+    }
+    return count_correct + 1;
 }

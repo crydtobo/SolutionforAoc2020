@@ -38,86 +38,22 @@ int task3(std::fstream &File)
 	return tree;
 }
 
-int task3_prim(std::fstream &File3, int option)
+int task3_prim(std::fstream &File3, const int &option)
 {
-	int count = 0, tree = 0;
-	size_t step = 0;
-	size_t traverse = 0;
-	std::string line;
-	while (File3 >> line)
-	{
-		//zmiana opcji przechodzenia
-		traverse = option * step;
-		if (count > 0)
-		{
-			if (line.size() - 1 >= traverse)
-			{
-				if (line[traverse] == '#')
-				{
-					tree++;
-				}
-			}
-			else
-			{
-				std::string l_line;
-				while (l_line.size() < traverse + 1)
-				{
-					l_line += line;
-				}
-				if (l_line[traverse] == '#')
-				{
-					tree++;
-				}
-			}
-		}
-		step++;
-		count++;
-	}
+	int tree = soultionTask3prim(File3, option);
 	return tree;
 }
 
 int task4(std::fstream &file)
 {
-	int count_bad = 0, count_correct = 0, count = 0, count_empty = 0;
-	std::string line, passport = "";
-
-	while (getline(file, line))
-	{
-		if (!line.empty())
-		{
-			count++;
-			passport = passport + " " + line;
-		}
-		else
-		{
-			count_empty++;
-			std::size_t found = passport.find("cid");
-			if (std::count(passport.begin(), passport.end(), ':') == 8)
-			{
-				count_correct++;
-			}
-			else if (std::count(passport.begin(), passport.end(), ':') == 7)
-			{ // 7 lub 8 headersow
-				if (found != std::string::npos)
-				{ // jest cid
-					count_bad++;
-				}
-				else
-				{
-					count_correct++;
-				}
-			}
-			passport = "";
-		}
-	}
-	return count_correct + 1;
+	return solutionTask4(file);
 }
 
 int task4_prim(std::fstream &file)
 {
-	int count_correct = 0;
-	int counter = 0;
+	int count_correct = 0, counter = 0;
 	std::vector<Passport> p = parse_input_from_file(file);
+
 	for (auto i : p)
 	{
 		counter++;
