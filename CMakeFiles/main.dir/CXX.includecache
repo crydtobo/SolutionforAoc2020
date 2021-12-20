@@ -64,6 +64,20 @@ iterator
 iostream
 -
 
+/home/dawid/Projects/C_C++/Aoc_2020/include/passport.h
+cassert
+-
+iostream
+-
+string
+-
+vector
+-
+memory
+-
+fstream
+-
+
 /home/dawid/Projects/C_C++/Aoc_2020/include/passport2.h
 iostream
 -
@@ -120,11 +134,29 @@ fstream
 include/tasks.h
 /home/dawid/Projects/C_C++/Aoc_2020/include/tasks.h
 
+/home/dawid/Projects/C_C++/Aoc_2020/src/boarding_Pass.cpp
+../include/boarding_Pass.h
+/home/dawid/Projects/C_C++/Aoc_2020/include/boarding_Pass.h
+iostream
+-
+
+/home/dawid/Projects/C_C++/Aoc_2020/src/declaration.cpp
+../include/declaration.h
+/home/dawid/Projects/C_C++/Aoc_2020/include/declaration.h
+
 /home/dawid/Projects/C_C++/Aoc_2020/src/function.cpp
 regex
 -
 ../include/tasks.h
 /home/dawid/Projects/C_C++/Aoc_2020/include/tasks.h
+
+/home/dawid/Projects/C_C++/Aoc_2020/src/instructions.cpp
+../include/instruction.h
+/home/dawid/Projects/C_C++/Aoc_2020/include/instruction.h
+
+/home/dawid/Projects/C_C++/Aoc_2020/src/passport.cpp
+../include/passport.h
+/home/dawid/Projects/C_C++/Aoc_2020/include/passport.h
 
 /home/dawid/Projects/C_C++/Aoc_2020/src/task.cpp
 ../include/tasks.h
@@ -144,5 +176,13 @@ map
 cmath
 -
 string
+-
+tuple
+-
+
+/home/dawid/Projects/C_C++/Aoc_2020/src/task1.cpp
+../include/tasks1.h
+/home/dawid/Projects/C_C++/Aoc_2020/include/tasks1.h
+vector
 -
 

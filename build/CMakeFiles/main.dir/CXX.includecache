@@ -64,7 +64,7 @@ iterator
 iostream
 -
 
-/home/dawid/Projects/C_C++/Aoc_2020/include/passport2.h
+/home/dawid/Projects/C_C++/Aoc_2020/include/passport.h
 iostream
 -
 fstream
@@ -82,7 +82,9 @@ array
 iterator
 -
 
-/home/dawid/Projects/C_C++/Aoc_2020/include/tasks.h
+/home/dawid/Projects/C_C++/Aoc_2020/include/solution.h
+tuple
+-
 iostream
 -
 fstream
@@ -98,13 +100,23 @@ map
 array
 -
 iterator
+-
+cmath
+-
+
+/home/dawid/Projects/C_C++/Aoc_2020/include/tasks.h
+iostream
+-
+fstream
+-
+vector
+-
+string
 -
 bags.h
 /home/dawid/Projects/C_C++/Aoc_2020/include/bags.h
 tasks1.h
 /home/dawid/Projects/C_C++/Aoc_2020/include/tasks1.h
-passport2.h
-/home/dawid/Projects/C_C++/Aoc_2020/include/passport2.h
 
 /home/dawid/Projects/C_C++/Aoc_2020/include/tasks1.h
 iostream
@@ -112,19 +124,9 @@ iostream
 fstream
 -
 
-/home/dawid/Projects/C_C++/Aoc_2020/main.cpp
-iostream
--
-fstream
--
-include/tasks.h
-/home/dawid/Projects/C_C++/Aoc_2020/include/tasks.h
-
-/home/dawid/Projects/C_C++/Aoc_2020/src/function.cpp
-regex
--
-../include/tasks.h
-/home/dawid/Projects/C_C++/Aoc_2020/include/tasks.h
+/home/dawid/Projects/C_C++/Aoc_2020/src/solution.cpp
+../include/solution.h
+/home/dawid/Projects/C_C++/Aoc_2020/include/solution.h
 
 /home/dawid/Projects/C_C++/Aoc_2020/src/task.cpp
 ../include/tasks.h
@@ -139,16 +141,8 @@ regex
 /home/dawid/Projects/C_C++/Aoc_2020/include/instruction.h
 ../include/asn1.h
 /home/dawid/Projects/C_C++/Aoc_2020/include/asn1.h
-map
--
-cmath
--
-string
--
-
-/home/dawid/Projects/C_C++/Aoc_2020/src/task1.cpp
-../include/tasks1.h
-/home/dawid/Projects/C_C++/Aoc_2020/include/tasks1.h
-vector
--
+../include/solution.h
+/home/dawid/Projects/C_C++/Aoc_2020/include/solution.h
+../include/passport.h
+/home/dawid/Projects/C_C++/Aoc_2020/include/passport.h
 

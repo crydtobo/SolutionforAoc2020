@@ -4,14 +4,13 @@
 #include <fstream>
 #include <vector>
 
-
-
-class Boarding_Pass{
+class Boarding_Pass
+{
 public:
 	Boarding_Pass() = default;
 
-void column_reveal(std::string i);
-void row_reveal(std::string i);
+	void column_reveal(std::string i);
+	void row_reveal(std::string i);
 
 	int row = 0;
 	int column = 0;

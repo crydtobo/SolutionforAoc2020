@@ -10,165 +10,102 @@
 #include "../include/bags.h"
 #include "../include/instruction.h"
 #include "../include/asn1.h"
+#include "../include/solution.h"
+#include "../include/passport.h"
 
-#include <map>
-#include <cmath>
-#include <string>
-
-
-int task2(std::fstream &File2){
-	int count = 0, n1 = 0, n2 = 0, line = 0, correct = 0, incorrect = 0;
-	char letter, semicolon, dash;
-	std::string pass;
-	std::vector<std::string> passwords;
-
-	while(File2 >> n1 >> dash >> n2 >> letter >> semicolon >> pass ){
-		count = 0;
-		line++;
-		passwords.push_back(pass);
-		for(size_t i = 0; i < pass.size(); i++){
-			if(pass[i] == letter){
-				count++;
-			}
-		}
-		if (count >= n1 and count <= n2){
-			correct++;
-		}
-		else{
-			incorrect++;
-		}
-	}
-	std::cout<<"Poprawne hasla: "<< correct <<std::endl;
-	std::cout<<"NIEPoprawne hasla: "<< incorrect <<std::endl;
-	std::cout<<std::endl;
-	return correct;
+int task2(std::fstream &File2)
+{
+	std::tuple<int,int> res = solutionTask2(File2);
+	std::cout << "Poprawne hasla: " << std::get<0>(res) << std::endl;
+	std::cout << "NIEPoprawne hasla: " << std::get<1>(res) << std::endl;
+	std::cout << std::endl;
+	return std::get<0>(res);
 }
 
-int task2_prim(std::fstream &File2){
-	int n1 = 0, n2 = 0, line = 0, correct = 0, incorrect = 0;
-	int flaga =0;
-	char letter, semicolon, dash;
-	std::string pass;
-
-	while(File2 >> n1 >> dash >> n2 >> letter >> semicolon >> pass ){
-		line++;
-		for(size_t i = 0; i < pass.size(); i++){
-			if(i == ((size_t)n1 - 1)){
-				if(pass[i] == letter){
-					flaga = 1;
-				}
-				else{
-					flaga = 0;
-				}
-			}
-			if(i == ((size_t)n2 - 1 )){
-				if(pass[i] == letter){
-					flaga++;
-				}
-				else{
-					flaga += 2;
-				}
-			}
-		}
-		if (flaga == 2){
-			incorrect++;
-		}
-		else if (flaga == 3 or flaga == 1){
-			correct++;
-		}
-		else{
-			flaga =0;
-		}
-	}
-	std::cout<<"Poprawne: "<< correct <<std::endl;
-	std::cout<<"NIEPoprawne: "<< incorrect <<std::endl;
-	std::cout<<std::endl;
-	return correct;
+int task2_prim(std::fstream &File2)
+{
+	std::tuple<int,int> res = solutionTask2Prim(File2);
+	std::cout << "Poprawne hasla: " << std::get<0>(res) << std::endl;
+	std::cout << "NIEPoprawne hasla: " << std::get<1>(res) << std::endl;
+	std::cout << std::endl;
+	return std::get<0>(res);
 }
 
-int task3(std::fstream &File3){
+int task3(std::fstream &File)
+{
+	int tree = 0;
+	tree = soultionTask3(File);
+	return tree;
+}
+
+int task3_prim(std::fstream &File3, int option)
+{
 	int count = 0, tree = 0;
 	size_t step = 0;
+	size_t traverse = 0;
 	std::string line;
-	std::vector<std::string> lines;
-	while(File3 >> line){
-		if(count > 0 and count % 2 == 0){
-			if(line.size()  - 1 >= 1 * step){
-				if(line[3*step] == '#'){
+	while (File3 >> line)
+	{
+		//zmiana opcji przechodzenia
+		traverse = option * step;
+		if (count > 0)
+		{
+			if (line.size() - 1 >= traverse)
+			{
+				if (line[traverse] == '#')
+				{
 					tree++;
 				}
 			}
-			else{
+			else
+			{
 				std::string l_line;
-				while(l_line.size() < 1*step + 1  ){
-					l_line +=line;
+				while (l_line.size() < traverse + 1)
+				{
+					l_line += line;
 				}
-				if(l_line[1*step] == '#'){
+				if (l_line[traverse] == '#')
+				{
 					tree++;
 				}
 			}
 		}
-		if(count % 2 == 0) step++;
+		step++;
 		count++;
 	}
 	return tree;
 }
 
-int task3_prim(std::fstream &File3, int option){
-	int count = 0, tree = 0;
-	size_t step = 0;
-	size_t traverse = 0;
-	std::string line;
-		while(File3 >> line){
-			//zmiana opcji przechodzenia
-			traverse = option * step;
-			if(count > 0){
-				if(line.size() - 1 >= traverse){
-					if(line[traverse] == '#'){
-						tree++;
-					}
-				}
-				else{
-					std::string l_line;
-					while(l_line.size() < traverse + 1  ){
-						l_line +=line;
-					}
-					if(l_line[traverse] == '#'){
-						tree++;
-					}
-				}
-			}
-			step++;
-			count++;
-		}
-	return tree;
-}
-
-int task4(std::fstream &file){
+int task4(std::fstream &file)
+{
 	int count_bad = 0, count_correct = 0, count = 0, count_empty = 0;
-	std::string line, passport= "";
+	std::string line, passport = "";
 
-	while(getline(file, line )){
-		if(!line.empty()){
+	while (getline(file, line))
+	{
+		if (!line.empty())
+		{
 			count++;
 			passport = passport + " " + line;
 		}
-		else{
+		else
+		{
 			count_empty++;
 			std::size_t found = passport.find("cid");
-			if( std::count(passport.begin(), passport.end(), ':') == 8){
+			if (std::count(passport.begin(), passport.end(), ':') == 8)
+			{
 				count_correct++;
 			}
-			else if(std::count(passport.begin(), passport.end(), ':') ==  7){// 7 lub 8 headersow
-				if(found!= std::string::npos ){ // jest cid
+			else if (std::count(passport.begin(), passport.end(), ':') == 7)
+			{ // 7 lub 8 headersow
+				if (found != std::string::npos)
+				{ // jest cid
 					count_bad++;
 				}
-				else{
+				else
+				{
 					count_correct++;
 				}
-			}
-			else{
-				count_bad++;
 			}
 			passport = "";
 		}
@@ -176,38 +113,46 @@ int task4(std::fstream &file){
 	return count_correct + 1;
 }
 
-int task4_prim(std::fstream &file){
+int task4_prim(std::fstream &file)
+{
 	int count_correct = 0;
 	int counter = 0;
 	std::vector<Passport> p = parse_input_from_file(file);
-	for (auto i : p) {
+	for (auto i : p)
+	{
 		counter++;
-		if ( i.is_valid() == 1) {
+		if (i.is_valid() == 1)
+		{
 			count_correct++;
 		}
 	}
 	return count_correct;
 }
 
-int task5(std::fstream &file){
+int task5(std::fstream &file)
+{
 	int max = 0;
 	std::vector<std::string> t = decode_input(file);
 	std::vector<int> maxi;
-	for(auto i: t){
+	for (auto i : t)
+	{
 		max = decode_seat(i);
 		maxi.push_back(max);
 	}
-	int solution = *max_element(maxi.begin(),maxi.end());
-	std::sort(maxi.begin(),maxi.end());
-	for(int k =0; k < (int)maxi.size(); k++){
-		if(maxi[k] + 1 != maxi[k+1]){
-			return maxi[k]+1;
+	int solution = *max_element(maxi.begin(), maxi.end());
+	std::sort(maxi.begin(), maxi.end());
+	for (int k = 0; k < (int)maxi.size(); k++)
+	{
+		if (maxi[k] + 1 != maxi[k + 1])
+		{
+			return maxi[k] + 1;
 		}
 	}
 	return solution;
 }
 
-int task6(std::fstream &file){
+int task6(std::fstream &file)
+{
 	int solution = 0;
 	Declaration object;
 	std::vector<std::vector<std::string>> t2 = parse_file2(file);
@@ -247,30 +192,37 @@ int task7(std::fstream &file)
 	return seen.size();
 }
 */
-int project_euler(){
+int project_euler()
+{
 	int result{0};
 	result = one();
 	result = fibonnaci();
 	return result;
 }
-int one(){
+int one()
+{
 	int game{0};
-	for(int i = 1; i<1000 ; i++){
-		if((i % 3 == 0) or (i % 5 == 0)){
+	for (int i = 1; i < 1000; i++)
+	{
+		if ((i % 3 == 0) or (i % 5 == 0))
+		{
 			game += i;
 		}
 	}
 	return game;
 }
 
-int fibonnaci(){
+int fibonnaci()
+{
 	int y = 0, x = 1, next = 0, sum = 0;
-	int theEnd = (4*(pow(10,6)));
-	while (next < theEnd){
+	int theEnd = (4 * (pow(10, 6)));
+	while (next < theEnd)
+	{
 		next = y + x;
 		y = x;
 		x = next;
-		if(next % 2 == 0){
+		if (next % 2 == 0)
+		{
 			sum += next;
 		}
 	}
@@ -278,38 +230,42 @@ int fibonnaci(){
 	return sum;
 }
 
-int theLargestPrimeFactor(){
+int theLargestPrimeFactor()
+{
 	//long long int n = 600851475143;
 	int primeFactor = 0;
 	return primeFactor;
 }
 
-
-int task8(std::fstream &file){
+int task8(std::fstream &file)
+{
 	int solution{0};
 	std::vector<std::string> result;
-    //result = decode_input(file);
-    //Instruction obj;
-    //obj.reading_instructions(result);
-    return solution;
+	//result = decode_input(file);
+	//Instruction obj;
+	//obj.reading_instructions(result);
+	return solution;
 }
 
-
-//ASN1 decoding BER 
-void encode_tag(std::vector<uint8_t>& encoded_tag, ASN1_Tag class_tag_a, ASN1_Tag type_tag_a ){
+//ASN1 decoding BER
+void encode_tag(std::vector<uint8_t> &encoded_tag, ASN1_Tag class_tag_a, ASN1_Tag type_tag_a)
+{
 	const uint32_t class_tag = static_cast<uint32_t>(class_tag_a);
 	const uint32_t type_tag = static_cast<uint32_t>(type_tag_a);
 
-	if(class_tag != 0x00 ){
+	if (class_tag != 0x00)
+	{
 		//TODO support for error and exception
-		std::cout<<"DER encoding error, should be 0x00 (tag:universal) but is" + std::to_string(class_tag)<<std::endl;
+		std::cout << "DER encoding error, should be 0x00 (tag:universal) but is" + std::to_string(class_tag) << std::endl;
 	}
 
 	//tags all happen to be under  31 (0x1F)
-	if(type_tag <= 30 ){
+	if (type_tag <= 30)
+	{
 		encoded_tag.push_back(static_cast<uint8_t>(type_tag | class_tag));
 	}
-	else{
+	else
+	{
 		/* for above 31 -> rather rare
 		 * for cases when any universal tag numbers higher than 31
 		 * then those need to use the high tag number form, which takes extra bytes
@@ -319,14 +275,14 @@ void encode_tag(std::vector<uint8_t>& encoded_tag, ASN1_Tag class_tag_a, ASN1_Ta
 		assert(blocks > 0);
 
 		encoded_tag.push_back(static_cast<uint8_t>(class_tag | 0x1F));
-		for(size_t i = 0; i != blocks - 1; ++i)
-			encoded_tag.push_back(0x80 | ((type_tag >> 7*(blocks-i-1)) & 0x7F));
+		for (size_t i = 0; i != blocks - 1; ++i)
+			encoded_tag.push_back(0x80 | ((type_tag >> 7 * (blocks - i - 1)) & 0x7F));
 		encoded_tag.push_back(type_tag & 0x7F);
 	}
-
 }
 
-int task_cert(std::fstream &file){
+int task_cert(std::fstream &file)
+{
 	int solution{0};
 	/*
 	std::vector<std::string> result;
@@ -366,15 +322,15 @@ int task_cert(std::fstream &file){
 			}
 	}
 	*/
-	std::cout <<"Test C++"<<std::endl;
+	std::cout << "Test C++" << std::endl;
 	std::vector<uint8_t> encoded;
 
-	for(auto i: encoded){
-			std::cout<< " " << std::hex << int(i) << std::endl;
-		}
-    return solution;
+	for (auto i : encoded)
+	{
+		std::cout << " " << std::hex << int(i) << std::endl;
+	}
+	return solution;
 }
-
 
 /*
 	uint32_t test1 = 0xF0F08400; // 16

@@ -13,11 +13,12 @@ include_directories(${GTEST_INCLUDE_DIRS})
 SET(SRC 
         main.cpp 
         src/task.cpp
-        src/function.cpp
         src/boarding_Pass.cpp
         src/declaration.cpp 
         src/instructions.cpp 
         src/task1.cpp
+        src/passport.cpp
+        src/solution.cpp
     )
 
 SET(GTEST_Files 

@@ -13,7 +13,8 @@
 #include <iostream>
 #include <fstream>
 
-class Declaration{
+class Declaration
+{
 public:
 	Declaration() = default;
 	std::vector<char> letter;
@@ -23,7 +24,6 @@ public:
 	void check(std::vector<std::string> input);
 	void check_second(std::vector<std::vector<std::string>> input);
 	int sum{0};
-
 };
 
 std::vector<std::string> parse_file(std::fstream &file);

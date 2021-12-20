@@ -22,6 +22,9 @@ CMakeFiles/main.dir/src/function.cpp.o
 CMakeFiles/main.dir/src/instructions.cpp.o
  /home/dawid/Projects/C_C++/Aoc_2020/include/instruction.h
  /home/dawid/Projects/C_C++/Aoc_2020/src/instructions.cpp
+CMakeFiles/main.dir/src/passport.cpp.o
+ /home/dawid/Projects/C_C++/Aoc_2020/include/passport.h
+ /home/dawid/Projects/C_C++/Aoc_2020/src/passport.cpp
 CMakeFiles/main.dir/src/task.cpp.o
  /home/dawid/Projects/C_C++/Aoc_2020/include/asn1.h
  /home/dawid/Projects/C_C++/Aoc_2020/include/bags.h

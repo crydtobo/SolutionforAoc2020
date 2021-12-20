@@ -22,6 +22,9 @@ CMakeFiles/main.dir/src/function.cpp.o: src/function.cpp
 CMakeFiles/main.dir/src/instructions.cpp.o: include/instruction.h
 CMakeFiles/main.dir/src/instructions.cpp.o: src/instructions.cpp
 
+CMakeFiles/main.dir/src/passport.cpp.o: include/passport.h
+CMakeFiles/main.dir/src/passport.cpp.o: src/passport.cpp
+
 CMakeFiles/main.dir/src/task.cpp.o: include/asn1.h
 CMakeFiles/main.dir/src/task.cpp.o: include/bags.h
 CMakeFiles/main.dir/src/task.cpp.o: include/boarding_Pass.h

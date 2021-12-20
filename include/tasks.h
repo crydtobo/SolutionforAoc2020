@@ -4,7 +4,6 @@
  *  Created on: Dec 8, 2020
  *      Author: dawid
  */
-
 #ifndef INCLUDE_TASKS_H_
 #define INCLUDE_TASKS_H_
 
@@ -12,14 +11,9 @@
 #include <fstream>
 #include <vector>
 #include <string>
-#include <algorithm>
-#include <map>
-#include <array>
-#include <iterator>
 
 #include "bags.h"
 #include "tasks1.h"
-#include "passport2.h"
 
 int task2(std::fstream &file);
 int task2_prim(std::fstream &file);

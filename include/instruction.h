@@ -15,9 +15,10 @@
 #include <iterator>
 #include <iostream>
 
-class Instruction{
+class Instruction
+{
 public:
-	using instruct = std::vector< std::pair<std::string, int> >;
+	using instruct = std::vector<std::pair<std::string, int>>;
 
 	Instruction();
 	void reading_instructions(std::vector<std::string> input);
