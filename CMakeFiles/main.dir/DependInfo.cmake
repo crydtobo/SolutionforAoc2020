@@ -7,11 +7,12 @@ set(CMAKE_DEPENDS_CHECK_CXX
   "/home/dawid/Projects/C_C++/Aoc_2020/main.cpp" "/home/dawid/Projects/C_C++/Aoc_2020/CMakeFiles/main.dir/main.cpp.o"
   "/home/dawid/Projects/C_C++/Aoc_2020/src/boarding_Pass.cpp" "/home/dawid/Projects/C_C++/Aoc_2020/CMakeFiles/main.dir/src/boarding_Pass.cpp.o"
   "/home/dawid/Projects/C_C++/Aoc_2020/src/declaration.cpp" "/home/dawid/Projects/C_C++/Aoc_2020/CMakeFiles/main.dir/src/declaration.cpp.o"
-  "/home/dawid/Projects/C_C++/Aoc_2020/src/function.cpp" "/home/dawid/Projects/C_C++/Aoc_2020/CMakeFiles/main.dir/src/function.cpp.o"
   "/home/dawid/Projects/C_C++/Aoc_2020/src/instructions.cpp" "/home/dawid/Projects/C_C++/Aoc_2020/CMakeFiles/main.dir/src/instructions.cpp.o"
   "/home/dawid/Projects/C_C++/Aoc_2020/src/passport.cpp" "/home/dawid/Projects/C_C++/Aoc_2020/CMakeFiles/main.dir/src/passport.cpp.o"
+  "/home/dawid/Projects/C_C++/Aoc_2020/src/solution.cpp" "/home/dawid/Projects/C_C++/Aoc_2020/CMakeFiles/main.dir/src/solution.cpp.o"
   "/home/dawid/Projects/C_C++/Aoc_2020/src/task.cpp" "/home/dawid/Projects/C_C++/Aoc_2020/CMakeFiles/main.dir/src/task.cpp.o"
   "/home/dawid/Projects/C_C++/Aoc_2020/src/task1.cpp" "/home/dawid/Projects/C_C++/Aoc_2020/CMakeFiles/main.dir/src/task1.cpp.o"
+  "/home/dawid/Projects/C_C++/Aoc_2020/tests/tests.cpp" "/home/dawid/Projects/C_C++/Aoc_2020/CMakeFiles/main.dir/tests/tests.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

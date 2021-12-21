@@ -12,6 +12,7 @@ set(CMAKE_DEPENDS_CHECK_CXX
   "/home/dawid/Projects/C_C++/Aoc_2020/src/solution.cpp" "/home/dawid/Projects/C_C++/Aoc_2020/build/CMakeFiles/main.dir/src/solution.cpp.o"
   "/home/dawid/Projects/C_C++/Aoc_2020/src/task.cpp" "/home/dawid/Projects/C_C++/Aoc_2020/build/CMakeFiles/main.dir/src/task.cpp.o"
   "/home/dawid/Projects/C_C++/Aoc_2020/src/task1.cpp" "/home/dawid/Projects/C_C++/Aoc_2020/build/CMakeFiles/main.dir/src/task1.cpp.o"
+  "/home/dawid/Projects/C_C++/Aoc_2020/tests/tests.cpp" "/home/dawid/Projects/C_C++/Aoc_2020/build/CMakeFiles/main.dir/tests/tests.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

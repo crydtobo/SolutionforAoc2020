@@ -7,6 +7,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/main.dir/src/solution.cpp.o"
   "CMakeFiles/main.dir/src/task.cpp.o"
   "CMakeFiles/main.dir/src/task1.cpp.o"
+  "CMakeFiles/main.dir/tests/tests.cpp.o"
   "main"
   "main.pdb"
 )

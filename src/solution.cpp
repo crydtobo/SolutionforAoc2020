@@ -9,15 +9,14 @@ bool isProperlyPass(const int &count, const  int &n1, const int &n2){
     return false;
 }
 
-bool isCorrectPassword(const int i, const int n1, const std::string &pass, const char &letter){
-    if ((i == ((size_t)n1 - 1)) && pass[i] == letter)
+bool isprobablyCorrectPassword(const int i, const int n1){
+    if (i == ((size_t)n1 - 1))
         return true;
     return false;
 }
 
-
-bool isprobablyCorrectPassword(const int i, const int n1){
-    if (i == ((size_t)n1 - 1))
+bool isCorrectPassword(const int i, const int n1, const std::string &pass, const char &letter){
+    if ((isprobablyCorrectPassword(i,n1)) && pass[i] == letter)
         return true;
     return false;
 }
@@ -252,4 +251,18 @@ int solutionTask4(std::fstream &File)
         }
     }
     return count_correct + 1;
+}
+
+
+int checkSolutionTask5(const std::vector<int> &maxi)
+{
+	int solution = *max_element(maxi.begin(), maxi.end());
+	for (int k = 0; k < maxi.size(); k++)
+	{
+		if (maxi[k] + 1 != maxi[k + 1])
+		{
+			return maxi[k] + 1;
+		}
+	}
+	return solution;
 }

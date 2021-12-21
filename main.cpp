@@ -1,12 +1,18 @@
 #include <iostream>
 #include <fstream>
+#include <gtest/gtest.h>
+
 #include "include/tasks.h"
 
-//zdefiniuj sciezke do folderu z plikami wejsciowymi
-#define config "/home/dawid/Projects/C_C++/Aoc_2020/src/inputs/"
-
-int main()
+int main(int argc, char **argv)
 {
+    //Google Testy
+    std::cout << "Google Testy" << std::endl;
+    testing::InitGoogleTest(&argc, argv);
+    auto ret = RUN_ALL_TESTS();
+
+    //return ret;
+
     std::cout << "+++++++++++++++++++++++++++++++++++++++++++++++ Aoc2020 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++" << std::endl;
     std::cout << "Jezeli jeszcze tego nie zrobiles to zdefiniuj sciezke do plikow wejsciowych!. \n Docelowo znajduja sie w folderze projektu w /src/inputs. W pliku main.cpp w 6 lini zdefiniowany config do podania sciezki\n #define config <sciezka> \n";
     std::cout << "+++++++++++++++++++++++++++++++++++++++++++++++ Aoc2020 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++" << std::endl;
@@ -75,19 +81,7 @@ int main()
             int first_mul = 0;
             first_mul = task3(File3);
             std::cout << "Result Part1:" << first_mul << std::endl;
-            unsigned int resulter = 0;
-            int option = 1;
-            int result = 0, mul = 1;
-            while (option < 8)
-            {
-                File3.close();
-                File3.open(std::string(config) + std::string("input3.txt"), std::ios::in);
-                result = task3_prim(File3, option);
-                mul *= result;
-                option += 2;
-            }
-            resulter = first_mul * mul;
-            std::cout << "Result Part2 " << resulter << std::endl;
+            std::cout << "Result Part2 " << task3Prim(File3, first_mul) << std::endl;
         }
         File3.close();
         std::cout << "File is closed correctly " << std::endl;

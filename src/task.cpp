@@ -13,11 +13,36 @@
 #include "../include/solution.h"
 #include "../include/passport.h"
 
+void openFile(std::fstream &file, const std::string &fileName)
+{
+    file.open(std::string(config) + std::string(fileName), std::ios::in);
+    if (!file)
+    {
+        std::cout << "Error, incorrect opening file!" << std::endl;
+    }
+}
+
+unsigned int task3Prim(std::fstream &file, const int &first_mul)
+{
+    unsigned int resulter = 0;
+    int option = 1;
+    int result = 0, mul = 1;
+    while (option < 8)
+    {
+        file.close();
+        openFile(file, "input3.txt");
+        result = task3_prim(file, option);
+        mul *= result;
+        option += 2;
+    }
+    return first_mul * mul;
+}
+
 int task2(std::fstream &File2)
 {
 	std::tuple<int,int> res = solutionTask2(File2);
-	std::cout << "Poprawne hasla: " << std::get<0>(res) << std::endl;
-	std::cout << "NIEPoprawne hasla: " << std::get<1>(res) << std::endl;
+	// std::cout << "Poprawne hasla: " << std::get<0>(res) << std::endl;
+	// std::cout << "NIEPoprawne hasla: " << std::get<1>(res) << std::endl;
 	std::cout << std::endl;
 	return std::get<0>(res);
 }
@@ -25,8 +50,8 @@ int task2(std::fstream &File2)
 int task2_prim(std::fstream &File2)
 {
 	std::tuple<int,int> res = solutionTask2Prim(File2);
-	std::cout << "Poprawne hasla: " << std::get<0>(res) << std::endl;
-	std::cout << "NIEPoprawne hasla: " << std::get<1>(res) << std::endl;
+	// std::cout << "Poprawne hasla: " << std::get<0>(res) << std::endl;
+	// std::cout << "NIEPoprawne hasla: " << std::get<1>(res) << std::endl;
 	std::cout << std::endl;
 	return std::get<0>(res);
 }
@@ -75,16 +100,8 @@ int task5(std::fstream &file)
 		max = decode_seat(i);
 		maxi.push_back(max);
 	}
-	int solution = *max_element(maxi.begin(), maxi.end());
 	std::sort(maxi.begin(), maxi.end());
-	for (int k = 0; k < (int)maxi.size(); k++)
-	{
-		if (maxi[k] + 1 != maxi[k + 1])
-		{
-			return maxi[k] + 1;
-		}
-	}
-	return solution;
+	return checkSolutionTask5(maxi);
 }
 
 int task6(std::fstream &file)
@@ -96,6 +113,7 @@ int task6(std::fstream &file)
 	solution = object.sum;
 	return solution;
 }
+
 /*
 int task7(std::fstream &file)
 {
@@ -128,6 +146,7 @@ int task7(std::fstream &file)
 	return seen.size();
 }
 */
+
 int project_euler()
 {
 	int result{0};
@@ -135,6 +154,7 @@ int project_euler()
 	result = fibonnaci();
 	return result;
 }
+
 int one()
 {
 	int game{0};
@@ -164,13 +184,6 @@ int fibonnaci()
 	}
 
 	return sum;
-}
-
-int theLargestPrimeFactor()
-{
-	//long long int n = 600851475143;
-	int primeFactor = 0;
-	return primeFactor;
 }
 
 int task8(std::fstream &file)
@@ -217,18 +230,18 @@ void encode_tag(std::vector<uint8_t> &encoded_tag, ASN1_Tag class_tag_a, ASN1_Ta
 	}
 }
 
-int task_cert(std::fstream &file)
+void task_cert(std::fstream &file)
 {
-	int solution{0};
-	/*
+	int solution;
+
 	std::vector<std::string> result;
+	std::vector<uint8_t> m;
+	std::vector<std::vector<uint8_t>> m_set_contents;
 
 	std::vector<uint8_t> encoded;
 	encode_tag(encoded, ASN1_Tag::UNIVERSAL , ASN1_Tag::OCTET_STRING);
 
-	for(auto i: encoded){
-		std::cout<< " " << std::hex << int(i) << std::endl;
-	}
+ 
 	uint32_t test = 0x023000000;
 	auto test_result = significant_bytes(test);
 	std::cout<< "Result significant : " << test_result << std::endl;
@@ -237,8 +250,7 @@ int task_cert(std::fstream &file)
 	size_t blocks = high_bit(static_cast<uint32_t>(ASN1_Tag::APPLICATION));
 	std::cout<< "Blocks: : " << blocks << std::endl;
 	std::cout<<"Make Pair::"<<std::endl;
-	std::vector<uint8_t> m;
-	std::vector<std::vector<uint8_t>> m_set_contents;
+	
 	size_t len = 10;
 	const uint8_t add[] = {0x01, 0x02, 0x03, 0x04, 0x05, 0x06, 0x07, 0x08, 0x09, 0x0A};
 	m.reserve(len);
@@ -246,26 +258,6 @@ int task_cert(std::fstream &file)
 		m += std::make_pair(add, len);
 		m_set_contents.push_back(std::move(m));
 	}
-	std::cout<<"Dalej::"<<std::endl;
-	int co = 0;
-	for(auto i: m_set_contents){
-		co++;
-		for(auto k: i){
-
-
-			std::cout<<"Count " << co << " -> EL: "<<std::hex<<(int)k <<std::endl;
-
-			}
-	}
-	*/
-	std::cout << "Test C++" << std::endl;
-	std::vector<uint8_t> encoded;
-
-	for (auto i : encoded)
-	{
-		std::cout << " " << std::hex << int(i) << std::endl;
-	}
-	return solution;
 }
 
 /*

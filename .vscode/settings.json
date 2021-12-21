@@ -72,7 +72,9 @@
         "condition_variable": "cpp",
         "unordered_set": "cpp",
         "ratio": "cpp",
-        "shared_mutex": "cpp"
+        "shared_mutex": "cpp",
+        "set": "cpp",
+        "iomanip": "cpp"
     },
     "git.ignoreLimitWarning": true,
     "C_Cpp.default.configurationProvider": "ms-vscode.cmake-tools"

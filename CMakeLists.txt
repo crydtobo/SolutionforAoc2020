@@ -19,6 +19,7 @@ SET(SRC
         src/task1.cpp
         src/passport.cpp
         src/solution.cpp
+        tests/tests.cpp
     )
 
 SET(GTEST_Files 

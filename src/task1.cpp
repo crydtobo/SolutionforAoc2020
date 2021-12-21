@@ -4,19 +4,12 @@
  *  Created on: Dec 7, 2020
  *      Author: dawid
  */
-#include "../include/tasks1.h"
 #include <vector>
+#include "../include/tasks1.h"
 
-int task1(std::fstream &File1)
-{
-	int mul = 0;
-	int a = 0;
-	std::vector<int> numbers;
-	while (File1 >> a)
-	{
-		numbers.push_back(a);
-	}
+int multiply2D(const std::vector<int> &numbers){
 	unsigned int i, j;
+	int mul;
 	for (i = 0; i < numbers.size(); i++)
 	{
 		for (j = 0; j < numbers.size(); j++)
@@ -30,16 +23,9 @@ int task1(std::fstream &File1)
 	return mul;
 }
 
-int task1_prim(std::fstream &File1)
-{
-	int mul = 0;
-	int a = 0;
-	std::vector<int> numbers;
-	while (File1 >> a)
-	{
-		numbers.push_back(a);
-	}
+int multiply3D(const std::vector<int> &numbers){
 	unsigned int i, j, k;
+	int mul;
 	for (i = 0; i < numbers.size(); i++)
 	{
 		for (j = 0; j < numbers.size(); j++)
@@ -54,6 +40,29 @@ int task1_prim(std::fstream &File1)
 		}
 	}
 	return mul;
+}
+
+int task1(std::fstream &File)
+{
+	int a = 0;
+	std::vector<int> numbers;
+	while (File >> a)
+	{
+		numbers.push_back(a);
+	}
+	return multiply2D(numbers);
+}
+
+int task1_prim(std::fstream &File1)
+{
+	int mul = 0;
+	int a = 0;
+	std::vector<int> numbers;
+	while (File1 >> a)
+	{
+		numbers.push_back(a);
+	} 
+	return multiply3D(numbers);
 }
 
 void split_string(std::string &text)

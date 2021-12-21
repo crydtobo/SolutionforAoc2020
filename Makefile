@@ -204,33 +204,6 @@ src/declaration.cpp.s:
 	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/declaration.cpp.s
 .PHONY : src/declaration.cpp.s
 
-src/function.o: src/function.cpp.o
-
-.PHONY : src/function.o
-
-# target to build an object file
-src/function.cpp.o:
-	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/function.cpp.o
-.PHONY : src/function.cpp.o
-
-src/function.i: src/function.cpp.i
-
-.PHONY : src/function.i
-
-# target to preprocess a source file
-src/function.cpp.i:
-	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/function.cpp.i
-.PHONY : src/function.cpp.i
-
-src/function.s: src/function.cpp.s
-
-.PHONY : src/function.s
-
-# target to generate assembly for a file
-src/function.cpp.s:
-	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/function.cpp.s
-.PHONY : src/function.cpp.s
-
 src/instructions.o: src/instructions.cpp.o
 
 .PHONY : src/instructions.o
@@ -284,6 +257,33 @@ src/passport.s: src/passport.cpp.s
 src/passport.cpp.s:
 	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/passport.cpp.s
 .PHONY : src/passport.cpp.s
+
+src/solution.o: src/solution.cpp.o
+
+.PHONY : src/solution.o
+
+# target to build an object file
+src/solution.cpp.o:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/solution.cpp.o
+.PHONY : src/solution.cpp.o
+
+src/solution.i: src/solution.cpp.i
+
+.PHONY : src/solution.i
+
+# target to preprocess a source file
+src/solution.cpp.i:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/solution.cpp.i
+.PHONY : src/solution.cpp.i
+
+src/solution.s: src/solution.cpp.s
+
+.PHONY : src/solution.s
+
+# target to generate assembly for a file
+src/solution.cpp.s:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/solution.cpp.s
+.PHONY : src/solution.cpp.s
 
 src/task.o: src/task.cpp.o
 
@@ -339,6 +339,33 @@ src/task1.cpp.s:
 	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/task1.cpp.s
 .PHONY : src/task1.cpp.s
 
+tests/tests.o: tests/tests.cpp.o
+
+.PHONY : tests/tests.o
+
+# target to build an object file
+tests/tests.cpp.o:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/tests/tests.cpp.o
+.PHONY : tests/tests.cpp.o
+
+tests/tests.i: tests/tests.cpp.i
+
+.PHONY : tests/tests.i
+
+# target to preprocess a source file
+tests/tests.cpp.i:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/tests/tests.cpp.i
+.PHONY : tests/tests.cpp.i
+
+tests/tests.s: tests/tests.cpp.s
+
+.PHONY : tests/tests.s
+
+# target to generate assembly for a file
+tests/tests.cpp.s:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/tests/tests.cpp.s
+.PHONY : tests/tests.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -357,21 +384,24 @@ help:
 	@echo "... src/declaration.o"
 	@echo "... src/declaration.i"
 	@echo "... src/declaration.s"
-	@echo "... src/function.o"
-	@echo "... src/function.i"
-	@echo "... src/function.s"
 	@echo "... src/instructions.o"
 	@echo "... src/instructions.i"
 	@echo "... src/instructions.s"
 	@echo "... src/passport.o"
 	@echo "... src/passport.i"
 	@echo "... src/passport.s"
+	@echo "... src/solution.o"
+	@echo "... src/solution.i"
+	@echo "... src/solution.s"
 	@echo "... src/task.o"
 	@echo "... src/task.i"
 	@echo "... src/task.s"
 	@echo "... src/task1.o"
 	@echo "... src/task1.i"
 	@echo "... src/task1.s"
+	@echo "... tests/tests.o"
+	@echo "... tests/tests.i"
+	@echo "... tests/tests.s"
 .PHONY : help
 
 
