@@ -19,10 +19,6 @@
 //sciezka do plikow testowych w folderze /input w /src
 #define config "../src/inputs/"
 
-
-//zdefiniuj sciezke do folderu z plikami wejsciowymi na twoim komputerze
-//#define config "/home/dawid/Projects/C_C++/Aoc_2020/src/inputs/"
-
 void openFile(std::fstream &file, const std::string &fileName);
 
 int task2(std::fstream &file);
