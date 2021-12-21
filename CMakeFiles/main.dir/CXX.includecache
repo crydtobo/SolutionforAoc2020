@@ -117,6 +117,8 @@ bags.h
 /home/dawid/Projects/C_C++/Aoc_2020/include/bags.h
 tasks1.h
 /home/dawid/Projects/C_C++/Aoc_2020/include/tasks1.h
+asn1.h
+/home/dawid/Projects/C_C++/Aoc_2020/include/asn1.h
 
 /home/dawid/Projects/C_C++/Aoc_2020/include/tasks1.h
 iostream
@@ -133,18 +135,6 @@ gtest/gtest.h
 -
 include/tasks.h
 /home/dawid/Projects/C_C++/Aoc_2020/include/tasks.h
-
-/home/dawid/Projects/C_C++/Aoc_2020/src/boarding_Pass.cpp
-../include/boarding_Pass.h
-/home/dawid/Projects/C_C++/Aoc_2020/include/boarding_Pass.h
-iostream
--
-
-/home/dawid/Projects/C_C++/Aoc_2020/src/passport.cpp
-regex
--
-../include/passport.h
-/home/dawid/Projects/C_C++/Aoc_2020/include/passport.h
 
 /home/dawid/Projects/C_C++/Aoc_2020/src/solution.cpp
 ../include/solution.h
@@ -168,6 +158,12 @@ regex
 ../include/passport.h
 /home/dawid/Projects/C_C++/Aoc_2020/include/passport.h
 
+/home/dawid/Projects/C_C++/Aoc_2020/src/task1.cpp
+vector
+-
+../include/tasks1.h
+/home/dawid/Projects/C_C++/Aoc_2020/include/tasks1.h
+
 /home/dawid/Projects/C_C++/Aoc_2020/tests/tests.cpp
 gtest/gtest.h
 -
@@ -175,6 +171,12 @@ iostream
 -
 vector
 -
+fstream
+-
+optional
+-
 ../include/tasks.h
 /home/dawid/Projects/C_C++/Aoc_2020/include/tasks.h
+../include/solution.h
+/home/dawid/Projects/C_C++/Aoc_2020/include/solution.h
 
