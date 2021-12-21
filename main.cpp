@@ -14,8 +14,6 @@ int main(int argc, char **argv)
     //return ret;
 
     std::cout << "+++++++++++++++++++++++++++++++++++++++++++++++ Aoc2020 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++" << std::endl;
-    std::cout << "Jezeli jeszcze tego nie zrobiles to zdefiniuj sciezke do plikow wejsciowych!. \n Docelowo znajduja sie w folderze projektu w /src/inputs. W pliku main.cpp w 6 lini zdefiniowany config do podania sciezki\n #define config <sciezka> \n";
-    std::cout << "+++++++++++++++++++++++++++++++++++++++++++++++ Aoc2020 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++" << std::endl;
     std::cout << "Podaj numer zadania od 1 do 9 \n";
     int cases = 0;
     std::cin >> cases;
