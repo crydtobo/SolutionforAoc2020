@@ -1,85 +1,60 @@
 #include "../include/solution.h"
 
-#define everyThridHash 3
-#define everyHash 1
+#define EVERY_THIRD_HASH 3
+#define EVERY_HASH 1
 
 bool isProperlyPass(const int &count, const  int &n1, const int &n2){
-    if (count >= n1 and count <= n2)
-        return true;
-    return false;
+    return (count >= n1 and count <= n2);
 }
 
 bool isprobablyCorrectPassword(const int i, const int n1){
-    if (i == ((size_t)n1 - 1))
-        return true;
-    return false;
+    return (i == ((size_t)n1 - 1));
 }
 
 bool isCorrectPassword(const int i, const int n1, const std::string &pass, const char &letter){
-    if ((isprobablyCorrectPassword(i,n1)) && pass[i] == letter)
-        return true;
-    return false;
+    return ((isprobablyCorrectPassword(i,n1)) && pass[i] == letter);
 }
 
 bool acceptedPassword(const int &flaga){
-    if (flaga == 3 or flaga == 1)
-        return true;
-    return false;
-}
-
-int countCorrectletter(std::string pass, char letter){
-	int count = 0;
-	for (size_t i = 0; i < pass.size(); i++)
-		{
-			if (pass[i] == letter)
-			{
-				count++;
-			}
-		}
-	return count;
+    return (flaga == 3 or flaga == 1);
 }
 
 bool everySecondLevel(const int &count){
-    if (count > 0 && count % 2 == 0)
-        return true;
-    return false;
+    return (count > 0 && count % 2 == 0);
 }
 
 bool everyNumberHash(const std::string &line, const size_t &step, const int &n){
-    if (line[n * step] == '#')
-        return true;
-    return false;
+    return (line[n* step] == '#');
 }
 
 bool findHashFirst(const std::string &line, const size_t &step){
-    if (line.size() - 1 >= step)
-        return true;
-    return false;
+    return (line.size() - 1 >= step);
 }
 
 bool findHashSecond(const std::string &line, const size_t &step){
-    if (line.size() < step + 1)
-        return true;
-    return false;
+    return (line.size() < step + 1);
 }
 
 bool isEven(const int &count){
-    if (count % 2 == 0)
-        return true;
-    return false;
+    return (count % 2 == 0);
 }
 
 bool isCorrectPassportForHeaders(const std::size_t &found, const std::string &pass){
-	if (std::count(pass.begin(), pass.end(), ':') == 7
-	 && (found == std::string::npos))
-		return true;
-	return false;
+	return (std::count(pass.begin(), pass.end(), ':') == 7
+	 && (found == std::string::npos));
 }
 
 bool isCorrectBasicPassport(const std::string &passport){
-	if (std::count(passport.begin(), passport.end(), ':') == 8)
-		return true;
-	return false;
+	return (std::count(passport.begin(), passport.end(), ':') == 8);
+}
+
+int countCorrectLetter(std::string pass, char letter){
+    return std::count(pass.begin(), pass.end(), letter);
+}
+
+int countCorrectPassword(const int &count, const int &n1, const int &n2)
+{
+    return (isProperlyPass(count, n1, n2)) ?  1 : 0;
 }
 
 std::tuple<int, int> solutionTask2(std::fstream &File2)
@@ -88,19 +63,19 @@ std::tuple<int, int> solutionTask2(std::fstream &File2)
 	char letter, semicolon, dash;
 	std::string pass;
 	std::vector<std::string> passwords;
+    std::tuple<int,int> res;
 
 	while (File2 >> n1 >> dash >> n2 >> letter >> semicolon >> pass)
 	{
 		count = 0;
 		line++;
 		passwords.push_back(pass);
-		count = countCorrectletter(pass, letter);
-		if (isProperlyPass(count, n1, n2))
-			correct++;
-		else
-			incorrect++;
+		count = countCorrectLetter(pass, letter);
+		correct += countCorrectPassword(count, n1, n2);
 	}
-	std::tuple<int,int> res = {correct, incorrect};
+    incorrect = count - correct;
+	res = {correct, incorrect};
+
 	return res;
 }
 
@@ -127,65 +102,85 @@ void firstPartTask2Prim(std::string &pass, char &letter, int &flaga, int &n1, in
     }
 }
 
+int countCorrectBags(int &flaga)
+{
+    if (acceptedPassword(flaga))
+    {
+        return 1;
+    }
+    else if (flaga == 2)
+    {
+        return 0;
+    }
+    else
+    {
+        flaga = 0;
+        return 0;
+    }
+    return 0;
+}
+
 std::tuple<int, int> solutionTask2Prim(std::fstream &File2)
 {
-    int n1 = 0, n2 = 0, line = 0, correct = 0, incorrect = 0, flaga = 0;
+    int n1 = 0, n2 = 0, correct = 0, incorrect = 0, flaga = 0, all;
     char letter, semicolon, dash;
     std::string pass;
 
     while (File2 >> n1 >> dash >> n2 >> letter >> semicolon >> pass)
     {
-        line++;
+        all++;
         firstPartTask2Prim(pass, letter, flaga, n1, n2);
-        if (flaga == 2)
-        {
-            incorrect++;
-        }
-        else if (acceptedPassword(flaga)) 
-        {
-            correct++;
-        }
-        else
-        {
-            flaga = 0;
-        }
+        correct += countCorrectBags(flaga);
     }
-    std::tuple<int, int> res = {correct, incorrect};
+
+    std::tuple<int, int> res = {correct, all - correct};
     return res;
 }
 
 int incrementStep(const int &count, size_t &step){
-    if (isEven(count))
-        step++;
-    return step;
+    return (isEven(count)) ? step++ : step; 
+}
+
+std::string copyLineIfHash(const std::string &line, size_t &step){
+    std::string new_line;
+
+    while (findHashSecond(new_line, step))
+    {
+        new_line += line;
+    }
+
+    return new_line;
+}
+
+int incrementTreeIfHash(const std::string &new_line, size_t &step)
+{
+    return (everyNumberHash(new_line, step, EVERY_HASH)) ? 1 : 0;
 }
 
 void countCorrectTree(const std::string &line, int &tree, size_t &step)
 {
-    std::string l_line;
-    while (findHashSecond(l_line, step))
-    {
-        l_line += line;
-    }
-    if (everyNumberHash(l_line, step, everyHash))
+    //increment tree
+    std::string new_line = copyLineIfHash(line, step);
+    tree += incrementTreeIfHash(new_line,step);
+}
+
+
+void countFoundHash(const std::string &line, int &tree, size_t &step)
+{
+    if (findHashFirst(line, step) && everyNumberHash(line, step, EVERY_THIRD_HASH))
     {
         tree++;
+    }
+    else
+    {
+        countCorrectTree(line, tree, step);
     }
 }
 
 int countTree(const int &count, const std::string &line, int &tree, size_t &step)
 {
     if (everySecondLevel(count))
-    {
-        if (findHashFirst(line, step) && everyNumberHash(line, step, everyThridHash))
-        {
-            tree++;
-        }
-        else
-        {
-            countCorrectTree(line, tree, step);
-        }
-    }
+        countFoundHash(line, tree, step);
     return tree;
 }
 
@@ -203,7 +198,7 @@ int soultionTask3(std::fstream &File)
     return tree;
 }
 
-int soultionTask3prim(std::fstream &File, const int &option){
+int soultionTask3Prim(std::fstream &File, const int &option){
     int count = 0, tree = 0;
 	size_t step = 0;
 	size_t traverse = 0;
@@ -229,10 +224,17 @@ int soultionTask3prim(std::fstream &File, const int &option){
     return tree;
 }
 
+int countCorrectPassport(const std::string &passport)
+{
+    std::size_t found = passport.find("cid");
+    return (isCorrectBasicPassport(passport) || isCorrectPassportForHeaders(found, passport)) ? 1 : 0;
+}
+
 int solutionTask4(std::fstream &File)
 {
-    int count_correct = 0;
-    std::string line, passport = "";
+    int countCorrect = 0;
+    std::string line;
+    std::string passport = "";
 
     while (getline(File, line))
     {
@@ -240,29 +242,30 @@ int solutionTask4(std::fstream &File)
         {
             passport = passport + " " + line;
         }
-        else 
+        else
         {
-            std::size_t found = passport.find("cid");
-            if (isCorrectBasicPassport(passport) || isCorrectPassportForHeaders(found, passport))
-            {
-                count_correct++;
-            }
+            countCorrect += countCorrectPassport(passport);
             passport = "";
         }
     }
-    return count_correct + 1;
+
+    return countCorrect + 1;
 }
 
+bool biggerOne(const int &first, const int &second){
+    return (first != second) ? 1 : 0;
+}
 
 int checkSolutionTask5(const std::vector<int> &maxi)
 {
 	int solution = *max_element(maxi.begin(), maxi.end());
 	for (int k = 0; k < maxi.size(); k++)
 	{
-		if (maxi[k] + 1 != maxi[k + 1])
+		if (biggerOne(maxi[k] + 1, maxi[k + 1]))
 		{
 			return maxi[k] + 1;
 		}
 	}
+
 	return solution;
 }

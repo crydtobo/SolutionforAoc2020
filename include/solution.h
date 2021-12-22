@@ -18,7 +18,7 @@ bool isprobablyCorrectPassword(const int i, const int n1);
 bool isCorrectPassword(const int i, const int n1, const std::string &pass, const char &letter);
 bool acceptedPassword(const int &flaga);
 bool everySecondLevel(const int &count);
-bool everyNumberHash(const std::string &line, const size_t &step, const int &n);
+bool everyNumberHash(const std::string &line, const size_t &step, const int &jump);
 bool findHashFirst(const std::string &line, const size_t &step);
 bool findHashSecond(const std::string &line, const size_t &step);
 bool isEven(const int &count);
@@ -32,7 +32,7 @@ std::tuple<int, int> solutionTask2(std::fstream &File2);
 std::tuple<int, int> solutionTask2Prim(std::fstream &File2);
 
 int soultionTask3(std::fstream &File);
-int soultionTask3prim(std::fstream &File, const int &option);
+int soultionTask3Prim(std::fstream &File, const int &option);
 int solutionTask4(std::fstream &File);
 int checkSolutionTask5(const std::vector<int> &maxi);
 

@@ -15,17 +15,17 @@ class Passport
 public:
 	Passport(std::string &&file) : byr(-1), iyr(-1), eyr(-1)
 	{
-		parse_to_task(std::move(file));
+		parseToTask(std::move(file));
 	}
 
-	void parse_to_task(std::string &&input);
-	void parse_kv(std::string &&input);
+	void parseToTask(std::string &&input);
+	void parseKey(std::string &&input);
 	bool check();
-	bool check_hgt();
-	bool check_hcl();
-	bool check_ecl();
-	bool check_pid();
-	bool is_valid();
+	bool checkHgt();
+	bool checkHcl();
+	bool checkEcl();
+	bool checkPid();
+	bool isValid();
 
 private:
 	std::string cid;
@@ -38,7 +38,7 @@ private:
 	std::string pid;
 };
 
-std::vector<std::string> decode_input(std::fstream &file);
-std::vector<Passport> parse_input_from_file(std::fstream &file);
+std::vector<std::string> decodeInput(std::fstream &file);
+std::vector<Passport> parseInputFromFile(std::fstream &file);
 
 #endif  /* INCLUDE_PASSPORT_H_*/

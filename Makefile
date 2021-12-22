@@ -150,6 +150,33 @@ main.cpp.s:
 	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/main.cpp.s
 .PHONY : main.cpp.s
 
+src/Strategy/doExactStrategy.o: src/Strategy/doExactStrategy.cpp.o
+
+.PHONY : src/Strategy/doExactStrategy.o
+
+# target to build an object file
+src/Strategy/doExactStrategy.cpp.o:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/Strategy/doExactStrategy.cpp.o
+.PHONY : src/Strategy/doExactStrategy.cpp.o
+
+src/Strategy/doExactStrategy.i: src/Strategy/doExactStrategy.cpp.i
+
+.PHONY : src/Strategy/doExactStrategy.i
+
+# target to preprocess a source file
+src/Strategy/doExactStrategy.cpp.i:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/Strategy/doExactStrategy.cpp.i
+.PHONY : src/Strategy/doExactStrategy.cpp.i
+
+src/Strategy/doExactStrategy.s: src/Strategy/doExactStrategy.cpp.s
+
+.PHONY : src/Strategy/doExactStrategy.s
+
+# target to generate assembly for a file
+src/Strategy/doExactStrategy.cpp.s:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/Strategy/doExactStrategy.cpp.s
+.PHONY : src/Strategy/doExactStrategy.cpp.s
+
 src/boarding_Pass.o: src/boarding_Pass.cpp.o
 
 .PHONY : src/boarding_Pass.o
@@ -378,6 +405,9 @@ help:
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
+	@echo "... src/Strategy/doExactStrategy.o"
+	@echo "... src/Strategy/doExactStrategy.i"
+	@echo "... src/Strategy/doExactStrategy.s"
 	@echo "... src/boarding_Pass.o"
 	@echo "... src/boarding_Pass.i"
 	@echo "... src/boarding_Pass.s"

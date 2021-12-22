@@ -1,7 +1,7 @@
 #include "../include/boarding_Pass.h"
 #include <iostream>
 
-std::vector<std::string> decode_input(std::fstream &file)
+std::vector<std::string> decodeInput(std::fstream &file)
 {
 	std::string line;
 	std::vector<std::string> pass_data;
@@ -18,55 +18,57 @@ std::vector<std::string> decode_input(std::fstream &file)
 	}
 	return pass_data;
 }
-void Boarding_Pass ::row_reveal(std::string first)
+
+uint32_t BoardingPass::changeUpper(){
+	return  lower + (upper - 1 - lower) / 2;
+}
+
+uint32_t BoardingPass::changeLower(){
+	 return lower + (upper - 1 - lower) / 2 + 1;
+}
+
+uint32_t BoardingPass::changeR(){
+	return l + (r - 1 - l) / 2;
+}
+
+uint32_t BoardingPass::changeL(){
+	 return l + (r + 1 - l) / 2;
+}
+
+void BoardingPass::rowReveal(std::string first)
 {
 	for (int i = 0; i < int(first.size()); i++)
 	{
 		if (first.at(i) == 'F')
-		{
-			upper = lower + (upper - 1 - lower) / 2;
-		}
-		else
-		{
-			lower = lower + (upper - 1 - lower) / 2 + 1;
-		}
-		if (lower == upper)
-		{
-			row = upper;
-		}
+			upper = changeUpper();
+		else 
+			lower = changeLower();
+
+		row = (lower == upper) ? upper : row;
 	}
 }
 
-void Boarding_Pass ::column_reveal(std::string first)
+void BoardingPass::columnReveal(std::string first)
 {
 	for (int i = 0; i < int(first.size()); i++)
 	{
 		if (first.at(i) == 'R')
-		{
-			l = l + (r + 1 - l) / 2;
-		}
+			l = changeL();
 		else
-		{
-			r = l + (r - 1 - l) / 2;
-		}
-		if (l == r)
-		{
-			column = r;
-		}
+			r = changeR();
+		column = (l == r) ? r : column;
 	}
 }
-int decode_seat(std::string i)
+int decodeSeat(std::string i)
 {
-	std::string first;
-	std::string second;
-	Boarding_Pass object;
-	int seat = 0;
+	std::string first, second;
+	BoardingPass object;
 
 	first = i.substr(0, i.size() - 3);
 	second = i.substr(i.size() - 3, i.size());
-	object.row_reveal(first);
-	object.column_reveal(second);
+	object.rowReveal(first);
+	object.columnReveal(second);
 	
-	seat = 8 * object.row + object.column;
+	int seat = 8 * object.row + object.column;
 	return seat;
 }

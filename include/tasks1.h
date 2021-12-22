@@ -11,8 +11,8 @@
 #include <fstream>
 
 int task1(std::fstream &file);
-int task1_prim(std::fstream &file);
+int task1Prim(std::fstream &file);
 
-void split_string(std::string &text);
+void splitString(std::string &text);
 
 #endif /* TASK1_H_ */

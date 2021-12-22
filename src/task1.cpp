@@ -53,7 +53,7 @@ int task1(std::fstream &File)
 	return multiply2D(numbers);
 }
 
-int task1_prim(std::fstream &File1)
+int task1Prim(std::fstream &File1)
 {
 	int mul = 0;
 	int a = 0;
@@ -65,9 +65,10 @@ int task1_prim(std::fstream &File1)
 	return multiply3D(numbers);
 }
 
-void split_string(std::string &text)
+void splitString(std::string &text)
 {
 	int i = 0;
+	std::string res;
 	while (text[i] != '\0')
 	{
 		if (i % 2 == 0)

@@ -7,55 +7,69 @@
 
 #include "../include/declaration.h"
 
-void Declaration ::generate_question()
+#define ALFABET_LETTERS 26
+
+void Declaration ::generateQuestion()
 {
 	for (int i = 97; i <= 122; i++)
 	{
 		letter.push_back(static_cast<char>(i));
 	}
 }
+
+int Declaration::countLetterOccur(const char &letter, const std::string &input){
+	auto found = std::find(input.begin(), input.end(), letter);
+	if(found != input.end()){
+		return 1;
+	}
+	return 0;
+}
+
 int Declaration ::compared(std::string input)
 {
 	int count = 0;
 	for (auto j : letter)
 	{
-		for (size_t i = 0; i < input.size(); i++)
-		{
-			if (input[i] == j)
-			{
-				count++;
-				break;
-			}
-		}
+		count += countLetterOccur(j,input);
 	}
 	return count;
 }
 
-int Declaration ::compared_second(std::vector<std::string> input)
+void countFrequency(const std::string &i, std::array<int, ALFABET_LETTERS> &q)
+{
+	for (auto ch : i)
+	{
+		q[ch - 'a']++;
+	}
+}
+
+int countTheSame(std::size_t &i, std::size_t &&sizeOfDeclaration)
+{
+		return (i == sizeOfDeclaration) ? 1 : 0;
+}
+
+int Declaration ::comparedSecond(std::vector<std::string> input)
 {
 	int count = 0;
-	int q[26] = {};
+	std::array<int, ALFABET_LETTERS> q = {};
+
 	for (auto i : input)
 	{
-		for (auto ch : i)
-		{
-			q[ch - 'a']++;
-		}
+		countFrequency(i, q);
 	}
-	for (size_t i : q)
+
+	for (std::size_t i : q)
 	{
-		if (i == input.size())
-		{
-			count++;
-		}
+		count += countTheSame(i, input.size());
 	}
+	
 	return count;
 }
 
 void Declaration ::check(std::vector<std::string> input)
 {
 	int count = 0;
-	generate_question();
+	generateQuestion();
 	for (auto i : input)
 	{
 		count = compared(i);
@@ -63,18 +77,18 @@ void Declaration ::check(std::vector<std::string> input)
 	}
 }
 
-void Declaration ::check_second(std::vector<std::vector<std::string>> input)
+void Declaration ::checkSecond(std::vector<std::vector<std::string>> input)
 {
 	int count = 0;
-	generate_question();
+	generateQuestion();
 	for (auto i : input)
 	{
-		count = compared_second(i);
+		count = comparedSecond(i);
 		sum += count;
 	}
 }
 
-std::vector<std::string> parse_file(std::fstream &file)
+std::vector<std::string> parseFile(std::fstream &file)
 {
 	std::string line, passport = "";
 	std::vector<std::string> passport_data;
@@ -94,7 +108,7 @@ std::vector<std::string> parse_file(std::fstream &file)
 	return passport_data;
 }
 
-std::vector<std::vector<std::string>> parse_file2(std::fstream &file)
+std::vector<std::vector<std::string>> parseFile2(std::fstream &file)
 {
 	std::string line;
 	std::vector<std::vector<std::string>> dec;

@@ -6,6 +6,30 @@
 
 #IncludeRegexTransform: 
 
+/home/dawid/Projects/C_C++/Aoc_2020/include/StrategyPattern/concretStrategy.h
+strategy.h
+/home/dawid/Projects/C_C++/Aoc_2020/include/StrategyPattern/strategy.h
+../tasks.h
+/home/dawid/Projects/C_C++/Aoc_2020/include/tasks.h
+
+/home/dawid/Projects/C_C++/Aoc_2020/include/StrategyPattern/context.h
+strategy.h
+/home/dawid/Projects/C_C++/Aoc_2020/include/StrategyPattern/strategy.h
+memory
+-
+
+/home/dawid/Projects/C_C++/Aoc_2020/include/StrategyPattern/doExactStrategy.h
+concretStrategy.h
+/home/dawid/Projects/C_C++/Aoc_2020/include/StrategyPattern/concretStrategy.h
+
+/home/dawid/Projects/C_C++/Aoc_2020/include/StrategyPattern/strategy.h
+iostream
+-
+fstream
+-
+string
+-
+
 /home/dawid/Projects/C_C++/Aoc_2020/include/asn1.h
 iostream
 -
@@ -39,13 +63,17 @@ vector
 -
 
 /home/dawid/Projects/C_C++/Aoc_2020/include/declaration.h
+iostream
+-
 vector
 -
 string
 -
-iostream
+algorithm
 -
 fstream
+-
+array
 -
 
 /home/dawid/Projects/C_C++/Aoc_2020/include/instruction.h
@@ -135,10 +163,14 @@ gtest/gtest.h
 -
 include/tasks.h
 /home/dawid/Projects/C_C++/Aoc_2020/include/tasks.h
+include/StrategyPattern/doExactStrategy.h
+/home/dawid/Projects/C_C++/Aoc_2020/include/StrategyPattern/doExactStrategy.h
 
-/home/dawid/Projects/C_C++/Aoc_2020/src/solution.cpp
-../include/solution.h
-/home/dawid/Projects/C_C++/Aoc_2020/include/solution.h
+/home/dawid/Projects/C_C++/Aoc_2020/src/Strategy/doExactStrategy.cpp
+../../include/StrategyPattern/doExactStrategy.h
+/home/dawid/Projects/C_C++/Aoc_2020/include/StrategyPattern/doExactStrategy.h
+../../include/StrategyPattern/context.h
+/home/dawid/Projects/C_C++/Aoc_2020/include/StrategyPattern/context.h
 
 /home/dawid/Projects/C_C++/Aoc_2020/src/task.cpp
 ../include/tasks.h
@@ -157,12 +189,8 @@ include/tasks.h
 /home/dawid/Projects/C_C++/Aoc_2020/include/solution.h
 ../include/passport.h
 /home/dawid/Projects/C_C++/Aoc_2020/include/passport.h
-
-/home/dawid/Projects/C_C++/Aoc_2020/src/task1.cpp
-vector
--
-../include/tasks1.h
-/home/dawid/Projects/C_C++/Aoc_2020/include/tasks1.h
+../include/StrategyPattern/concretStrategy.h
+/home/dawid/Projects/C_C++/Aoc_2020/include/StrategyPattern/concretStrategy.h
 
 /home/dawid/Projects/C_C++/Aoc_2020/tests/tests.cpp
 gtest/gtest.h

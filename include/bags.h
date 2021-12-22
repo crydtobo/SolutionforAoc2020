@@ -24,9 +24,8 @@ public:
 
 	Bags() = default;
 
-	uint32_t count_bags(contains_t &contains, std::string bag_name);
-	void parse_input(std::vector<std::string> &in, contained_t &contained, contains_t &contains);
+	uint32_t countBags(contains_t &contains, std::string bagName);
+	void parseInput(std::vector<std::string> &in, contained_t &contained, contains_t &contains);
 };
-//void parse_input(std::vector<std::string> &in, Bags::contained_t &contained, Bags::contains_t &contains);
 
 #endif /* INCLUDE_BAGS_H_ */

@@ -21,7 +21,7 @@ public:
 	using instruct = std::vector<std::pair<std::string, int>>;
 
 	Instruction();
-	void reading_instructions(std::vector<std::string> input);
+	void readingInstructions(std::vector<std::string> input);
 	instruct parseInstruct(std::string &input);
 	void doJmp(std::vector<std::string> m);
 

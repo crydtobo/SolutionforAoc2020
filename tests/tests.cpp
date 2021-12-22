@@ -6,33 +6,7 @@
 
 #include "../include/tasks.h"
 #include "../include/solution.h"
-
-// //handler dla plików
-// void openFile(std::fstream &file, const std::string &fileName)
-// {
-//     file.open(std::string(config) + std::string(fileName), std::ios::in);
-//     if (!file)
-//     {
-//         std::cout << "Error, incorrect opening file!" << std::endl;
-//     }
-// }
-
-// int task3Prim(std::fstream &file, const int &first_mul)
-// {
-//     unsigned int resulter = 0;
-//     int option = 1;
-//     int result = 0, mul = 1;
-//     while (option < 8)
-//     {
-//         file.close();
-//         openFile(file, "input3.txt");
-//         result = task3_prim(file, option);
-//         mul *= result;
-//         option += 2;
-//     }
-//     return first_mul * mul;
-// }
-
+ 
 const std::string test0 = "ecl:tr# pid:834567 eyr:1234 hcl:#fffffd byr:1909 iyr:2007 cid:123 hgt:163cm";
 const std::string test1 = "ecl:gry pid:860033327 eyr:2020 hcl:#fffffd byr:1937 iyr:2017 cid:147 hgt:183cm";
 const std::string test2 = "iyr:2013 ecl:amb cid:350 eyr:2023 pid:028048884 hcl:#cfa07d byr:1929 hgt:181in";
@@ -46,16 +20,16 @@ TEST(test, encode_tag)
 {
     std::vector<uint8_t> encoded, encoded1, encoded2, encoded3;
     bool state;
-    encode_tag(encoded, ASN1_Tag::UNIVERSAL, ASN1_Tag::OCTET_STRING);
+    encodeTag(encoded, ASN1_Tag::UNIVERSAL, ASN1_Tag::OCTET_STRING);
     state = encoded[0] == 0x04 ? 1 : 0;
     ASSERT_TRUE(state);
-    encode_tag(encoded1, ASN1_Tag::UNIVERSAL, ASN1_Tag::BIT_STRING);
+    encodeTag(encoded1, ASN1_Tag::UNIVERSAL, ASN1_Tag::BIT_STRING);
     state = encoded1[0] == 0x03 ? 1 : 0;
     ASSERT_TRUE(state);
-    encode_tag(encoded2, ASN1_Tag::UNIVERSAL, ASN1_Tag::INTEGER);
+    encodeTag(encoded2, ASN1_Tag::UNIVERSAL, ASN1_Tag::INTEGER);
     state = encoded2[0] == 0x02 ? 1 : 0;
     ASSERT_TRUE(state);
-    encode_tag(encoded3, ASN1_Tag::UNIVERSAL, ASN1_Tag::NULL_TAG);
+    encodeTag(encoded3, ASN1_Tag::UNIVERSAL, ASN1_Tag::NULL_TAG);
     state = encoded3[0] == 0x05 ? 1 : 0;
     ASSERT_TRUE(state);
 }
@@ -185,7 +159,7 @@ TEST(test, task1ForInput1)
     file.close();
 
     openFile(file, filename);
-    ASSERT_TRUE(task1_prim(file) == 144554112);
+    ASSERT_TRUE(task1Prim(file) == 144554112);
     file.close();
 }
 
@@ -199,7 +173,7 @@ TEST(test, task2ForInput2)
     file.close();
 
     openFile(file, filename);
-    ASSERT_TRUE(task2_prim(file) == 509);
+    ASSERT_TRUE(task2Prim(file) == 509);
     file.close();
 }
 
@@ -228,7 +202,7 @@ TEST(test, task4ForInput4)
     file.close();
 
     openFile(file, filename);
-    ASSERT_TRUE( task4_prim(file)  == 131);
+    ASSERT_TRUE( task4Prim(file)  == 131);
     file.close();
 }
 
@@ -244,10 +218,10 @@ TEST(test, task5ForInput5)
 
 TEST(test, task6ForInput6)
 {
-    std::fstream file;
+    std::fstream file1;
     const std::string filename = "input6.txt";
 
-    openFile(file, filename);
-    ASSERT_TRUE(task6(file) == 3276);
-    file.close();
+    openFile(file1, filename);
+    ASSERT_TRUE(task6(file1) == 3276);
+    file1.close();
 }

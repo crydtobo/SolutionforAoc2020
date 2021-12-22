@@ -10,17 +10,14 @@ Instruction::Instruction() : acc{0}, posisition{1}, remember{0}
 {
 }
 
-void Instruction::reading_instructions(std::vector<std::string> input)
+void Instruction::readingInstructions(std::vector<std::string> input)
 {
 	remember = posisition;
-	//for(auto i: input){
-	//auto parse = parseInstruct(i);
-	//}
 }
 
 void Instruction::doJmp(std::vector<std::string> input)
 {
-	std::cout << "GRUU";
+	auto found = std::find(input.begin(), input.end(), "dojmp");
 }
 
 Instruction::instruct parseInstruct(std::string &input)
@@ -30,6 +27,5 @@ Instruction::instruct parseInstruct(std::string &input)
 	std::vector<std::string> l;
 	Instruction::instruct num;
 
-	//num.push_back(std::make_pair( l[0], std::stoi(l[1]) ) );
 	return num;
 }

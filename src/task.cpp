@@ -12,47 +12,42 @@
 #include "../include/asn1.h"
 #include "../include/solution.h"
 #include "../include/passport.h"
+#include "../include/StrategyPattern/concretStrategy.h"
 
 void openFile(std::fstream &file, const std::string &fileName)
 {
-    file.open(std::string(config) + std::string(fileName), std::ios::in);
-    if (!file)
-    {
-        std::cout << "Error, incorrect opening file!" << std::endl;
-    }
+	file.open(std::string(config) + std::string(fileName), std::ios::in);
+	if (!file)
+	{
+		std::cout << "Error, incorrect opening file!" << std::endl;
+	}
 }
 
 unsigned int task3Prim(std::fstream &file, const int &first_mul)
 {
-    unsigned int resulter = 0;
-    int option = 1;
-    int result = 0, mul = 1;
-    while (option < 8)
-    {
-        file.close();
-        openFile(file, "input3.txt");
-        result = task3_prim(file, option);
-        mul *= result;
-        option += 2;
-    }
-    return first_mul * mul;
+	unsigned int resulter = 0;
+	int option = 1;
+	int result = 0, mul = 1;
+	while (option < 8)
+	{
+		file.close();
+		openFile(file, INPUT3);
+		result = task3PrimResult(file, option);
+		mul *= result;
+		option += 2;
+	}
+	return first_mul * mul;
 }
 
 int task2(std::fstream &File2)
 {
-	std::tuple<int,int> res = solutionTask2(File2);
-	// std::cout << "Poprawne hasla: " << std::get<0>(res) << std::endl;
-	// std::cout << "NIEPoprawne hasla: " << std::get<1>(res) << std::endl;
-	std::cout << std::endl;
+	std::tuple<int, int> res = solutionTask2(File2);
 	return std::get<0>(res);
 }
 
-int task2_prim(std::fstream &File2)
+int task2Prim(std::fstream &File2)
 {
-	std::tuple<int,int> res = solutionTask2Prim(File2);
-	// std::cout << "Poprawne hasla: " << std::get<0>(res) << std::endl;
-	// std::cout << "NIEPoprawne hasla: " << std::get<1>(res) << std::endl;
-	std::cout << std::endl;
+	std::tuple<int, int> res = solutionTask2Prim(File2);
 	return std::get<0>(res);
 }
 
@@ -63,9 +58,9 @@ int task3(std::fstream &File)
 	return tree;
 }
 
-int task3_prim(std::fstream &File3, const int &option)
+int task3PrimResult(std::fstream &File3, const int &option)
 {
-	int tree = soultionTask3prim(File3, option);
+	int tree = soultionTask3Prim(File3, option);
 	return tree;
 }
 
@@ -74,15 +69,14 @@ int task4(std::fstream &file)
 	return solutionTask4(file);
 }
 
-int task4_prim(std::fstream &file)
+int task4Prim(std::fstream &file)
 {
-	int count_correct = 0, counter = 0;
-	std::vector<Passport> p = parse_input_from_file(file);
+	int count_correct = 0;
+	std::vector<Passport> p = parseInputFromFile(file);
 
 	for (auto i : p)
 	{
-		counter++;
-		if (i.is_valid() == 1)
+		if (i.isValid() == 1)
 		{
 			count_correct++;
 		}
@@ -93,11 +87,11 @@ int task4_prim(std::fstream &file)
 int task5(std::fstream &file)
 {
 	int max = 0;
-	std::vector<std::string> t = decode_input(file);
+	std::vector<std::string> t = decodeInput(file);
 	std::vector<int> maxi;
 	for (auto i : t)
 	{
-		max = decode_seat(i);
+		max = decodeSeat(i);
 		maxi.push_back(max);
 	}
 	std::sort(maxi.begin(), maxi.end());
@@ -108,8 +102,8 @@ int task6(std::fstream &file)
 {
 	int solution = 0;
 	Declaration object;
-	std::vector<std::vector<std::string>> t2 = parse_file2(file);
-	object.check_second(t2);
+	std::vector<std::vector<std::string>> t2 = parseFile2(file);
+	object.checkSecond(t2);
 	solution = object.sum;
 	return solution;
 }
@@ -121,7 +115,7 @@ int task7(std::fstream &file)
 	Bags::contained_t contained;
 	Bags::contains_t contains;
 
-	std::vector<std::string> b = decode_input(file);
+	std::vector<std::string> b = decodeInput(file);
 	object.parse_input(b, contained, contains);
 
 	auto bags = contains["shiny gold"];
@@ -129,7 +123,7 @@ int task7(std::fstream &file)
 	std::unordered_set<std::string> seen({"shiny gold"});
 	while (!q.empty())
 	{
-		std::string bag_name = q.front();
+		std::string bagName = q.front();
 		for (auto &bag : contained[bag_name])
 		{
 			if (seen.insert(bag).second)
@@ -140,14 +134,14 @@ int task7(std::fstream &file)
 		q.pop_front();
 	}
 	
-	uint32_t numbers = object.count_bags(contains, "shiny gold");
+	uint32_t numbers = object.countBags(contains, "shiny gold");
 	std::cout << "Solution 2: " << numbers << std::endl;
 	std::cout << "Solution 1: ";
 	return seen.size();
 }
 */
 
-int project_euler()
+int projectEuler()
 {
 	int result{0};
 	result = one();
@@ -197,21 +191,20 @@ int task8(std::fstream &file)
 }
 
 //ASN1 decoding BER
-void encode_tag(std::vector<uint8_t> &encoded_tag, ASN1_Tag class_tag_a, ASN1_Tag type_tag_a)
+void encodeTag(std::vector<uint8_t> &encodedTag, ASN1_Tag classTagA, ASN1_Tag typeTagA)
 {
-	const uint32_t class_tag = static_cast<uint32_t>(class_tag_a);
-	const uint32_t type_tag = static_cast<uint32_t>(type_tag_a);
+	const uint32_t classTag = static_cast<uint32_t>(classTagA);
+	const uint32_t typeTag = static_cast<uint32_t>(typeTagA);
 
-	if (class_tag != 0x00)
+	if (classTag != 0x00)
 	{
-		//TODO support for error and exception
-		std::cout << "DER encoding error, should be 0x00 (tag:universal) but is" + std::to_string(class_tag) << std::endl;
+		std::cout << "DER encoding error, should be 0x00 (tag:universal) but is" + std::to_string(classTag) << std::endl;
 	}
 
 	//tags all happen to be under  31 (0x1F)
-	if (type_tag <= 30)
+	if (typeTag <= 30)
 	{
-		encoded_tag.push_back(static_cast<uint8_t>(type_tag | class_tag));
+		encodedTag.push_back(static_cast<uint8_t>(typeTag | classTag));
 	}
 	else
 	{
@@ -219,18 +212,18 @@ void encode_tag(std::vector<uint8_t> &encoded_tag, ASN1_Tag class_tag_a, ASN1_Ta
 		 * for cases when any universal tag numbers higher than 31
 		 * then those need to use the high tag number form, which takes extra bytes
 		 */
-		size_t blocks = high_bit(static_cast<uint32_t>(type_tag)) + 6;
+		size_t blocks = high_bit(static_cast<uint32_t>(typeTag)) + 6;
 		blocks = (blocks - (blocks % 7)) / 7;
 		assert(blocks > 0);
 
-		encoded_tag.push_back(static_cast<uint8_t>(class_tag | 0x1F));
+		encodedTag.push_back(static_cast<uint8_t>(classTag | 0x1F));
 		for (size_t i = 0; i != blocks - 1; ++i)
-			encoded_tag.push_back(0x80 | ((type_tag >> 7 * (blocks - i - 1)) & 0x7F));
-		encoded_tag.push_back(type_tag & 0x7F);
+			encodedTag.push_back(0x80 | ((typeTag >> 7 * (blocks - i - 1)) & 0x7F));
+		encodedTag.push_back(typeTag & 0x7F);
 	}
 }
 
-void task_cert(std::fstream &file)
+void taskCert(std::fstream &file)
 {
 	int solution;
 
@@ -239,75 +232,22 @@ void task_cert(std::fstream &file)
 	std::vector<std::vector<uint8_t>> m_set_contents;
 
 	std::vector<uint8_t> encoded;
-	encode_tag(encoded, ASN1_Tag::UNIVERSAL , ASN1_Tag::OCTET_STRING);
+	encodeTag(encoded, ASN1_Tag::UNIVERSAL, ASN1_Tag::OCTET_STRING);
 
- 
 	uint32_t test = 0x023000000;
 	auto test_result = significant_bytes(test);
-	std::cout<< "Result significant : " << test_result << std::endl;
-
+	std::cout << "Result significant : " << test_result << std::endl;
 
 	size_t blocks = high_bit(static_cast<uint32_t>(ASN1_Tag::APPLICATION));
-	std::cout<< "Blocks: : " << blocks << std::endl;
-	std::cout<<"Make Pair::"<<std::endl;
-	
+	std::cout << "Blocks: : " << blocks << std::endl;
+	std::cout << "Make Pair::" << std::endl;
+
 	size_t len = 10;
 	const uint8_t add[] = {0x01, 0x02, 0x03, 0x04, 0x05, 0x06, 0x07, 0x08, 0x09, 0x0A};
 	m.reserve(len);
-	for(int i = 0; i < 10; i++){
+	for (int i = 0; i < 10; i++)
+	{
 		m += std::make_pair(add, len);
 		m_set_contents.push_back(std::move(m));
 	}
 }
-
-/*
-	uint32_t test1 = 0xF0F08400; // 16
-	uint32_t test2 = 0xFF008400; // 0
-	uint32_t test3 = 0x08008400; //4
-	uint32_t test4 = 0x70008400; //1
-	uint8_t test5 = 0x84;
-	uint8_t test6 = 0x00;
-	uint8_t test7 = 0x01;
-	uint8_t test8 = 0x32;
-	uint8_t test13 = 0xFF;
-	uint64_t test9 = 0x0000840000008400;
-	uint64_t test10 = 0x7000FFFF00008400;
-	uint64_t test11 = 0xF000840000008400;
-	uint64_t test12 = 0x000000000000000;
-	auto test_result = expand_top_bit(static_cast<uint32_t>(test1));
-	std::cout<< "Result: " << test_result << std::endl;
-	std::cout<< "High bit: " << static_cast<int>(0x10) << std::endl;
-	std::cout<< "High bit: " << test1 << " to:  "<< int(high_bit(test1)) << std::endl;
-	std::cout<< "High bit: " << test2 << " to:  "<< int(high_bit(test2)) << std::endl;
-	std::cout<< "High bit: " << test3 << " to:  "<< int(high_bit(test3)) << std::endl;
-	std::cout<< "High bit: " << test4 << " to:  "<< int(high_bit(test4)) << std::endl;
-	std::cout<< "High bit: " << test5 << " to:  "<< int(high_bit(test5)) << std::endl;
-	std::cout<< "High bit: " << test6 << " to:  "<< int(high_bit(test6)) << std::endl;
-	std::cout<< "High bit: " << test7 << " to:  "<< int(high_bit(test7)) << std::endl;
-	std::cout<< "High bit: " << test8 << " to:  "<< int(high_bit(test8)) << std::endl;
-	std::cout<< "High bit: " << test9 << " to:  "<< int(high_bit(test9)) << std::endl;
-	std::cout<< "High bit: " << test10 << " to:  "<< int(high_bit(test10)) << std::endl;
-	std::cout<< "High bit: " << test11 << " to:  "<< int(high_bit(test11)) << std::endl;
-	std::cout<< "High bit: " << test12 << " to:  "<< int(high_bit(test12)) << std::endl;
-	std::cout<< "Not " << ~0x0001001<< std::endl;
-	std::cout<< "Sub" << 0x70001001 - 1 << std::endl;
-	std::cout<< "Sub" << 0x00010070 - 1 << std::endl;
-	std::cout<< "ct: " << check(test1) << std::endl;
-		std::cout<< "Hctt: " << check(test2)  << std::endl;
-		std::cout<< "ctt: " << std::hex << int(check(test6))   << std::endl;
-		std::cout<< "ctt: " << std::hex << int(check(test12))   << std::endl;
-		std::cout<< "ctt: " << std::hex << int(check(test13))   << std::endl;
-
-		//my high_bit
-		std::cout<< "High bit: " << test1 << " to:  "<< int(high_bit_my(test1)) << std::endl;
-			std::cout<< "High bit: " << test2 << " to:  "<< int(high_bit_my(test2)) << std::endl;
-			std::cout<< "High bit: " << test3 << " to:  "<< int(high_bit_my(test3)) << std::endl;
-			std::cout<< "High bit: " << test4 << " to:  "<< int(high_bit_my(test4)) << std::endl;
-			std::cout<< "High bit: " << test5 << " to:  "<< int(high_bit_my(test5)) << std::endl;
-			std::cout<< "High bit: " << test6 << " to:  "<< int(high_bit_my(test6)) << std::endl;
-			std::cout<< "High bit 7: " << test7 << " to:  "<< int(high_bit_my(test7)) << std::endl;
-			std::cout<< "High bit: " << test8 << " to:  "<< int(high_bit_my(test8)) << std::endl;
-			std::cout<< "High bit: " << test9 << " to:  "<< int(high_bit_my(test9)) << std::endl;
-			std::cout<< "High bit: " << test10 << " to:  "<< int(high_bit_my(test10)) << std::endl;
-			std::cout<< "High bit: " << test11 << " to:  "<< int(high_bit_my(test11)) << std::endl;
-			std::cout<< "High bit: " << test12 << " to:  "<< int(high_bit_my(test12)) << std::endl;*/

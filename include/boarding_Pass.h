@@ -4,22 +4,34 @@
 #include <fstream>
 #include <vector>
 
-class Boarding_Pass
+#define LOWER 0
+#define UPPER 127
+#define MOST_SIGNIFICAT 7
+
+class BoardingPass
 {
 public:
-	Boarding_Pass() = default;
+	BoardingPass() = default;
 
-	void column_reveal(std::string i);
-	void row_reveal(std::string i);
+	void columnReveal(std::string i);
+	void rowReveal(std::string i);
 
 	int row = 0;
 	int column = 0;
-	int seat_ID = 0;
-	uint32_t lower = 0;
-	uint32_t upper = 127;
-	uint32_t r = 7;
+	int seatID = 0;
+	uint32_t lower = LOWER;
+	uint32_t upper = UPPER;
+	uint32_t r = MOST_SIGNIFICAT;
 	uint32_t l = 0;
+
+private:
+	uint32_t changeUpper();
+	uint32_t changeLower();
+	uint32_t changeR();
+	uint32_t changeL();
 };
-std::vector<std::string> decode_input(std::fstream &file);
-int decode_seat(std::string i);
+
+std::vector<std::string> decodeInput(std::fstream &file);
+int decodeSeat(std::string i);
+
 #endif /* INCLUDE_BOARDING_PASS_H_ */
