@@ -198,6 +198,14 @@ int soultionTask3(std::fstream &File)
     return tree;
 }
 
+void correctTraverseTree(const std::string &line, size_t &traverse, int &tree)
+{
+    if (findHashFirst(line, traverse) && line[traverse] == '#')
+        tree++;
+    else
+        countCorrectTree(line, tree, traverse);
+}
+
 int soultionTask3Prim(std::fstream &File, const int &option){
     int count = 0, tree = 0;
 	size_t step = 0;
@@ -209,14 +217,7 @@ int soultionTask3Prim(std::fstream &File, const int &option){
 		traverse = option * step;
 		if (count > 0)
 		{
-			if (findHashFirst(line, traverse) && line[traverse] == '#')
-			{
-				tree++;
-			}
-			else
-			{
-				countCorrectTree(line, tree, traverse);
-			}
+			correctTraverseTree(line, traverse, tree);
 		}
 		step++;
 		count++;
