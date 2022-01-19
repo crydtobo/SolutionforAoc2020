@@ -5,11 +5,14 @@ set(CMAKE_DEPENDS_LANGUAGES
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
   "/home/dawid/Projects/C_C++/Aoc_2020/main.cpp" "/home/dawid/Projects/C_C++/Aoc_2020/build/CMakeFiles/main.dir/main.cpp.o"
-  "/home/dawid/Projects/C_C++/Aoc_2020/src/Strategy/doExactStrategy.cpp" "/home/dawid/Projects/C_C++/Aoc_2020/build/CMakeFiles/main.dir/src/Strategy/doExactStrategy.cpp.o"
+  "/home/dawid/Projects/C_C++/Aoc_2020/src/Passport/passportFactory.cpp" "/home/dawid/Projects/C_C++/Aoc_2020/build/CMakeFiles/main.dir/src/Passport/passportFactory.cpp.o"
+  "/home/dawid/Projects/C_C++/Aoc_2020/src/Passport/passportFeatureFactory.cpp" "/home/dawid/Projects/C_C++/Aoc_2020/build/CMakeFiles/main.dir/src/Passport/passportFeatureFactory.cpp.o"
+  "/home/dawid/Projects/C_C++/Aoc_2020/src/Passport/passportFeatureStrategy.cpp" "/home/dawid/Projects/C_C++/Aoc_2020/build/CMakeFiles/main.dir/src/Passport/passportFeatureStrategy.cpp.o"
+  "/home/dawid/Projects/C_C++/Aoc_2020/src/Passport/passportSupport.cpp" "/home/dawid/Projects/C_C++/Aoc_2020/build/CMakeFiles/main.dir/src/Passport/passportSupport.cpp.o"
+  "/home/dawid/Projects/C_C++/Aoc_2020/src/StrategyTaskSupport/doExactStrategy.cpp" "/home/dawid/Projects/C_C++/Aoc_2020/build/CMakeFiles/main.dir/src/StrategyTaskSupport/doExactStrategy.cpp.o"
   "/home/dawid/Projects/C_C++/Aoc_2020/src/boarding_Pass.cpp" "/home/dawid/Projects/C_C++/Aoc_2020/build/CMakeFiles/main.dir/src/boarding_Pass.cpp.o"
   "/home/dawid/Projects/C_C++/Aoc_2020/src/declaration.cpp" "/home/dawid/Projects/C_C++/Aoc_2020/build/CMakeFiles/main.dir/src/declaration.cpp.o"
   "/home/dawid/Projects/C_C++/Aoc_2020/src/instructions.cpp" "/home/dawid/Projects/C_C++/Aoc_2020/build/CMakeFiles/main.dir/src/instructions.cpp.o"
-  "/home/dawid/Projects/C_C++/Aoc_2020/src/passport.cpp" "/home/dawid/Projects/C_C++/Aoc_2020/build/CMakeFiles/main.dir/src/passport.cpp.o"
   "/home/dawid/Projects/C_C++/Aoc_2020/src/solution.cpp" "/home/dawid/Projects/C_C++/Aoc_2020/build/CMakeFiles/main.dir/src/solution.cpp.o"
   "/home/dawid/Projects/C_C++/Aoc_2020/src/task.cpp" "/home/dawid/Projects/C_C++/Aoc_2020/build/CMakeFiles/main.dir/src/task.cpp.o"
   "/home/dawid/Projects/C_C++/Aoc_2020/src/task1.cpp" "/home/dawid/Projects/C_C++/Aoc_2020/build/CMakeFiles/main.dir/src/task1.cpp.o"

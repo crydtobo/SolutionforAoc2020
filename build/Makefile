@@ -150,32 +150,140 @@ main.cpp.s:
 	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/main.cpp.s
 .PHONY : main.cpp.s
 
-src/Strategy/doExactStrategy.o: src/Strategy/doExactStrategy.cpp.o
+src/Passport/passportFactory.o: src/Passport/passportFactory.cpp.o
 
-.PHONY : src/Strategy/doExactStrategy.o
+.PHONY : src/Passport/passportFactory.o
 
 # target to build an object file
-src/Strategy/doExactStrategy.cpp.o:
-	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/Strategy/doExactStrategy.cpp.o
-.PHONY : src/Strategy/doExactStrategy.cpp.o
+src/Passport/passportFactory.cpp.o:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/Passport/passportFactory.cpp.o
+.PHONY : src/Passport/passportFactory.cpp.o
 
-src/Strategy/doExactStrategy.i: src/Strategy/doExactStrategy.cpp.i
+src/Passport/passportFactory.i: src/Passport/passportFactory.cpp.i
 
-.PHONY : src/Strategy/doExactStrategy.i
+.PHONY : src/Passport/passportFactory.i
 
 # target to preprocess a source file
-src/Strategy/doExactStrategy.cpp.i:
-	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/Strategy/doExactStrategy.cpp.i
-.PHONY : src/Strategy/doExactStrategy.cpp.i
+src/Passport/passportFactory.cpp.i:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/Passport/passportFactory.cpp.i
+.PHONY : src/Passport/passportFactory.cpp.i
 
-src/Strategy/doExactStrategy.s: src/Strategy/doExactStrategy.cpp.s
+src/Passport/passportFactory.s: src/Passport/passportFactory.cpp.s
 
-.PHONY : src/Strategy/doExactStrategy.s
+.PHONY : src/Passport/passportFactory.s
 
 # target to generate assembly for a file
-src/Strategy/doExactStrategy.cpp.s:
-	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/Strategy/doExactStrategy.cpp.s
-.PHONY : src/Strategy/doExactStrategy.cpp.s
+src/Passport/passportFactory.cpp.s:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/Passport/passportFactory.cpp.s
+.PHONY : src/Passport/passportFactory.cpp.s
+
+src/Passport/passportFeatureFactory.o: src/Passport/passportFeatureFactory.cpp.o
+
+.PHONY : src/Passport/passportFeatureFactory.o
+
+# target to build an object file
+src/Passport/passportFeatureFactory.cpp.o:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/Passport/passportFeatureFactory.cpp.o
+.PHONY : src/Passport/passportFeatureFactory.cpp.o
+
+src/Passport/passportFeatureFactory.i: src/Passport/passportFeatureFactory.cpp.i
+
+.PHONY : src/Passport/passportFeatureFactory.i
+
+# target to preprocess a source file
+src/Passport/passportFeatureFactory.cpp.i:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/Passport/passportFeatureFactory.cpp.i
+.PHONY : src/Passport/passportFeatureFactory.cpp.i
+
+src/Passport/passportFeatureFactory.s: src/Passport/passportFeatureFactory.cpp.s
+
+.PHONY : src/Passport/passportFeatureFactory.s
+
+# target to generate assembly for a file
+src/Passport/passportFeatureFactory.cpp.s:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/Passport/passportFeatureFactory.cpp.s
+.PHONY : src/Passport/passportFeatureFactory.cpp.s
+
+src/Passport/passportFeatureStrategy.o: src/Passport/passportFeatureStrategy.cpp.o
+
+.PHONY : src/Passport/passportFeatureStrategy.o
+
+# target to build an object file
+src/Passport/passportFeatureStrategy.cpp.o:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/Passport/passportFeatureStrategy.cpp.o
+.PHONY : src/Passport/passportFeatureStrategy.cpp.o
+
+src/Passport/passportFeatureStrategy.i: src/Passport/passportFeatureStrategy.cpp.i
+
+.PHONY : src/Passport/passportFeatureStrategy.i
+
+# target to preprocess a source file
+src/Passport/passportFeatureStrategy.cpp.i:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/Passport/passportFeatureStrategy.cpp.i
+.PHONY : src/Passport/passportFeatureStrategy.cpp.i
+
+src/Passport/passportFeatureStrategy.s: src/Passport/passportFeatureStrategy.cpp.s
+
+.PHONY : src/Passport/passportFeatureStrategy.s
+
+# target to generate assembly for a file
+src/Passport/passportFeatureStrategy.cpp.s:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/Passport/passportFeatureStrategy.cpp.s
+.PHONY : src/Passport/passportFeatureStrategy.cpp.s
+
+src/Passport/passportSupport.o: src/Passport/passportSupport.cpp.o
+
+.PHONY : src/Passport/passportSupport.o
+
+# target to build an object file
+src/Passport/passportSupport.cpp.o:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/Passport/passportSupport.cpp.o
+.PHONY : src/Passport/passportSupport.cpp.o
+
+src/Passport/passportSupport.i: src/Passport/passportSupport.cpp.i
+
+.PHONY : src/Passport/passportSupport.i
+
+# target to preprocess a source file
+src/Passport/passportSupport.cpp.i:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/Passport/passportSupport.cpp.i
+.PHONY : src/Passport/passportSupport.cpp.i
+
+src/Passport/passportSupport.s: src/Passport/passportSupport.cpp.s
+
+.PHONY : src/Passport/passportSupport.s
+
+# target to generate assembly for a file
+src/Passport/passportSupport.cpp.s:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/Passport/passportSupport.cpp.s
+.PHONY : src/Passport/passportSupport.cpp.s
+
+src/StrategyTaskSupport/doExactStrategy.o: src/StrategyTaskSupport/doExactStrategy.cpp.o
+
+.PHONY : src/StrategyTaskSupport/doExactStrategy.o
+
+# target to build an object file
+src/StrategyTaskSupport/doExactStrategy.cpp.o:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/StrategyTaskSupport/doExactStrategy.cpp.o
+.PHONY : src/StrategyTaskSupport/doExactStrategy.cpp.o
+
+src/StrategyTaskSupport/doExactStrategy.i: src/StrategyTaskSupport/doExactStrategy.cpp.i
+
+.PHONY : src/StrategyTaskSupport/doExactStrategy.i
+
+# target to preprocess a source file
+src/StrategyTaskSupport/doExactStrategy.cpp.i:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/StrategyTaskSupport/doExactStrategy.cpp.i
+.PHONY : src/StrategyTaskSupport/doExactStrategy.cpp.i
+
+src/StrategyTaskSupport/doExactStrategy.s: src/StrategyTaskSupport/doExactStrategy.cpp.s
+
+.PHONY : src/StrategyTaskSupport/doExactStrategy.s
+
+# target to generate assembly for a file
+src/StrategyTaskSupport/doExactStrategy.cpp.s:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/StrategyTaskSupport/doExactStrategy.cpp.s
+.PHONY : src/StrategyTaskSupport/doExactStrategy.cpp.s
 
 src/boarding_Pass.o: src/boarding_Pass.cpp.o
 
@@ -257,33 +365,6 @@ src/instructions.s: src/instructions.cpp.s
 src/instructions.cpp.s:
 	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/instructions.cpp.s
 .PHONY : src/instructions.cpp.s
-
-src/passport.o: src/passport.cpp.o
-
-.PHONY : src/passport.o
-
-# target to build an object file
-src/passport.cpp.o:
-	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/passport.cpp.o
-.PHONY : src/passport.cpp.o
-
-src/passport.i: src/passport.cpp.i
-
-.PHONY : src/passport.i
-
-# target to preprocess a source file
-src/passport.cpp.i:
-	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/passport.cpp.i
-.PHONY : src/passport.cpp.i
-
-src/passport.s: src/passport.cpp.s
-
-.PHONY : src/passport.s
-
-# target to generate assembly for a file
-src/passport.cpp.s:
-	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/passport.cpp.s
-.PHONY : src/passport.cpp.s
 
 src/solution.o: src/solution.cpp.o
 
@@ -405,9 +486,21 @@ help:
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
-	@echo "... src/Strategy/doExactStrategy.o"
-	@echo "... src/Strategy/doExactStrategy.i"
-	@echo "... src/Strategy/doExactStrategy.s"
+	@echo "... src/Passport/passportFactory.o"
+	@echo "... src/Passport/passportFactory.i"
+	@echo "... src/Passport/passportFactory.s"
+	@echo "... src/Passport/passportFeatureFactory.o"
+	@echo "... src/Passport/passportFeatureFactory.i"
+	@echo "... src/Passport/passportFeatureFactory.s"
+	@echo "... src/Passport/passportFeatureStrategy.o"
+	@echo "... src/Passport/passportFeatureStrategy.i"
+	@echo "... src/Passport/passportFeatureStrategy.s"
+	@echo "... src/Passport/passportSupport.o"
+	@echo "... src/Passport/passportSupport.i"
+	@echo "... src/Passport/passportSupport.s"
+	@echo "... src/StrategyTaskSupport/doExactStrategy.o"
+	@echo "... src/StrategyTaskSupport/doExactStrategy.i"
+	@echo "... src/StrategyTaskSupport/doExactStrategy.s"
 	@echo "... src/boarding_Pass.o"
 	@echo "... src/boarding_Pass.i"
 	@echo "... src/boarding_Pass.s"
@@ -417,9 +510,6 @@ help:
 	@echo "... src/instructions.o"
 	@echo "... src/instructions.i"
 	@echo "... src/instructions.s"
-	@echo "... src/passport.o"
-	@echo "... src/passport.i"
-	@echo "... src/passport.s"
 	@echo "... src/solution.o"
 	@echo "... src/solution.i"
 	@echo "... src/solution.s"

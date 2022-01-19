@@ -3,7 +3,7 @@
 #include <gtest/gtest.h>
 
 #include "include/tasks.h"
-#include "include/StrategyPattern/doExactStrategy.h"
+#include "include/StrategyTaskSupport/doExactStrategy.h"
 
 int main(int argc, char **argv)
 {

@@ -6,7 +6,7 @@
 
 #include "../include/tasks.h"
 #include "../include/solution.h"
- 
+
 const std::string test0 = "ecl:tr# pid:834567 eyr:1234 hcl:#fffffd byr:1909 iyr:2007 cid:123 hgt:163cm";
 const std::string test1 = "ecl:gry pid:860033327 eyr:2020 hcl:#fffffd byr:1937 iyr:2017 cid:147 hgt:183cm";
 const std::string test2 = "iyr:2013 ecl:amb cid:350 eyr:2023 pid:028048884 hcl:#cfa07d byr:1929 hgt:181in";
@@ -16,21 +16,38 @@ const std::string test5 = "hcl:#cfa07d eyr:2025 pid:166559648 cid:147 hgt:183cm"
 const std::string test6 = "ecl:gry cid:147 hgt:183cm";
 const std::string test7 = "ecl:gry cid:147 hgt:183cm iyr:2011 ecl:brn";
 
-TEST(test, encode_tag)
+TEST(test, encode_tag_OctetString)
 {
-    std::vector<uint8_t> encoded, encoded1, encoded2, encoded3;
+    std::vector<uint8_t> encoded;
     bool state;
     encodeTag(encoded, ASN1_Tag::UNIVERSAL, ASN1_Tag::OCTET_STRING);
     state = encoded[0] == 0x04 ? 1 : 0;
     ASSERT_TRUE(state);
-    encodeTag(encoded1, ASN1_Tag::UNIVERSAL, ASN1_Tag::BIT_STRING);
-    state = encoded1[0] == 0x03 ? 1 : 0;
+}
+
+TEST(test, encode_tag_BitString)
+{
+    std::vector<uint8_t> encoded;
+    bool state;
+    encodeTag(encoded, ASN1_Tag::UNIVERSAL, ASN1_Tag::BIT_STRING);
+    state = encoded[0] == 0x03 ? 1 : 0;
     ASSERT_TRUE(state);
-    encodeTag(encoded2, ASN1_Tag::UNIVERSAL, ASN1_Tag::INTEGER);
-    state = encoded2[0] == 0x02 ? 1 : 0;
+}
+
+TEST(test, encode_tag_Integer)
+{
+    std::vector<uint8_t> encoded;
+    bool state;
+    encodeTag(encoded, ASN1_Tag::UNIVERSAL, ASN1_Tag::INTEGER);
+    state = encoded[0] == 0x02 ? 1 : 0;
     ASSERT_TRUE(state);
-    encodeTag(encoded3, ASN1_Tag::UNIVERSAL, ASN1_Tag::NULL_TAG);
-    state = encoded3[0] == 0x05 ? 1 : 0;
+}
+
+TEST(test, encode_tag)
+{
+    std::vector<uint8_t> encoded;
+    encodeTag(encoded, ASN1_Tag::UNIVERSAL, ASN1_Tag::NULL_TAG);
+    bool state = encoded[0] == 0x05 ? 1 : 0;
     ASSERT_TRUE(state);
 }
 
@@ -60,7 +77,7 @@ TEST(test, isprobablyCorrectPassword)
     ASSERT_TRUE(isprobablyCorrectPassword(10222, 10223));
     ASSERT_TRUE(isprobablyCorrectPassword(4, 5));
     ASSERT_TRUE(isprobablyCorrectPassword(7, 5) == false);
-    ASSERT_TRUE(isprobablyCorrectPassword(12,0) == false);
+    ASSERT_TRUE(isprobablyCorrectPassword(12, 0) == false);
     ASSERT_TRUE(isprobablyCorrectPassword(20, 15) == false);
     ASSERT_TRUE(isprobablyCorrectPassword(2019, 20212321) == false);
 }
@@ -74,7 +91,7 @@ TEST(test, isCorrectBasicPassport)
     ASSERT_TRUE(isCorrectBasicPassport(test3) == false);
     ASSERT_TRUE(isCorrectBasicPassport(test5) == false);
     ASSERT_TRUE(isCorrectBasicPassport(test6) == false);
-    ASSERT_TRUE(isCorrectBasicPassport(test7) == false);   
+    ASSERT_TRUE(isCorrectBasicPassport(test7) == false);
 }
 
 TEST(test, findHashFirst)
@@ -114,7 +131,7 @@ TEST(test, everyNumberHash)
     ASSERT_TRUE(everyNumberHash(test2, 12, 1) == false);
     ASSERT_TRUE(everyNumberHash(test3, 2, 1) == false);
     ASSERT_TRUE(everyNumberHash(test5, 4, 2) == false);
-    ASSERT_TRUE(everyNumberHash(test6, 1 ,3 ) == false);
+    ASSERT_TRUE(everyNumberHash(test6, 1, 3) == false);
     ASSERT_TRUE(everyNumberHash(test7, 1, 1) == false);
 }
 
@@ -188,7 +205,7 @@ TEST(test, task3ForInput3)
     file.close();
 
     openFile(file, filename);
-    ASSERT_TRUE( task3Prim(file, resultTask3)  == 3819182400);
+    ASSERT_TRUE(task3Prim(file, resultTask3) == 3819182400);
     file.close();
 }
 
@@ -202,7 +219,7 @@ TEST(test, task4ForInput4)
     file.close();
 
     openFile(file, filename);
-    ASSERT_TRUE( task4Prim(file)  == 131);
+    ASSERT_TRUE(task4Prim(file) == 172);
     file.close();
 }
 

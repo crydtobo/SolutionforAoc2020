@@ -11,8 +11,7 @@
 #include "../include/instruction.h"
 #include "../include/asn1.h"
 #include "../include/solution.h"
-#include "../include/passport.h"
-#include "../include/StrategyPattern/concretStrategy.h"
+#include "../include/StrategyTaskSupport/concretStrategy.h"
 
 void openFile(std::fstream &file, const std::string &fileName)
 {
@@ -69,14 +68,55 @@ int task4(std::fstream &file)
 	return solutionTask4(file);
 }
 
+// int task4Prim(std::fstream &file)
+// {
+// 	int count_correct = 0;
+// 	std::vector<Passport> p = parseInputFromFile(file);
+
+// 	for (auto i : p)
+// 	{
+// 		if (i.isValid() == 1)
+// 		{
+// 			count_correct++;
+// 		}
+// 	}
+// 	return count_correct;
+// }
+
+#include "../include/Passport/passportFeatureStrategy.h"
+#include "../include/Passport/passportFactory.h"
+ 
+
+std::vector<std::string> parseForNewPassport(std::fstream &file)
+{
+	std::string line, passport = "";
+	std::vector<std::string> passportData;
+	while (getline(file, line))
+	{
+		if (!line.empty())
+		{
+			passport += line + " ";
+		}
+		else
+		{
+			passportData.emplace_back(std::move(passport));
+			passport = "";
+		}
+	}
+	passportData.emplace_back(std::move(passport));
+	return passportData;
+}
+
 int task4Prim(std::fstream &file)
 {
 	int count_correct = 0;
-	std::vector<Passport> p = parseInputFromFile(file);
+	std::vector<std::string> p = parseForNewPassport(file);
+	PassportFactory factoryPassport {};
 
 	for (auto i : p)
 	{
-		if (i.isValid() == 1)
+		auto passport = factoryPassport.createPassport(i);
+		if (passport->isValid())
 		{
 			count_correct++;
 		}
