@@ -37,11 +37,22 @@ CMakeFiles/main.dir/src/StrategyTaskSupport/doExactStrategy.cpp.o
  /home/dawid/Projects/C_C++/Aoc_2020/include/StrategyTaskSupport/context.h
  /home/dawid/Projects/C_C++/Aoc_2020/include/StrategyTaskSupport/doExactStrategy.h
  /home/dawid/Projects/C_C++/Aoc_2020/include/StrategyTaskSupport/strategy.h
+ /home/dawid/Projects/C_C++/Aoc_2020/include/StrategyTaskSupport/taskFactory.h
+ /home/dawid/Projects/C_C++/Aoc_2020/include/StrategyTaskSupport/taskStrategyFactory.h
  /home/dawid/Projects/C_C++/Aoc_2020/include/asn1.h
  /home/dawid/Projects/C_C++/Aoc_2020/include/bags.h
  /home/dawid/Projects/C_C++/Aoc_2020/include/tasks.h
  /home/dawid/Projects/C_C++/Aoc_2020/include/tasks1.h
  /home/dawid/Projects/C_C++/Aoc_2020/src/StrategyTaskSupport/doExactStrategy.cpp
+CMakeFiles/main.dir/src/StrategyTaskSupport/taskStrategyFactory.cpp.o
+ /home/dawid/Projects/C_C++/Aoc_2020/include/StrategyTaskSupport/concretStrategy.h
+ /home/dawid/Projects/C_C++/Aoc_2020/include/StrategyTaskSupport/strategy.h
+ /home/dawid/Projects/C_C++/Aoc_2020/include/StrategyTaskSupport/taskStrategyFactory.h
+ /home/dawid/Projects/C_C++/Aoc_2020/include/asn1.h
+ /home/dawid/Projects/C_C++/Aoc_2020/include/bags.h
+ /home/dawid/Projects/C_C++/Aoc_2020/include/tasks.h
+ /home/dawid/Projects/C_C++/Aoc_2020/include/tasks1.h
+ /home/dawid/Projects/C_C++/Aoc_2020/src/StrategyTaskSupport/taskStrategyFactory.cpp
 CMakeFiles/main.dir/src/boarding_Pass.cpp.o
  /home/dawid/Projects/C_C++/Aoc_2020/include/boarding_Pass.h
  /home/dawid/Projects/C_C++/Aoc_2020/src/boarding_Pass.cpp

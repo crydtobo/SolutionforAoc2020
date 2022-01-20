@@ -285,6 +285,33 @@ src/StrategyTaskSupport/doExactStrategy.cpp.s:
 	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/StrategyTaskSupport/doExactStrategy.cpp.s
 .PHONY : src/StrategyTaskSupport/doExactStrategy.cpp.s
 
+src/StrategyTaskSupport/taskStrategyFactory.o: src/StrategyTaskSupport/taskStrategyFactory.cpp.o
+
+.PHONY : src/StrategyTaskSupport/taskStrategyFactory.o
+
+# target to build an object file
+src/StrategyTaskSupport/taskStrategyFactory.cpp.o:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/StrategyTaskSupport/taskStrategyFactory.cpp.o
+.PHONY : src/StrategyTaskSupport/taskStrategyFactory.cpp.o
+
+src/StrategyTaskSupport/taskStrategyFactory.i: src/StrategyTaskSupport/taskStrategyFactory.cpp.i
+
+.PHONY : src/StrategyTaskSupport/taskStrategyFactory.i
+
+# target to preprocess a source file
+src/StrategyTaskSupport/taskStrategyFactory.cpp.i:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/StrategyTaskSupport/taskStrategyFactory.cpp.i
+.PHONY : src/StrategyTaskSupport/taskStrategyFactory.cpp.i
+
+src/StrategyTaskSupport/taskStrategyFactory.s: src/StrategyTaskSupport/taskStrategyFactory.cpp.s
+
+.PHONY : src/StrategyTaskSupport/taskStrategyFactory.s
+
+# target to generate assembly for a file
+src/StrategyTaskSupport/taskStrategyFactory.cpp.s:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/StrategyTaskSupport/taskStrategyFactory.cpp.s
+.PHONY : src/StrategyTaskSupport/taskStrategyFactory.cpp.s
+
 src/boarding_Pass.o: src/boarding_Pass.cpp.o
 
 .PHONY : src/boarding_Pass.o
@@ -501,6 +528,9 @@ help:
 	@echo "... src/StrategyTaskSupport/doExactStrategy.o"
 	@echo "... src/StrategyTaskSupport/doExactStrategy.i"
 	@echo "... src/StrategyTaskSupport/doExactStrategy.s"
+	@echo "... src/StrategyTaskSupport/taskStrategyFactory.o"
+	@echo "... src/StrategyTaskSupport/taskStrategyFactory.i"
+	@echo "... src/StrategyTaskSupport/taskStrategyFactory.s"
 	@echo "... src/boarding_Pass.o"
 	@echo "... src/boarding_Pass.i"
 	@echo "... src/boarding_Pass.s"

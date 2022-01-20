@@ -1,164 +1,212 @@
+#pragma once
+
 #include "strategy.h"
 #include "../tasks.h"
 
-#define INPUT1 "input1.txt"
-#define INPUT2 "input2.txt"
-#define INPUT3 "input3.txt"
-#define INPUT4 "input4.txt"
-#define INPUT5 "input5.txt"
-#define INPUT6 "input6.txt"
-#define INPUT7 "input7.txt"
-#define INPUT8 "input8.txt"
-
+namespace
+{
+    const std::string INPUT1 = "input1.txt";
+    const std::string INPUT2 = "input2.txt";
+    const std::string INPUT3 = "input3.txt";
+    const std::string INPUT4 = "input4.txt";
+    const std::string INPUT5 = "input5.txt";
+    const std::string INPUT6 = "input6.txt";
+    const std::string INPUT7 = "input7.txt";
+    const std::string INPUT8 = "input8.txt";
+}
 class Task1 : public Strategy
 {
 public:
-    std::string doThing(const std::string &file_name) const override
+    Task1(const std::string &fileName) : nameOfFile(fileName)
     {
-        std::cout << "Task1 - > Report Repair" << std::endl;
+    }
+    
+    std::string doThing(const std::string &fileName) const override
+    {
         std::fstream file;
-        openFile(file, INPUT1);
+        openFile(file, nameOfFile);
         int res1 = task1(file);
         file.close();
-        openFile(file, INPUT1);
+        openFile(file, nameOfFile);
         int res2 = task1Prim(file);
         file.close();
-        std::cout << "File is closed correctly " << std::endl;
-        std::string result = std::string("Part1: ") + std::to_string(res1) + std::string("\n") +
-                             std::string("Part2: ") + std::to_string(res2);
+        std::string result = logFromTask("Task1 - > Report Repair", res1, res2);
         return result;
     }
+
+private:
+    std::string nameOfFile;
 };
 
 class Task2 : public Strategy
 {
 public:
+    Task2(const std::string &fileName) : nameOfFile(fileName)
+    {
+    }
+
     std::string doThing(const std::string &file_name) const override
     {
-        std::cout << "Task2 - > Password Philosophy" << std::endl;
         std::fstream File2;
-        openFile(File2, INPUT2);
+        openFile(File2, nameOfFile);
         int res1 = task2(File2);
         File2.close();
-        openFile(File2, INPUT2);
+        openFile(File2, nameOfFile);
         int res2 = task2Prim(File2);
         File2.close();
-        std::cout << "File is closed correctly " << std::endl;
-        std::string result = std::string("Part1: ") + std::to_string(res1) + std::string("\n") +
-                             std::string("Part2: ") + std::to_string(res2);
+        std::string result = logFromTask("Task2 - > Password Philosophy", res1, res2);
         return result;
     }
+
+private:
+    std::string nameOfFile;
 };
 
 class Task3 : public Strategy
 {
 public:
+    Task3(const std::string &fileName) : nameOfFile(fileName)
+    {
+    }
+
     std::string doThing(const std::string &file_name) const override
     {
-        std::cout << "Task3 - > Toboggan Trajectory" << std::endl;
         std::fstream file;
-        openFile(file, INPUT3);
+        openFile(file, nameOfFile);
         int res1 = task3(file);
         file.close();
-        openFile(file, INPUT3);
+        openFile(file, nameOfFile);
         int res2 = task3Prim(file, res1);
         file.close();
-        std::cout << "File is closed correctly " << std::endl;
-        std::string result = std::string("Part1: ") + std::to_string(res1) + std::string("\n") +
-                             std::string("Part2: ") + std::to_string(res2);
+        std::string result = logFromTask("Task3 - > Toboggan Trajectory", res1, res2);
         return result;
     }
+
+private:
+    std::string nameOfFile;
 };
 
 class Task4 : public Strategy
 {
 public:
+    Task4(const std::string &fileName) : nameOfFile(fileName)
+    {
+    }
+
     std::string doThing(const std::string &file_name) const override
     {
-        std::cout << "Task4 -> Passport Processing" << std::endl;
         std::fstream file;
-        openFile(file, INPUT4);
+        openFile(file, nameOfFile);
         int res1 = task4(file);
         file.close();
-        openFile(file, INPUT4);
+        openFile(file, nameOfFile);
         int res2 = task4Prim(file);
         file.close();
-        std::cout << "File is closed correctly " << std::endl;
-        std::string result = std::string("Part1: Number of valid passport: ") + std::to_string(res1) + std::string("\n") +
-                             std::string("Part2: Number of valid passport: ") + std::to_string(res2);
+        std::string result = logFromTask("Task4 -> Passport Processing", res1, res2);
         return result;
     }
+
+private:
+    std::string nameOfFile;
 };
 
 class Task5 : public Strategy
 {
 public:
+    Task5(const std::string &fileName) : nameOfFile(fileName)
+    {
+    }
+
     std::string doThing(const std::string &file_name) const override
     {
-        std::cout << "Task5 -> Binary Boarding" << std::endl;
         std::fstream file;
-        openFile(file, INPUT5);
+        openFile(file, nameOfFile);
         int res1 = task5(file);
         file.close();
-        std::cout << "File is closed correctly " << std::endl;
-        std::string result = std::string("Max seat ID: ") + std::to_string(res1) + std::string("\n");
+        std::string result = logFromTask("Task5 -> Binary Boarding", res1);
         return result;
     }
+
+private:
+    std::string nameOfFile;
 };
 
 class Task6 : public Strategy
 {
 public:
+    Task6(const std::string &fileName) : nameOfFile(fileName)
+    {
+    }
+
     std::string doThing(const std::string &file_name) const override
     {
-        std::cout << "Task6 -> Custom Customs" << std::endl;
         std::fstream file;
-        openFile(file, INPUT6);
+        openFile(file, nameOfFile);
         int res1 = task6(file);
         file.close();
-        std::cout << "File is closed correctly " << std::endl;
-        std::string result = std::string("Result: ") + std::to_string(res1) + std::string("\n");
+        std::string result = logFromTask("Task6 -> Custom Customs", res1);
         return result;
     }
+
+private:
+    std::string nameOfFile;
 };
 
 class Task7 : public Strategy
 {
 public:
+    Task7(const std::string &fileName) : nameOfFile(fileName)
+    {
+    }
+
     std::string doThing(const std::string &file_name) const override
     {
         std::cout << "Task7 -> Handy Haversacks" << std::endl;
         std::fstream file;
-        openFile(file, INPUT7);
-        //int res1 = task7(file);
+        openFile(file, nameOfFile);
+        // int res1 = task7(file);
         std::string res = "It doesnt work now, I am planning do it in the near future ;)";
         file.close();
         std::cout << "File is closed correctly " << std::endl;
         std::string result = std::string("Result: ") + std::string("\n") + std::string(res) + std::string("\n");
         return result;
     }
+
+private:
+    std::string nameOfFile;
 };
 
-class Task8: public Strategy
+class Task8 : public Strategy
 {
 public:
+    Task8(const std::string &fileName) : nameOfFile(fileName)
+    {
+    }
+
     std::string doThing(const std::string &file_name) const override
     {
         std::cout << "Task8 -> Handheld Halting" << std::endl;
         std::fstream file;
-        openFile(file, INPUT7);
-        //int res1 = task8(file);
+        openFile(file, nameOfFile);
+        // int res1 = task8(file);
         std::string res = "It doesnt work now, I am planning do it in the near future ;)";
         file.close();
         std::cout << "File is closed correctly " << std::endl;
         std::string result = std::string("Result: ") + std::string("\n") + std::string(res) + std::string("\n");
         return result;
     }
+
+private:
+    std::string nameOfFile;
 };
 
-class Task9: public Strategy
+class Task9 : public Strategy
 {
 public:
+    Task9(const std::string &fileName) : nameOfFile(fileName)
+    {
+    }
+
     std::string doThing(const std::string &file_name) const override
     {
         std::cout << "Podziel hex stringa na 2 bajtowe chunks " << std::endl;
@@ -168,4 +216,7 @@ public:
         std::string result = std::string("For string: ") + std::string("\n") + std::string(text) + std::string("\n") + std::string("Answer: above\n");
         return result;
     }
+
+private:
+    std::string nameOfFile;
 };

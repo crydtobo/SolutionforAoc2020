@@ -36,11 +36,22 @@ CMakeFiles/main.dir/src/StrategyTaskSupport/doExactStrategy.cpp.o: include/Strat
 CMakeFiles/main.dir/src/StrategyTaskSupport/doExactStrategy.cpp.o: include/StrategyTaskSupport/context.h
 CMakeFiles/main.dir/src/StrategyTaskSupport/doExactStrategy.cpp.o: include/StrategyTaskSupport/doExactStrategy.h
 CMakeFiles/main.dir/src/StrategyTaskSupport/doExactStrategy.cpp.o: include/StrategyTaskSupport/strategy.h
+CMakeFiles/main.dir/src/StrategyTaskSupport/doExactStrategy.cpp.o: include/StrategyTaskSupport/taskFactory.h
+CMakeFiles/main.dir/src/StrategyTaskSupport/doExactStrategy.cpp.o: include/StrategyTaskSupport/taskStrategyFactory.h
 CMakeFiles/main.dir/src/StrategyTaskSupport/doExactStrategy.cpp.o: include/asn1.h
 CMakeFiles/main.dir/src/StrategyTaskSupport/doExactStrategy.cpp.o: include/bags.h
 CMakeFiles/main.dir/src/StrategyTaskSupport/doExactStrategy.cpp.o: include/tasks.h
 CMakeFiles/main.dir/src/StrategyTaskSupport/doExactStrategy.cpp.o: include/tasks1.h
 CMakeFiles/main.dir/src/StrategyTaskSupport/doExactStrategy.cpp.o: src/StrategyTaskSupport/doExactStrategy.cpp
+
+CMakeFiles/main.dir/src/StrategyTaskSupport/taskStrategyFactory.cpp.o: include/StrategyTaskSupport/concretStrategy.h
+CMakeFiles/main.dir/src/StrategyTaskSupport/taskStrategyFactory.cpp.o: include/StrategyTaskSupport/strategy.h
+CMakeFiles/main.dir/src/StrategyTaskSupport/taskStrategyFactory.cpp.o: include/StrategyTaskSupport/taskStrategyFactory.h
+CMakeFiles/main.dir/src/StrategyTaskSupport/taskStrategyFactory.cpp.o: include/asn1.h
+CMakeFiles/main.dir/src/StrategyTaskSupport/taskStrategyFactory.cpp.o: include/bags.h
+CMakeFiles/main.dir/src/StrategyTaskSupport/taskStrategyFactory.cpp.o: include/tasks.h
+CMakeFiles/main.dir/src/StrategyTaskSupport/taskStrategyFactory.cpp.o: include/tasks1.h
+CMakeFiles/main.dir/src/StrategyTaskSupport/taskStrategyFactory.cpp.o: src/StrategyTaskSupport/taskStrategyFactory.cpp
 
 CMakeFiles/main.dir/src/boarding_Pass.cpp.o: include/boarding_Pass.h
 CMakeFiles/main.dir/src/boarding_Pass.cpp.o: src/boarding_Pass.cpp

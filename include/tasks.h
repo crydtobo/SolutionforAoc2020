@@ -26,6 +26,7 @@
 #define DEFAULT_OPTION 1
 
 void openFile(std::fstream &file, const std::string &fileName);
+std::string logFromTask(const std::string &message, const int &result1, const int result2 = 0);
 
 unsigned int task3Prim(std::fstream &file, const int &first_mul);
 

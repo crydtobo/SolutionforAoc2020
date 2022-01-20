@@ -5,6 +5,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/main.dir/src/Passport/passportFeatureStrategy.cpp.o"
   "CMakeFiles/main.dir/src/Passport/passportSupport.cpp.o"
   "CMakeFiles/main.dir/src/StrategyTaskSupport/doExactStrategy.cpp.o"
+  "CMakeFiles/main.dir/src/StrategyTaskSupport/taskStrategyFactory.cpp.o"
   "CMakeFiles/main.dir/src/boarding_Pass.cpp.o"
   "CMakeFiles/main.dir/src/declaration.cpp.o"
   "CMakeFiles/main.dir/src/instructions.cpp.o"

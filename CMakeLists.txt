@@ -23,6 +23,7 @@ SET(SRC
         src/Passport/passportSupport.cpp
         src/solution.cpp
         src/StrategyTaskSupport/doExactStrategy.cpp
+        src/StrategyTaskSupport/taskStrategyFactory.cpp
         tests/tests.cpp
     )
 

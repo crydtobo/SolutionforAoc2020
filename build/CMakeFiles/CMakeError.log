@@ -1,21 +1,21 @@
 Performing C SOURCE FILE Test CMAKE_HAVE_LIBC_PTHREAD failed with the following output:
 Change Dir: /home/dawid/Projects/C_C++/Aoc_2020/build/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/usr/bin/make cmTC_375e9/fast && /usr/bin/make -f CMakeFiles/cmTC_375e9.dir/build.make CMakeFiles/cmTC_375e9.dir/build
+Run Build Command(s):/usr/bin/make cmTC_e5da2/fast && /usr/bin/make -f CMakeFiles/cmTC_e5da2.dir/build.make CMakeFiles/cmTC_e5da2.dir/build
 make[1]: Entering directory '/home/dawid/Projects/C_C++/Aoc_2020/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_375e9.dir/src.c.o
-/bin/x86_64-linux-gnu-gcc-9   -DCMAKE_HAVE_LIBC_PTHREAD   -o CMakeFiles/cmTC_375e9.dir/src.c.o   -c /home/dawid/Projects/C_C++/Aoc_2020/build/CMakeFiles/CMakeTmp/src.c
-Linking C executable cmTC_375e9
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_375e9.dir/link.txt --verbose=1
-/bin/x86_64-linux-gnu-gcc-9  -DCMAKE_HAVE_LIBC_PTHREAD    CMakeFiles/cmTC_375e9.dir/src.c.o  -o cmTC_375e9 
-/usr/bin/ld: CMakeFiles/cmTC_375e9.dir/src.c.o: in function `main':
+Building C object CMakeFiles/cmTC_e5da2.dir/src.c.o
+/bin/x86_64-linux-gnu-gcc-9   -DCMAKE_HAVE_LIBC_PTHREAD   -o CMakeFiles/cmTC_e5da2.dir/src.c.o   -c /home/dawid/Projects/C_C++/Aoc_2020/build/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_e5da2
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_e5da2.dir/link.txt --verbose=1
+/bin/x86_64-linux-gnu-gcc-9  -DCMAKE_HAVE_LIBC_PTHREAD    CMakeFiles/cmTC_e5da2.dir/src.c.o  -o cmTC_e5da2 
+/usr/bin/ld: CMakeFiles/cmTC_e5da2.dir/src.c.o: in function `main':
 src.c:(.text+0x46): undefined reference to `pthread_create'
 /usr/bin/ld: src.c:(.text+0x52): undefined reference to `pthread_detach'
 /usr/bin/ld: src.c:(.text+0x63): undefined reference to `pthread_join'
 collect2: error: ld returned 1 exit status
-make[1]: *** [CMakeFiles/cmTC_375e9.dir/build.make:87: cmTC_375e9] Error 1
+make[1]: *** [CMakeFiles/cmTC_e5da2.dir/build.make:87: cmTC_e5da2] Error 1
 make[1]: Leaving directory '/home/dawid/Projects/C_C++/Aoc_2020/build/CMakeFiles/CMakeTmp'
-make: *** [Makefile:121: cmTC_375e9/fast] Error 2
+make: *** [Makefile:121: cmTC_e5da2/fast] Error 2
 
 
 Source file was:
@@ -41,18 +41,18 @@ int main(void)
 Determining if the function pthread_create exists in the pthreads failed with the following output:
 Change Dir: /home/dawid/Projects/C_C++/Aoc_2020/build/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/usr/bin/make cmTC_a524a/fast && /usr/bin/make -f CMakeFiles/cmTC_a524a.dir/build.make CMakeFiles/cmTC_a524a.dir/build
+Run Build Command(s):/usr/bin/make cmTC_0cde1/fast && /usr/bin/make -f CMakeFiles/cmTC_0cde1.dir/build.make CMakeFiles/cmTC_0cde1.dir/build
 make[1]: Entering directory '/home/dawid/Projects/C_C++/Aoc_2020/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_a524a.dir/CheckFunctionExists.c.o
-/bin/x86_64-linux-gnu-gcc-9   -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_a524a.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.16/Modules/CheckFunctionExists.c
-Linking C executable cmTC_a524a
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_a524a.dir/link.txt --verbose=1
-/bin/x86_64-linux-gnu-gcc-9  -DCHECK_FUNCTION_EXISTS=pthread_create    CMakeFiles/cmTC_a524a.dir/CheckFunctionExists.c.o  -o cmTC_a524a  -lpthreads 
+Building C object CMakeFiles/cmTC_0cde1.dir/CheckFunctionExists.c.o
+/bin/x86_64-linux-gnu-gcc-9   -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_0cde1.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.16/Modules/CheckFunctionExists.c
+Linking C executable cmTC_0cde1
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_0cde1.dir/link.txt --verbose=1
+/bin/x86_64-linux-gnu-gcc-9  -DCHECK_FUNCTION_EXISTS=pthread_create    CMakeFiles/cmTC_0cde1.dir/CheckFunctionExists.c.o  -o cmTC_0cde1  -lpthreads 
 /usr/bin/ld: cannot find -lpthreads
 collect2: error: ld returned 1 exit status
-make[1]: *** [CMakeFiles/cmTC_a524a.dir/build.make:87: cmTC_a524a] Error 1
+make[1]: *** [CMakeFiles/cmTC_0cde1.dir/build.make:87: cmTC_0cde1] Error 1
 make[1]: Leaving directory '/home/dawid/Projects/C_C++/Aoc_2020/build/CMakeFiles/CMakeTmp'
-make: *** [Makefile:121: cmTC_a524a/fast] Error 2
+make: *** [Makefile:121: cmTC_0cde1/fast] Error 2
 
 
 

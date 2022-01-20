@@ -61,6 +61,11 @@
 },
 {
   "directory": "/home/dawid/Projects/C_C++/Aoc_2020/build",
+  "command": "/bin/c++     -O0 -g -g   -std=gnu++17 -o CMakeFiles/main.dir/src/StrategyTaskSupport/taskStrategyFactory.cpp.o -c /home/dawid/Projects/C_C++/Aoc_2020/src/StrategyTaskSupport/taskStrategyFactory.cpp",
+  "file": "/home/dawid/Projects/C_C++/Aoc_2020/src/StrategyTaskSupport/taskStrategyFactory.cpp"
+},
+{
+  "directory": "/home/dawid/Projects/C_C++/Aoc_2020/build",
   "command": "/bin/c++     -O0 -g -g   -std=gnu++17 -o CMakeFiles/main.dir/tests/tests.cpp.o -c /home/dawid/Projects/C_C++/Aoc_2020/tests/tests.cpp",
   "file": "/home/dawid/Projects/C_C++/Aoc_2020/tests/tests.cpp"
 }

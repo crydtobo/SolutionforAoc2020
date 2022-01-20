@@ -10,6 +10,7 @@ set(CMAKE_DEPENDS_CHECK_CXX
   "/home/dawid/Projects/C_C++/Aoc_2020/src/Passport/passportFeatureStrategy.cpp" "/home/dawid/Projects/C_C++/Aoc_2020/CMakeFiles/main.dir/src/Passport/passportFeatureStrategy.cpp.o"
   "/home/dawid/Projects/C_C++/Aoc_2020/src/Passport/passportSupport.cpp" "/home/dawid/Projects/C_C++/Aoc_2020/CMakeFiles/main.dir/src/Passport/passportSupport.cpp.o"
   "/home/dawid/Projects/C_C++/Aoc_2020/src/StrategyTaskSupport/doExactStrategy.cpp" "/home/dawid/Projects/C_C++/Aoc_2020/CMakeFiles/main.dir/src/StrategyTaskSupport/doExactStrategy.cpp.o"
+  "/home/dawid/Projects/C_C++/Aoc_2020/src/StrategyTaskSupport/taskStrategyFactory.cpp" "/home/dawid/Projects/C_C++/Aoc_2020/CMakeFiles/main.dir/src/StrategyTaskSupport/taskStrategyFactory.cpp.o"
   "/home/dawid/Projects/C_C++/Aoc_2020/src/boarding_Pass.cpp" "/home/dawid/Projects/C_C++/Aoc_2020/CMakeFiles/main.dir/src/boarding_Pass.cpp.o"
   "/home/dawid/Projects/C_C++/Aoc_2020/src/declaration.cpp" "/home/dawid/Projects/C_C++/Aoc_2020/CMakeFiles/main.dir/src/declaration.cpp.o"
   "/home/dawid/Projects/C_C++/Aoc_2020/src/instructions.cpp" "/home/dawid/Projects/C_C++/Aoc_2020/CMakeFiles/main.dir/src/instructions.cpp.o"

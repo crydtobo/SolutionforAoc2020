@@ -13,6 +13,14 @@
 #include "../include/solution.h"
 #include "../include/StrategyTaskSupport/concretStrategy.h"
 
+std::string logFromTask(const std::string &message, const int &result1, const int result2 )
+{
+    std::cout << message << std::endl;
+    std::string result = std::string("Part1: ") + std::to_string(result1) + std::string("\n") +
+                         std::string("Part2: ") + std::to_string(result2);
+    return result;
+}
+
 void openFile(std::fstream &file, const std::string &fileName)
 {
 	file.open(std::string(config) + std::string(fileName), std::ios::in);
@@ -83,7 +91,6 @@ int task4(std::fstream &file)
 // 	return count_correct;
 // }
 
-#include "../include/Passport/passportFeatureStrategy.h"
 #include "../include/Passport/passportFactory.h"
  
 
@@ -240,18 +247,13 @@ void encodeTag(std::vector<uint8_t> &encodedTag, ASN1_Tag classTagA, ASN1_Tag ty
 	{
 		std::cout << "DER encoding error, should be 0x00 (tag:universal) but is" + std::to_string(classTag) << std::endl;
 	}
-
-	//tags all happen to be under  31 (0x1F)
+	
 	if (typeTag <= 30)
 	{
 		encodedTag.push_back(static_cast<uint8_t>(typeTag | classTag));
 	}
 	else
 	{
-		/* for above 31 -> rather rare
-		 * for cases when any universal tag numbers higher than 31
-		 * then those need to use the high tag number form, which takes extra bytes
-		 */
 		size_t blocks = high_bit(static_cast<uint32_t>(typeTag)) + 6;
 		blocks = (blocks - (blocks % 7)) / 7;
 		assert(blocks > 0);
