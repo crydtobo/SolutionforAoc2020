@@ -12,16 +12,6 @@ strategy.h
 ../tasks.h
 /home/dawid/Projects/C_C++/Aoc_2020/include/tasks.h
 
-/home/dawid/Projects/C_C++/Aoc_2020/include/StrategyTaskSupport/context.h
-strategy.h
-/home/dawid/Projects/C_C++/Aoc_2020/include/StrategyTaskSupport/strategy.h
-memory
--
-
-/home/dawid/Projects/C_C++/Aoc_2020/include/StrategyTaskSupport/doExactStrategy.h
-concretStrategy.h
-/home/dawid/Projects/C_C++/Aoc_2020/include/StrategyTaskSupport/concretStrategy.h
-
 /home/dawid/Projects/C_C++/Aoc_2020/include/StrategyTaskSupport/strategy.h
 iostream
 -
@@ -29,26 +19,6 @@ fstream
 -
 string
 -
-
-/home/dawid/Projects/C_C++/Aoc_2020/include/TaskFactory/task.h
-string
--
-memory
--
-vector
--
-taskFeatureFactory.h
-/home/dawid/Projects/C_C++/Aoc_2020/include/TaskFactory/taskFeatureFactory.h
-../StrategyTaskSupport/strategy.h
-/home/dawid/Projects/C_C++/Aoc_2020/include/StrategyTaskSupport/strategy.h
-
-/home/dawid/Projects/C_C++/Aoc_2020/include/TaskFactory/taskFactory.h
-memory
--
-string
--
-task.h
-/home/dawid/Projects/C_C++/Aoc_2020/include/TaskFactory/task.h
 
 /home/dawid/Projects/C_C++/Aoc_2020/include/TaskFactory/taskFeatureFactory.h
 ../StrategyTaskSupport/concretStrategy.h
@@ -104,11 +74,7 @@ iostream
 fstream
 -
 
-/home/dawid/Projects/C_C++/Aoc_2020/src/StrategyTaskSupport/doExactStrategy.cpp
-../../include/StrategyTaskSupport/doExactStrategy.h
-/home/dawid/Projects/C_C++/Aoc_2020/include/StrategyTaskSupport/doExactStrategy.h
-../../include/StrategyTaskSupport/context.h
-/home/dawid/Projects/C_C++/Aoc_2020/include/StrategyTaskSupport/context.h
-../../include/TaskFactory/taskFactory.h
-/home/dawid/Projects/C_C++/Aoc_2020/include/TaskFactory/taskFactory.h
+/home/dawid/Projects/C_C++/Aoc_2020/src/TaskFactory/taskFeatureFactory.cpp
+../../include/TaskFactory/taskFeatureFactory.h
+/home/dawid/Projects/C_C++/Aoc_2020/include/TaskFactory/taskFeatureFactory.h
 

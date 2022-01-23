@@ -3,6 +3,7 @@
 #include <string>
 #include <memory>
 #include <vector>
+#include <fstream>
 
 #include "passportFeatureFactory.h"
 #include "passportFeatureStrategy.h"
@@ -21,3 +22,5 @@ private:
     void getFeatures(const std::string &nameOfFeature);
     void parseKeyValue(const std::string &key);
 };
+
+std::vector<std::string> parseForNewPassport(std::fstream &file);

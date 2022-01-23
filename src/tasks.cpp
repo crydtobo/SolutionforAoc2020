@@ -11,9 +11,10 @@
 #include "../include/instruction.h"
 #include "../include/asn1.h"
 #include "../include/solution.h"
+#include "../include/Passport/passportFactory.h"
 #include "../include/StrategyTaskSupport/concretStrategy.h"
 
-std::string logFromTask(const std::string &message, const int &result1, const int result2 )
+std::string logFromTask(const std::string &message, const int &result1, const int result2)
 {
     std::cout << message << std::endl;
     std::string result = std::string("Part1: ") + std::to_string(result1) + std::string("\n") +
@@ -74,44 +75,6 @@ int task3PrimResult(std::fstream &File3, const int &option)
 int task4(std::fstream &file)
 {
 	return solutionTask4(file);
-}
-
-// int task4Prim(std::fstream &file)
-// {
-// 	int count_correct = 0;
-// 	std::vector<Passport> p = parseInputFromFile(file);
-
-// 	for (auto i : p)
-// 	{
-// 		if (i.isValid() == 1)
-// 		{
-// 			count_correct++;
-// 		}
-// 	}
-// 	return count_correct;
-// }
-
-#include "../include/Passport/passportFactory.h"
- 
-
-std::vector<std::string> parseForNewPassport(std::fstream &file)
-{
-	std::string line, passport = "";
-	std::vector<std::string> passportData;
-	while (getline(file, line))
-	{
-		if (!line.empty())
-		{
-			passport += line + " ";
-		}
-		else
-		{
-			passportData.emplace_back(std::move(passport));
-			passport = "";
-		}
-	}
-	passportData.emplace_back(std::move(passport));
-	return passportData;
 }
 
 int task4Prim(std::fstream &file)

@@ -40,3 +40,23 @@ void Passport::parseKeyValue(const std::string &keyFromInput)
     auto strategy = featureFactory->getFeature(key, value);
     features.push_back(std::move(strategy));
 }
+
+std::vector<std::string> parseForNewPassport(std::fstream &file)
+{
+	std::string line, passport = "";
+	std::vector<std::string> passportData;
+	while (getline(file, line))
+	{
+		if (!line.empty())
+		{
+			passport += line + " ";
+		}
+		else
+		{
+			passportData.emplace_back(std::move(passport));
+			passport = "";
+		}
+	}
+	passportData.emplace_back(std::move(passport));
+	return passportData;
+}
