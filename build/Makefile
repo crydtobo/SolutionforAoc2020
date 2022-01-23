@@ -285,32 +285,86 @@ src/StrategyTaskSupport/doExactStrategy.cpp.s:
 	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/StrategyTaskSupport/doExactStrategy.cpp.s
 .PHONY : src/StrategyTaskSupport/doExactStrategy.cpp.s
 
-src/StrategyTaskSupport/taskStrategyFactory.o: src/StrategyTaskSupport/taskStrategyFactory.cpp.o
+src/TaskFactory/task.o: src/TaskFactory/task.cpp.o
 
-.PHONY : src/StrategyTaskSupport/taskStrategyFactory.o
+.PHONY : src/TaskFactory/task.o
 
 # target to build an object file
-src/StrategyTaskSupport/taskStrategyFactory.cpp.o:
-	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/StrategyTaskSupport/taskStrategyFactory.cpp.o
-.PHONY : src/StrategyTaskSupport/taskStrategyFactory.cpp.o
+src/TaskFactory/task.cpp.o:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/TaskFactory/task.cpp.o
+.PHONY : src/TaskFactory/task.cpp.o
 
-src/StrategyTaskSupport/taskStrategyFactory.i: src/StrategyTaskSupport/taskStrategyFactory.cpp.i
+src/TaskFactory/task.i: src/TaskFactory/task.cpp.i
 
-.PHONY : src/StrategyTaskSupport/taskStrategyFactory.i
+.PHONY : src/TaskFactory/task.i
 
 # target to preprocess a source file
-src/StrategyTaskSupport/taskStrategyFactory.cpp.i:
-	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/StrategyTaskSupport/taskStrategyFactory.cpp.i
-.PHONY : src/StrategyTaskSupport/taskStrategyFactory.cpp.i
+src/TaskFactory/task.cpp.i:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/TaskFactory/task.cpp.i
+.PHONY : src/TaskFactory/task.cpp.i
 
-src/StrategyTaskSupport/taskStrategyFactory.s: src/StrategyTaskSupport/taskStrategyFactory.cpp.s
+src/TaskFactory/task.s: src/TaskFactory/task.cpp.s
 
-.PHONY : src/StrategyTaskSupport/taskStrategyFactory.s
+.PHONY : src/TaskFactory/task.s
 
 # target to generate assembly for a file
-src/StrategyTaskSupport/taskStrategyFactory.cpp.s:
-	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/StrategyTaskSupport/taskStrategyFactory.cpp.s
-.PHONY : src/StrategyTaskSupport/taskStrategyFactory.cpp.s
+src/TaskFactory/task.cpp.s:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/TaskFactory/task.cpp.s
+.PHONY : src/TaskFactory/task.cpp.s
+
+src/TaskFactory/taskFactory.o: src/TaskFactory/taskFactory.cpp.o
+
+.PHONY : src/TaskFactory/taskFactory.o
+
+# target to build an object file
+src/TaskFactory/taskFactory.cpp.o:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/TaskFactory/taskFactory.cpp.o
+.PHONY : src/TaskFactory/taskFactory.cpp.o
+
+src/TaskFactory/taskFactory.i: src/TaskFactory/taskFactory.cpp.i
+
+.PHONY : src/TaskFactory/taskFactory.i
+
+# target to preprocess a source file
+src/TaskFactory/taskFactory.cpp.i:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/TaskFactory/taskFactory.cpp.i
+.PHONY : src/TaskFactory/taskFactory.cpp.i
+
+src/TaskFactory/taskFactory.s: src/TaskFactory/taskFactory.cpp.s
+
+.PHONY : src/TaskFactory/taskFactory.s
+
+# target to generate assembly for a file
+src/TaskFactory/taskFactory.cpp.s:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/TaskFactory/taskFactory.cpp.s
+.PHONY : src/TaskFactory/taskFactory.cpp.s
+
+src/TaskFactory/taskFeatureFactory.o: src/TaskFactory/taskFeatureFactory.cpp.o
+
+.PHONY : src/TaskFactory/taskFeatureFactory.o
+
+# target to build an object file
+src/TaskFactory/taskFeatureFactory.cpp.o:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/TaskFactory/taskFeatureFactory.cpp.o
+.PHONY : src/TaskFactory/taskFeatureFactory.cpp.o
+
+src/TaskFactory/taskFeatureFactory.i: src/TaskFactory/taskFeatureFactory.cpp.i
+
+.PHONY : src/TaskFactory/taskFeatureFactory.i
+
+# target to preprocess a source file
+src/TaskFactory/taskFeatureFactory.cpp.i:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/TaskFactory/taskFeatureFactory.cpp.i
+.PHONY : src/TaskFactory/taskFeatureFactory.cpp.i
+
+src/TaskFactory/taskFeatureFactory.s: src/TaskFactory/taskFeatureFactory.cpp.s
+
+.PHONY : src/TaskFactory/taskFeatureFactory.s
+
+# target to generate assembly for a file
+src/TaskFactory/taskFeatureFactory.cpp.s:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/TaskFactory/taskFeatureFactory.cpp.s
+.PHONY : src/TaskFactory/taskFeatureFactory.cpp.s
 
 src/boarding_Pass.o: src/boarding_Pass.cpp.o
 
@@ -420,33 +474,6 @@ src/solution.cpp.s:
 	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/solution.cpp.s
 .PHONY : src/solution.cpp.s
 
-src/task.o: src/task.cpp.o
-
-.PHONY : src/task.o
-
-# target to build an object file
-src/task.cpp.o:
-	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/task.cpp.o
-.PHONY : src/task.cpp.o
-
-src/task.i: src/task.cpp.i
-
-.PHONY : src/task.i
-
-# target to preprocess a source file
-src/task.cpp.i:
-	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/task.cpp.i
-.PHONY : src/task.cpp.i
-
-src/task.s: src/task.cpp.s
-
-.PHONY : src/task.s
-
-# target to generate assembly for a file
-src/task.cpp.s:
-	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/task.cpp.s
-.PHONY : src/task.cpp.s
-
 src/task1.o: src/task1.cpp.o
 
 .PHONY : src/task1.o
@@ -473,6 +500,33 @@ src/task1.s: src/task1.cpp.s
 src/task1.cpp.s:
 	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/task1.cpp.s
 .PHONY : src/task1.cpp.s
+
+src/tasks.o: src/tasks.cpp.o
+
+.PHONY : src/tasks.o
+
+# target to build an object file
+src/tasks.cpp.o:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/tasks.cpp.o
+.PHONY : src/tasks.cpp.o
+
+src/tasks.i: src/tasks.cpp.i
+
+.PHONY : src/tasks.i
+
+# target to preprocess a source file
+src/tasks.cpp.i:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/tasks.cpp.i
+.PHONY : src/tasks.cpp.i
+
+src/tasks.s: src/tasks.cpp.s
+
+.PHONY : src/tasks.s
+
+# target to generate assembly for a file
+src/tasks.cpp.s:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/tasks.cpp.s
+.PHONY : src/tasks.cpp.s
 
 tests/tests.o: tests/tests.cpp.o
 
@@ -528,9 +582,15 @@ help:
 	@echo "... src/StrategyTaskSupport/doExactStrategy.o"
 	@echo "... src/StrategyTaskSupport/doExactStrategy.i"
 	@echo "... src/StrategyTaskSupport/doExactStrategy.s"
-	@echo "... src/StrategyTaskSupport/taskStrategyFactory.o"
-	@echo "... src/StrategyTaskSupport/taskStrategyFactory.i"
-	@echo "... src/StrategyTaskSupport/taskStrategyFactory.s"
+	@echo "... src/TaskFactory/task.o"
+	@echo "... src/TaskFactory/task.i"
+	@echo "... src/TaskFactory/task.s"
+	@echo "... src/TaskFactory/taskFactory.o"
+	@echo "... src/TaskFactory/taskFactory.i"
+	@echo "... src/TaskFactory/taskFactory.s"
+	@echo "... src/TaskFactory/taskFeatureFactory.o"
+	@echo "... src/TaskFactory/taskFeatureFactory.i"
+	@echo "... src/TaskFactory/taskFeatureFactory.s"
 	@echo "... src/boarding_Pass.o"
 	@echo "... src/boarding_Pass.i"
 	@echo "... src/boarding_Pass.s"
@@ -543,12 +603,12 @@ help:
 	@echo "... src/solution.o"
 	@echo "... src/solution.i"
 	@echo "... src/solution.s"
-	@echo "... src/task.o"
-	@echo "... src/task.i"
-	@echo "... src/task.s"
 	@echo "... src/task1.o"
 	@echo "... src/task1.i"
 	@echo "... src/task1.s"
+	@echo "... src/tasks.o"
+	@echo "... src/tasks.i"
+	@echo "... src/tasks.s"
 	@echo "... tests/tests.o"
 	@echo "... tests/tests.i"
 	@echo "... tests/tests.s"

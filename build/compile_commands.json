@@ -6,8 +6,8 @@
 },
 {
   "directory": "/home/dawid/Projects/C_C++/Aoc_2020/build",
-  "command": "/bin/c++     -O0 -g -g   -std=gnu++17 -o CMakeFiles/main.dir/src/task.cpp.o -c /home/dawid/Projects/C_C++/Aoc_2020/src/task.cpp",
-  "file": "/home/dawid/Projects/C_C++/Aoc_2020/src/task.cpp"
+  "command": "/bin/c++     -O0 -g -g   -std=gnu++17 -o CMakeFiles/main.dir/src/tasks.cpp.o -c /home/dawid/Projects/C_C++/Aoc_2020/src/tasks.cpp",
+  "file": "/home/dawid/Projects/C_C++/Aoc_2020/src/tasks.cpp"
 },
 {
   "directory": "/home/dawid/Projects/C_C++/Aoc_2020/build",
@@ -61,8 +61,18 @@
 },
 {
   "directory": "/home/dawid/Projects/C_C++/Aoc_2020/build",
-  "command": "/bin/c++     -O0 -g -g   -std=gnu++17 -o CMakeFiles/main.dir/src/StrategyTaskSupport/taskStrategyFactory.cpp.o -c /home/dawid/Projects/C_C++/Aoc_2020/src/StrategyTaskSupport/taskStrategyFactory.cpp",
-  "file": "/home/dawid/Projects/C_C++/Aoc_2020/src/StrategyTaskSupport/taskStrategyFactory.cpp"
+  "command": "/bin/c++     -O0 -g -g   -std=gnu++17 -o CMakeFiles/main.dir/src/TaskFactory/task.cpp.o -c /home/dawid/Projects/C_C++/Aoc_2020/src/TaskFactory/task.cpp",
+  "file": "/home/dawid/Projects/C_C++/Aoc_2020/src/TaskFactory/task.cpp"
+},
+{
+  "directory": "/home/dawid/Projects/C_C++/Aoc_2020/build",
+  "command": "/bin/c++     -O0 -g -g   -std=gnu++17 -o CMakeFiles/main.dir/src/TaskFactory/taskFactory.cpp.o -c /home/dawid/Projects/C_C++/Aoc_2020/src/TaskFactory/taskFactory.cpp",
+  "file": "/home/dawid/Projects/C_C++/Aoc_2020/src/TaskFactory/taskFactory.cpp"
+},
+{
+  "directory": "/home/dawid/Projects/C_C++/Aoc_2020/build",
+  "command": "/bin/c++     -O0 -g -g   -std=gnu++17 -o CMakeFiles/main.dir/src/TaskFactory/taskFeatureFactory.cpp.o -c /home/dawid/Projects/C_C++/Aoc_2020/src/TaskFactory/taskFeatureFactory.cpp",
+  "file": "/home/dawid/Projects/C_C++/Aoc_2020/src/TaskFactory/taskFeatureFactory.cpp"
 },
 {
   "directory": "/home/dawid/Projects/C_C++/Aoc_2020/build",

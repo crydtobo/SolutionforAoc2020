@@ -12,7 +12,7 @@ include_directories(${GTEST_INCLUDE_DIRS})
 
 SET(SRC 
         main.cpp 
-        src/task.cpp
+        src/tasks.cpp
         src/boarding_Pass.cpp
         src/declaration.cpp 
         src/instructions.cpp 
@@ -23,7 +23,9 @@ SET(SRC
         src/Passport/passportSupport.cpp
         src/solution.cpp
         src/StrategyTaskSupport/doExactStrategy.cpp
-        src/StrategyTaskSupport/taskStrategyFactory.cpp
+        src/TaskFactory/task.cpp
+        src/TaskFactory/taskFactory.cpp
+        src/TaskFactory/taskFeatureFactory.cpp
         tests/tests.cpp
     )
 

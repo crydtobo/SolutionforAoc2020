@@ -14,7 +14,7 @@
 class Strategy
 {
 public:
-    virtual ~Strategy() {}
+    virtual ~Strategy() = default;
     virtual std::string doThing(const std::string &file_name) const = 0;
 };
 #endif /* INCLUDE_STRATEGY_H_*/

@@ -37,22 +37,44 @@ CMakeFiles/main.dir/src/StrategyTaskSupport/doExactStrategy.cpp.o
  /home/dawid/Projects/C_C++/Aoc_2020/include/StrategyTaskSupport/context.h
  /home/dawid/Projects/C_C++/Aoc_2020/include/StrategyTaskSupport/doExactStrategy.h
  /home/dawid/Projects/C_C++/Aoc_2020/include/StrategyTaskSupport/strategy.h
- /home/dawid/Projects/C_C++/Aoc_2020/include/StrategyTaskSupport/taskFactory.h
- /home/dawid/Projects/C_C++/Aoc_2020/include/StrategyTaskSupport/taskStrategyFactory.h
+ /home/dawid/Projects/C_C++/Aoc_2020/include/TaskFactory/task.h
+ /home/dawid/Projects/C_C++/Aoc_2020/include/TaskFactory/taskFactory.h
+ /home/dawid/Projects/C_C++/Aoc_2020/include/TaskFactory/taskFeatureFactory.h
  /home/dawid/Projects/C_C++/Aoc_2020/include/asn1.h
  /home/dawid/Projects/C_C++/Aoc_2020/include/bags.h
  /home/dawid/Projects/C_C++/Aoc_2020/include/tasks.h
  /home/dawid/Projects/C_C++/Aoc_2020/include/tasks1.h
  /home/dawid/Projects/C_C++/Aoc_2020/src/StrategyTaskSupport/doExactStrategy.cpp
-CMakeFiles/main.dir/src/StrategyTaskSupport/taskStrategyFactory.cpp.o
+CMakeFiles/main.dir/src/TaskFactory/task.cpp.o
  /home/dawid/Projects/C_C++/Aoc_2020/include/StrategyTaskSupport/concretStrategy.h
  /home/dawid/Projects/C_C++/Aoc_2020/include/StrategyTaskSupport/strategy.h
- /home/dawid/Projects/C_C++/Aoc_2020/include/StrategyTaskSupport/taskStrategyFactory.h
+ /home/dawid/Projects/C_C++/Aoc_2020/include/TaskFactory/task.h
+ /home/dawid/Projects/C_C++/Aoc_2020/include/TaskFactory/taskFeatureFactory.h
  /home/dawid/Projects/C_C++/Aoc_2020/include/asn1.h
  /home/dawid/Projects/C_C++/Aoc_2020/include/bags.h
  /home/dawid/Projects/C_C++/Aoc_2020/include/tasks.h
  /home/dawid/Projects/C_C++/Aoc_2020/include/tasks1.h
- /home/dawid/Projects/C_C++/Aoc_2020/src/StrategyTaskSupport/taskStrategyFactory.cpp
+ /home/dawid/Projects/C_C++/Aoc_2020/src/TaskFactory/task.cpp
+CMakeFiles/main.dir/src/TaskFactory/taskFactory.cpp.o
+ /home/dawid/Projects/C_C++/Aoc_2020/include/StrategyTaskSupport/concretStrategy.h
+ /home/dawid/Projects/C_C++/Aoc_2020/include/StrategyTaskSupport/strategy.h
+ /home/dawid/Projects/C_C++/Aoc_2020/include/TaskFactory/task.h
+ /home/dawid/Projects/C_C++/Aoc_2020/include/TaskFactory/taskFactory.h
+ /home/dawid/Projects/C_C++/Aoc_2020/include/TaskFactory/taskFeatureFactory.h
+ /home/dawid/Projects/C_C++/Aoc_2020/include/asn1.h
+ /home/dawid/Projects/C_C++/Aoc_2020/include/bags.h
+ /home/dawid/Projects/C_C++/Aoc_2020/include/tasks.h
+ /home/dawid/Projects/C_C++/Aoc_2020/include/tasks1.h
+ /home/dawid/Projects/C_C++/Aoc_2020/src/TaskFactory/taskFactory.cpp
+CMakeFiles/main.dir/src/TaskFactory/taskFeatureFactory.cpp.o
+ /home/dawid/Projects/C_C++/Aoc_2020/include/StrategyTaskSupport/concretStrategy.h
+ /home/dawid/Projects/C_C++/Aoc_2020/include/StrategyTaskSupport/strategy.h
+ /home/dawid/Projects/C_C++/Aoc_2020/include/TaskFactory/taskFeatureFactory.h
+ /home/dawid/Projects/C_C++/Aoc_2020/include/asn1.h
+ /home/dawid/Projects/C_C++/Aoc_2020/include/bags.h
+ /home/dawid/Projects/C_C++/Aoc_2020/include/tasks.h
+ /home/dawid/Projects/C_C++/Aoc_2020/include/tasks1.h
+ /home/dawid/Projects/C_C++/Aoc_2020/src/TaskFactory/taskFeatureFactory.cpp
 CMakeFiles/main.dir/src/boarding_Pass.cpp.o
  /home/dawid/Projects/C_C++/Aoc_2020/include/boarding_Pass.h
  /home/dawid/Projects/C_C++/Aoc_2020/src/boarding_Pass.cpp
@@ -65,7 +87,10 @@ CMakeFiles/main.dir/src/instructions.cpp.o
 CMakeFiles/main.dir/src/solution.cpp.o
  /home/dawid/Projects/C_C++/Aoc_2020/include/solution.h
  /home/dawid/Projects/C_C++/Aoc_2020/src/solution.cpp
-CMakeFiles/main.dir/src/task.cpp.o
+CMakeFiles/main.dir/src/task1.cpp.o
+ /home/dawid/Projects/C_C++/Aoc_2020/include/tasks1.h
+ /home/dawid/Projects/C_C++/Aoc_2020/src/task1.cpp
+CMakeFiles/main.dir/src/tasks.cpp.o
  /home/dawid/Projects/C_C++/Aoc_2020/include/Passport/passport.h
  /home/dawid/Projects/C_C++/Aoc_2020/include/Passport/passportFactory.h
  /home/dawid/Projects/C_C++/Aoc_2020/include/Passport/passportFeatureFactory.h
@@ -81,10 +106,7 @@ CMakeFiles/main.dir/src/task.cpp.o
  /home/dawid/Projects/C_C++/Aoc_2020/include/solution.h
  /home/dawid/Projects/C_C++/Aoc_2020/include/tasks.h
  /home/dawid/Projects/C_C++/Aoc_2020/include/tasks1.h
- /home/dawid/Projects/C_C++/Aoc_2020/src/task.cpp
-CMakeFiles/main.dir/src/task1.cpp.o
- /home/dawid/Projects/C_C++/Aoc_2020/include/tasks1.h
- /home/dawid/Projects/C_C++/Aoc_2020/src/task1.cpp
+ /home/dawid/Projects/C_C++/Aoc_2020/src/tasks.cpp
 CMakeFiles/main.dir/tests/tests.cpp.o
  /home/dawid/Projects/C_C++/Aoc_2020/include/asn1.h
  /home/dawid/Projects/C_C++/Aoc_2020/include/bags.h

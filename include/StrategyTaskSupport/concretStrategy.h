@@ -14,6 +14,7 @@ namespace
     const std::string INPUT7 = "input7.txt";
     const std::string INPUT8 = "input8.txt";
 }
+
 class Task1 : public Strategy
 {
 public:

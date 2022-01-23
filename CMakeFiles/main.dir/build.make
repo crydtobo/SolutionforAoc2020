@@ -70,18 +70,18 @@ CMakeFiles/main.dir/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/main.dir/main.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/dawid/Projects/C_C++/Aoc_2020/main.cpp -o CMakeFiles/main.dir/main.cpp.s
 
-CMakeFiles/main.dir/src/task.cpp.o: CMakeFiles/main.dir/flags.make
-CMakeFiles/main.dir/src/task.cpp.o: src/task.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/dawid/Projects/C_C++/Aoc_2020/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/main.dir/src/task.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/main.dir/src/task.cpp.o -c /home/dawid/Projects/C_C++/Aoc_2020/src/task.cpp
+CMakeFiles/main.dir/src/tasks.cpp.o: CMakeFiles/main.dir/flags.make
+CMakeFiles/main.dir/src/tasks.cpp.o: src/tasks.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/dawid/Projects/C_C++/Aoc_2020/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/main.dir/src/tasks.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/main.dir/src/tasks.cpp.o -c /home/dawid/Projects/C_C++/Aoc_2020/src/tasks.cpp
 
-CMakeFiles/main.dir/src/task.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/main.dir/src/task.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/dawid/Projects/C_C++/Aoc_2020/src/task.cpp > CMakeFiles/main.dir/src/task.cpp.i
+CMakeFiles/main.dir/src/tasks.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/main.dir/src/tasks.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/dawid/Projects/C_C++/Aoc_2020/src/tasks.cpp > CMakeFiles/main.dir/src/tasks.cpp.i
 
-CMakeFiles/main.dir/src/task.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/main.dir/src/task.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/dawid/Projects/C_C++/Aoc_2020/src/task.cpp -o CMakeFiles/main.dir/src/task.cpp.s
+CMakeFiles/main.dir/src/tasks.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/main.dir/src/tasks.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/dawid/Projects/C_C++/Aoc_2020/src/tasks.cpp -o CMakeFiles/main.dir/src/tasks.cpp.s
 
 CMakeFiles/main.dir/src/boarding_Pass.cpp.o: CMakeFiles/main.dir/flags.make
 CMakeFiles/main.dir/src/boarding_Pass.cpp.o: src/boarding_Pass.cpp
@@ -213,22 +213,48 @@ CMakeFiles/main.dir/src/StrategyTaskSupport/doExactStrategy.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/main.dir/src/StrategyTaskSupport/doExactStrategy.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/dawid/Projects/C_C++/Aoc_2020/src/StrategyTaskSupport/doExactStrategy.cpp -o CMakeFiles/main.dir/src/StrategyTaskSupport/doExactStrategy.cpp.s
 
-CMakeFiles/main.dir/src/StrategyTaskSupport/taskStrategyFactory.cpp.o: CMakeFiles/main.dir/flags.make
-CMakeFiles/main.dir/src/StrategyTaskSupport/taskStrategyFactory.cpp.o: src/StrategyTaskSupport/taskStrategyFactory.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/dawid/Projects/C_C++/Aoc_2020/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object CMakeFiles/main.dir/src/StrategyTaskSupport/taskStrategyFactory.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/main.dir/src/StrategyTaskSupport/taskStrategyFactory.cpp.o -c /home/dawid/Projects/C_C++/Aoc_2020/src/StrategyTaskSupport/taskStrategyFactory.cpp
+CMakeFiles/main.dir/src/TaskFactory/task.cpp.o: CMakeFiles/main.dir/flags.make
+CMakeFiles/main.dir/src/TaskFactory/task.cpp.o: src/TaskFactory/task.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/dawid/Projects/C_C++/Aoc_2020/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object CMakeFiles/main.dir/src/TaskFactory/task.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/main.dir/src/TaskFactory/task.cpp.o -c /home/dawid/Projects/C_C++/Aoc_2020/src/TaskFactory/task.cpp
 
-CMakeFiles/main.dir/src/StrategyTaskSupport/taskStrategyFactory.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/main.dir/src/StrategyTaskSupport/taskStrategyFactory.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/dawid/Projects/C_C++/Aoc_2020/src/StrategyTaskSupport/taskStrategyFactory.cpp > CMakeFiles/main.dir/src/StrategyTaskSupport/taskStrategyFactory.cpp.i
+CMakeFiles/main.dir/src/TaskFactory/task.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/main.dir/src/TaskFactory/task.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/dawid/Projects/C_C++/Aoc_2020/src/TaskFactory/task.cpp > CMakeFiles/main.dir/src/TaskFactory/task.cpp.i
 
-CMakeFiles/main.dir/src/StrategyTaskSupport/taskStrategyFactory.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/main.dir/src/StrategyTaskSupport/taskStrategyFactory.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/dawid/Projects/C_C++/Aoc_2020/src/StrategyTaskSupport/taskStrategyFactory.cpp -o CMakeFiles/main.dir/src/StrategyTaskSupport/taskStrategyFactory.cpp.s
+CMakeFiles/main.dir/src/TaskFactory/task.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/main.dir/src/TaskFactory/task.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/dawid/Projects/C_C++/Aoc_2020/src/TaskFactory/task.cpp -o CMakeFiles/main.dir/src/TaskFactory/task.cpp.s
+
+CMakeFiles/main.dir/src/TaskFactory/taskFactory.cpp.o: CMakeFiles/main.dir/flags.make
+CMakeFiles/main.dir/src/TaskFactory/taskFactory.cpp.o: src/TaskFactory/taskFactory.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/dawid/Projects/C_C++/Aoc_2020/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object CMakeFiles/main.dir/src/TaskFactory/taskFactory.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/main.dir/src/TaskFactory/taskFactory.cpp.o -c /home/dawid/Projects/C_C++/Aoc_2020/src/TaskFactory/taskFactory.cpp
+
+CMakeFiles/main.dir/src/TaskFactory/taskFactory.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/main.dir/src/TaskFactory/taskFactory.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/dawid/Projects/C_C++/Aoc_2020/src/TaskFactory/taskFactory.cpp > CMakeFiles/main.dir/src/TaskFactory/taskFactory.cpp.i
+
+CMakeFiles/main.dir/src/TaskFactory/taskFactory.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/main.dir/src/TaskFactory/taskFactory.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/dawid/Projects/C_C++/Aoc_2020/src/TaskFactory/taskFactory.cpp -o CMakeFiles/main.dir/src/TaskFactory/taskFactory.cpp.s
+
+CMakeFiles/main.dir/src/TaskFactory/taskFeatureFactory.cpp.o: CMakeFiles/main.dir/flags.make
+CMakeFiles/main.dir/src/TaskFactory/taskFeatureFactory.cpp.o: src/TaskFactory/taskFeatureFactory.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/dawid/Projects/C_C++/Aoc_2020/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building CXX object CMakeFiles/main.dir/src/TaskFactory/taskFeatureFactory.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/main.dir/src/TaskFactory/taskFeatureFactory.cpp.o -c /home/dawid/Projects/C_C++/Aoc_2020/src/TaskFactory/taskFeatureFactory.cpp
+
+CMakeFiles/main.dir/src/TaskFactory/taskFeatureFactory.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/main.dir/src/TaskFactory/taskFeatureFactory.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/dawid/Projects/C_C++/Aoc_2020/src/TaskFactory/taskFeatureFactory.cpp > CMakeFiles/main.dir/src/TaskFactory/taskFeatureFactory.cpp.i
+
+CMakeFiles/main.dir/src/TaskFactory/taskFeatureFactory.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/main.dir/src/TaskFactory/taskFeatureFactory.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/dawid/Projects/C_C++/Aoc_2020/src/TaskFactory/taskFeatureFactory.cpp -o CMakeFiles/main.dir/src/TaskFactory/taskFeatureFactory.cpp.s
 
 CMakeFiles/main.dir/tests/tests.cpp.o: CMakeFiles/main.dir/flags.make
 CMakeFiles/main.dir/tests/tests.cpp.o: tests/tests.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/dawid/Projects/C_C++/Aoc_2020/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object CMakeFiles/main.dir/tests/tests.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/dawid/Projects/C_C++/Aoc_2020/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building CXX object CMakeFiles/main.dir/tests/tests.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/main.dir/tests/tests.cpp.o -c /home/dawid/Projects/C_C++/Aoc_2020/tests/tests.cpp
 
 CMakeFiles/main.dir/tests/tests.cpp.i: cmake_force
@@ -242,7 +268,7 @@ CMakeFiles/main.dir/tests/tests.cpp.s: cmake_force
 # Object files for target main
 main_OBJECTS = \
 "CMakeFiles/main.dir/main.cpp.o" \
-"CMakeFiles/main.dir/src/task.cpp.o" \
+"CMakeFiles/main.dir/src/tasks.cpp.o" \
 "CMakeFiles/main.dir/src/boarding_Pass.cpp.o" \
 "CMakeFiles/main.dir/src/declaration.cpp.o" \
 "CMakeFiles/main.dir/src/instructions.cpp.o" \
@@ -253,14 +279,16 @@ main_OBJECTS = \
 "CMakeFiles/main.dir/src/Passport/passportSupport.cpp.o" \
 "CMakeFiles/main.dir/src/solution.cpp.o" \
 "CMakeFiles/main.dir/src/StrategyTaskSupport/doExactStrategy.cpp.o" \
-"CMakeFiles/main.dir/src/StrategyTaskSupport/taskStrategyFactory.cpp.o" \
+"CMakeFiles/main.dir/src/TaskFactory/task.cpp.o" \
+"CMakeFiles/main.dir/src/TaskFactory/taskFactory.cpp.o" \
+"CMakeFiles/main.dir/src/TaskFactory/taskFeatureFactory.cpp.o" \
 "CMakeFiles/main.dir/tests/tests.cpp.o"
 
 # External object files for target main
 main_EXTERNAL_OBJECTS =
 
 main: CMakeFiles/main.dir/main.cpp.o
-main: CMakeFiles/main.dir/src/task.cpp.o
+main: CMakeFiles/main.dir/src/tasks.cpp.o
 main: CMakeFiles/main.dir/src/boarding_Pass.cpp.o
 main: CMakeFiles/main.dir/src/declaration.cpp.o
 main: CMakeFiles/main.dir/src/instructions.cpp.o
@@ -271,11 +299,13 @@ main: CMakeFiles/main.dir/src/Passport/passportFeatureStrategy.cpp.o
 main: CMakeFiles/main.dir/src/Passport/passportSupport.cpp.o
 main: CMakeFiles/main.dir/src/solution.cpp.o
 main: CMakeFiles/main.dir/src/StrategyTaskSupport/doExactStrategy.cpp.o
-main: CMakeFiles/main.dir/src/StrategyTaskSupport/taskStrategyFactory.cpp.o
+main: CMakeFiles/main.dir/src/TaskFactory/task.cpp.o
+main: CMakeFiles/main.dir/src/TaskFactory/taskFactory.cpp.o
+main: CMakeFiles/main.dir/src/TaskFactory/taskFeatureFactory.cpp.o
 main: CMakeFiles/main.dir/tests/tests.cpp.o
 main: CMakeFiles/main.dir/build.make
 main: CMakeFiles/main.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/dawid/Projects/C_C++/Aoc_2020/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Linking CXX executable main"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/dawid/Projects/C_C++/Aoc_2020/CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Linking CXX executable main"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/main.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

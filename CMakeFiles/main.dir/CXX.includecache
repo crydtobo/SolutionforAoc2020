@@ -30,16 +30,28 @@ fstream
 string
 -
 
-/home/dawid/Projects/C_C++/Aoc_2020/include/StrategyTaskSupport/taskFactory.h
+/home/dawid/Projects/C_C++/Aoc_2020/include/TaskFactory/task.h
+string
+-
+memory
+-
+vector
+-
+taskFeatureFactory.h
+/home/dawid/Projects/C_C++/Aoc_2020/include/TaskFactory/taskFeatureFactory.h
+../StrategyTaskSupport/strategy.h
+/home/dawid/Projects/C_C++/Aoc_2020/include/StrategyTaskSupport/strategy.h
+
+/home/dawid/Projects/C_C++/Aoc_2020/include/TaskFactory/taskFactory.h
 memory
 -
 string
 -
-taskStrategyFactory.h
-/home/dawid/Projects/C_C++/Aoc_2020/include/StrategyTaskSupport/taskStrategyFactory.h
+task.h
+/home/dawid/Projects/C_C++/Aoc_2020/include/TaskFactory/task.h
 
-/home/dawid/Projects/C_C++/Aoc_2020/include/StrategyTaskSupport/taskStrategyFactory.h
-concretStrategy.h
+/home/dawid/Projects/C_C++/Aoc_2020/include/TaskFactory/taskFeatureFactory.h
+../StrategyTaskSupport/concretStrategy.h
 /home/dawid/Projects/C_C++/Aoc_2020/include/StrategyTaskSupport/concretStrategy.h
 iterator
 -
@@ -97,6 +109,6 @@ fstream
 /home/dawid/Projects/C_C++/Aoc_2020/include/StrategyTaskSupport/doExactStrategy.h
 ../../include/StrategyTaskSupport/context.h
 /home/dawid/Projects/C_C++/Aoc_2020/include/StrategyTaskSupport/context.h
-../../include/StrategyTaskSupport/taskFactory.h
-/home/dawid/Projects/C_C++/Aoc_2020/include/StrategyTaskSupport/taskFactory.h
+../../include/TaskFactory/taskFactory.h
+/home/dawid/Projects/C_C++/Aoc_2020/include/TaskFactory/taskFactory.h
 
