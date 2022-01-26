@@ -233,21 +233,17 @@ void taskCert(std::fstream &file)
 	int solution;
 
 	std::vector<std::string> result;
-	std::vector<uint8_t> m;
+	std::vector<uint8_t> m, encoded;
 	std::vector<std::vector<uint8_t>> m_set_contents;
 
-	std::vector<uint8_t> encoded;
 	encodeTag(encoded, ASN1_Tag::UNIVERSAL, ASN1_Tag::OCTET_STRING);
 
 	uint32_t test = 0x023000000;
 	auto test_result = significant_bytes(test);
-	std::cout << "Result significant : " << test_result << std::endl;
 
 	size_t blocks = high_bit(static_cast<uint32_t>(ASN1_Tag::APPLICATION));
-	std::cout << "Blocks: : " << blocks << std::endl;
-	std::cout << "Make Pair::" << std::endl;
-
 	size_t len = 10;
+
 	const uint8_t add[] = {0x01, 0x02, 0x03, 0x04, 0x05, 0x06, 0x07, 0x08, 0x09, 0x0A};
 	m.reserve(len);
 	for (int i = 0; i < 10; i++)

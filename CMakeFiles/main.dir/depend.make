@@ -75,6 +75,9 @@ CMakeFiles/main.dir/src/TaskFactory/taskFeatureFactory.cpp.o: include/tasks.h
 CMakeFiles/main.dir/src/TaskFactory/taskFeatureFactory.cpp.o: include/tasks1.h
 CMakeFiles/main.dir/src/TaskFactory/taskFeatureFactory.cpp.o: src/TaskFactory/taskFeatureFactory.cpp
 
+CMakeFiles/main.dir/src/bags.cpp.o: include/bags.h
+CMakeFiles/main.dir/src/bags.cpp.o: src/bags.cpp
+
 CMakeFiles/main.dir/src/boarding_Pass.cpp.o: include/boarding_Pass.h
 CMakeFiles/main.dir/src/boarding_Pass.cpp.o: src/boarding_Pass.cpp
 

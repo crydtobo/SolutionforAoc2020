@@ -11,28 +11,49 @@
 #include <string>
 #include <vector>
 
-void Bags::parseInput(std::vector<std::string> &input, contained_t &contained, contains_t &contains)
+std::tuple<std::sregex_iterator, std::sregex_iterator>  Bags::demandOfSearching(const std::string &in)
+{
+	std::regex numberOfBags(R"(,? (\d+) (\w+ \w+) bags?)");
+	auto start = std::sregex_iterator(in.begin(), in.end(), numberOfBags);
+	auto end = std::sregex_iterator();
+	return {start,end};
+}
+
+void Bags::checkIfNameExist(const std::string &in, std::smatch &result)
 {
 	std::regex nameOfBags(R"((\w+ \w+) bags contain)");
-	std::regex numberOfBags(R"(,? (\d+) (\w+ \w+) bags?)");
-	std::string line;
-	for (auto in : input)
+	assert(std::regex_search(in, result, nameOfBags));
+}
+
+void Bags::checkIfBagsExist(std::sregex_iterator &i, std::smatch &result)
+{
+	std::smatch match = *i;
+	contains[result[1]].emplace(match[2], std::stoi(match[1]));
+
+	if (!contained.emplace(match[2], std::unordered_set<std::string>({result[1]})).second)
 	{
+		contained[match[2]].insert(result[1]);
+	}
+}
+
+void Bags::createContainer(const std::string &in)
+{
 		std::smatch result;
-		assert(std::regex_search(in, result, nameOfBags));
+		checkIfNameExist(in,result);
 		contains.emplace(result[1], std::unordered_map<std::string, uint32_t>());
-		auto start = std::sregex_iterator(in.begin(), in.end(), numberOfBags);
-		auto end = std::sregex_iterator();
+
+		auto [start, end] = demandOfSearching(in);
 		for (std::sregex_iterator i = start; i != end; ++i)
 		{
-			std::smatch match = *i;
-			contains[result[1]].emplace(match[2], std::stoi(match[1]));
-
-			if (!contained.emplace(match[2], std::unordered_set<std::string>({result[1]})).second)
-			{
-				contained[match[2]].insert(result[1]);
-			}
+			checkIfBagsExist(i, result);
 		}
+}
+
+void Bags::parseInput(std::vector<std::string> &input)
+{
+	for (auto in : input)
+	{
+		createContainer(in);
 	}
 }
 

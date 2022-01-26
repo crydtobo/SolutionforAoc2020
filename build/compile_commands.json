@@ -31,6 +31,16 @@
 },
 {
   "directory": "/home/dawid/Projects/C_C++/Aoc_2020/build",
+  "command": "/bin/c++     -O0 -g -g   -std=gnu++17 -o CMakeFiles/main.dir/src/bags.cpp.o -c /home/dawid/Projects/C_C++/Aoc_2020/src/bags.cpp",
+  "file": "/home/dawid/Projects/C_C++/Aoc_2020/src/bags.cpp"
+},
+{
+  "directory": "/home/dawid/Projects/C_C++/Aoc_2020/build",
+  "command": "/bin/c++     -O0 -g -g   -std=gnu++17 -o CMakeFiles/main.dir/src/solution.cpp.o -c /home/dawid/Projects/C_C++/Aoc_2020/src/solution.cpp",
+  "file": "/home/dawid/Projects/C_C++/Aoc_2020/src/solution.cpp"
+},
+{
+  "directory": "/home/dawid/Projects/C_C++/Aoc_2020/build",
   "command": "/bin/c++     -O0 -g -g   -std=gnu++17 -o CMakeFiles/main.dir/src/Passport/passportFactory.cpp.o -c /home/dawid/Projects/C_C++/Aoc_2020/src/Passport/passportFactory.cpp",
   "file": "/home/dawid/Projects/C_C++/Aoc_2020/src/Passport/passportFactory.cpp"
 },
@@ -48,11 +58,6 @@
   "directory": "/home/dawid/Projects/C_C++/Aoc_2020/build",
   "command": "/bin/c++     -O0 -g -g   -std=gnu++17 -o CMakeFiles/main.dir/src/Passport/passportSupport.cpp.o -c /home/dawid/Projects/C_C++/Aoc_2020/src/Passport/passportSupport.cpp",
   "file": "/home/dawid/Projects/C_C++/Aoc_2020/src/Passport/passportSupport.cpp"
-},
-{
-  "directory": "/home/dawid/Projects/C_C++/Aoc_2020/build",
-  "command": "/bin/c++     -O0 -g -g   -std=gnu++17 -o CMakeFiles/main.dir/src/solution.cpp.o -c /home/dawid/Projects/C_C++/Aoc_2020/src/solution.cpp",
-  "file": "/home/dawid/Projects/C_C++/Aoc_2020/src/solution.cpp"
 },
 {
   "directory": "/home/dawid/Projects/C_C++/Aoc_2020/build",

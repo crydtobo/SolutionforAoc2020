@@ -8,6 +8,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/main.dir/src/TaskFactory/task.cpp.o"
   "CMakeFiles/main.dir/src/TaskFactory/taskFactory.cpp.o"
   "CMakeFiles/main.dir/src/TaskFactory/taskFeatureFactory.cpp.o"
+  "CMakeFiles/main.dir/src/bags.cpp.o"
   "CMakeFiles/main.dir/src/boarding_Pass.cpp.o"
   "CMakeFiles/main.dir/src/declaration.cpp.o"
   "CMakeFiles/main.dir/src/instructions.cpp.o"

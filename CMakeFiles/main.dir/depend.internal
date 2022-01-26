@@ -75,6 +75,9 @@ CMakeFiles/main.dir/src/TaskFactory/taskFeatureFactory.cpp.o
  /home/dawid/Projects/C_C++/Aoc_2020/include/tasks.h
  /home/dawid/Projects/C_C++/Aoc_2020/include/tasks1.h
  /home/dawid/Projects/C_C++/Aoc_2020/src/TaskFactory/taskFeatureFactory.cpp
+CMakeFiles/main.dir/src/bags.cpp.o
+ /home/dawid/Projects/C_C++/Aoc_2020/include/bags.h
+ /home/dawid/Projects/C_C++/Aoc_2020/src/bags.cpp
 CMakeFiles/main.dir/src/boarding_Pass.cpp.o
  /home/dawid/Projects/C_C++/Aoc_2020/include/boarding_Pass.h
  /home/dawid/Projects/C_C++/Aoc_2020/src/boarding_Pass.cpp

@@ -25,7 +25,14 @@ public:
 	Bags() = default;
 
 	uint32_t countBags(contains_t &contains, std::string bagName);
-	void parseInput(std::vector<std::string> &in, contained_t &contained, contains_t &contains);
+	void createContainer(const std::string &in);
+	void checkIfBagsExist(std::sregex_iterator &i, std::smatch &result);
+	void checkIfNameExist(const std::string &in, std::smatch &result);
+	std::tuple<std::sregex_iterator, std::sregex_iterator> demandOfSearching(const std::string &in);
+	void parseInput(std::vector<std::string> &in);
+	
+	contained_t &contained;
+	contains_t &contains;
 };
 
 #endif /* INCLUDE_BAGS_H_ */

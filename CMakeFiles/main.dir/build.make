@@ -135,9 +135,35 @@ CMakeFiles/main.dir/src/task1.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/main.dir/src/task1.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/dawid/Projects/C_C++/Aoc_2020/src/task1.cpp -o CMakeFiles/main.dir/src/task1.cpp.s
 
+CMakeFiles/main.dir/src/bags.cpp.o: CMakeFiles/main.dir/flags.make
+CMakeFiles/main.dir/src/bags.cpp.o: src/bags.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/dawid/Projects/C_C++/Aoc_2020/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/main.dir/src/bags.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/main.dir/src/bags.cpp.o -c /home/dawid/Projects/C_C++/Aoc_2020/src/bags.cpp
+
+CMakeFiles/main.dir/src/bags.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/main.dir/src/bags.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/dawid/Projects/C_C++/Aoc_2020/src/bags.cpp > CMakeFiles/main.dir/src/bags.cpp.i
+
+CMakeFiles/main.dir/src/bags.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/main.dir/src/bags.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/dawid/Projects/C_C++/Aoc_2020/src/bags.cpp -o CMakeFiles/main.dir/src/bags.cpp.s
+
+CMakeFiles/main.dir/src/solution.cpp.o: CMakeFiles/main.dir/flags.make
+CMakeFiles/main.dir/src/solution.cpp.o: src/solution.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/dawid/Projects/C_C++/Aoc_2020/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/main.dir/src/solution.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/main.dir/src/solution.cpp.o -c /home/dawid/Projects/C_C++/Aoc_2020/src/solution.cpp
+
+CMakeFiles/main.dir/src/solution.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/main.dir/src/solution.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/dawid/Projects/C_C++/Aoc_2020/src/solution.cpp > CMakeFiles/main.dir/src/solution.cpp.i
+
+CMakeFiles/main.dir/src/solution.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/main.dir/src/solution.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/dawid/Projects/C_C++/Aoc_2020/src/solution.cpp -o CMakeFiles/main.dir/src/solution.cpp.s
+
 CMakeFiles/main.dir/src/Passport/passportFactory.cpp.o: CMakeFiles/main.dir/flags.make
 CMakeFiles/main.dir/src/Passport/passportFactory.cpp.o: src/Passport/passportFactory.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/dawid/Projects/C_C++/Aoc_2020/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/main.dir/src/Passport/passportFactory.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/dawid/Projects/C_C++/Aoc_2020/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/main.dir/src/Passport/passportFactory.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/main.dir/src/Passport/passportFactory.cpp.o -c /home/dawid/Projects/C_C++/Aoc_2020/src/Passport/passportFactory.cpp
 
 CMakeFiles/main.dir/src/Passport/passportFactory.cpp.i: cmake_force
@@ -150,7 +176,7 @@ CMakeFiles/main.dir/src/Passport/passportFactory.cpp.s: cmake_force
 
 CMakeFiles/main.dir/src/Passport/passportFeatureFactory.cpp.o: CMakeFiles/main.dir/flags.make
 CMakeFiles/main.dir/src/Passport/passportFeatureFactory.cpp.o: src/Passport/passportFeatureFactory.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/dawid/Projects/C_C++/Aoc_2020/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/main.dir/src/Passport/passportFeatureFactory.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/dawid/Projects/C_C++/Aoc_2020/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/main.dir/src/Passport/passportFeatureFactory.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/main.dir/src/Passport/passportFeatureFactory.cpp.o -c /home/dawid/Projects/C_C++/Aoc_2020/src/Passport/passportFeatureFactory.cpp
 
 CMakeFiles/main.dir/src/Passport/passportFeatureFactory.cpp.i: cmake_force
@@ -163,7 +189,7 @@ CMakeFiles/main.dir/src/Passport/passportFeatureFactory.cpp.s: cmake_force
 
 CMakeFiles/main.dir/src/Passport/passportFeatureStrategy.cpp.o: CMakeFiles/main.dir/flags.make
 CMakeFiles/main.dir/src/Passport/passportFeatureStrategy.cpp.o: src/Passport/passportFeatureStrategy.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/dawid/Projects/C_C++/Aoc_2020/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/main.dir/src/Passport/passportFeatureStrategy.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/dawid/Projects/C_C++/Aoc_2020/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/main.dir/src/Passport/passportFeatureStrategy.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/main.dir/src/Passport/passportFeatureStrategy.cpp.o -c /home/dawid/Projects/C_C++/Aoc_2020/src/Passport/passportFeatureStrategy.cpp
 
 CMakeFiles/main.dir/src/Passport/passportFeatureStrategy.cpp.i: cmake_force
@@ -176,7 +202,7 @@ CMakeFiles/main.dir/src/Passport/passportFeatureStrategy.cpp.s: cmake_force
 
 CMakeFiles/main.dir/src/Passport/passportSupport.cpp.o: CMakeFiles/main.dir/flags.make
 CMakeFiles/main.dir/src/Passport/passportSupport.cpp.o: src/Passport/passportSupport.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/dawid/Projects/C_C++/Aoc_2020/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/main.dir/src/Passport/passportSupport.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/dawid/Projects/C_C++/Aoc_2020/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/main.dir/src/Passport/passportSupport.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/main.dir/src/Passport/passportSupport.cpp.o -c /home/dawid/Projects/C_C++/Aoc_2020/src/Passport/passportSupport.cpp
 
 CMakeFiles/main.dir/src/Passport/passportSupport.cpp.i: cmake_force
@@ -187,22 +213,9 @@ CMakeFiles/main.dir/src/Passport/passportSupport.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/main.dir/src/Passport/passportSupport.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/dawid/Projects/C_C++/Aoc_2020/src/Passport/passportSupport.cpp -o CMakeFiles/main.dir/src/Passport/passportSupport.cpp.s
 
-CMakeFiles/main.dir/src/solution.cpp.o: CMakeFiles/main.dir/flags.make
-CMakeFiles/main.dir/src/solution.cpp.o: src/solution.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/dawid/Projects/C_C++/Aoc_2020/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/main.dir/src/solution.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/main.dir/src/solution.cpp.o -c /home/dawid/Projects/C_C++/Aoc_2020/src/solution.cpp
-
-CMakeFiles/main.dir/src/solution.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/main.dir/src/solution.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/dawid/Projects/C_C++/Aoc_2020/src/solution.cpp > CMakeFiles/main.dir/src/solution.cpp.i
-
-CMakeFiles/main.dir/src/solution.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/main.dir/src/solution.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/dawid/Projects/C_C++/Aoc_2020/src/solution.cpp -o CMakeFiles/main.dir/src/solution.cpp.s
-
 CMakeFiles/main.dir/src/StrategyTaskSupport/doExactStrategy.cpp.o: CMakeFiles/main.dir/flags.make
 CMakeFiles/main.dir/src/StrategyTaskSupport/doExactStrategy.cpp.o: src/StrategyTaskSupport/doExactStrategy.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/dawid/Projects/C_C++/Aoc_2020/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/main.dir/src/StrategyTaskSupport/doExactStrategy.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/dawid/Projects/C_C++/Aoc_2020/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object CMakeFiles/main.dir/src/StrategyTaskSupport/doExactStrategy.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/main.dir/src/StrategyTaskSupport/doExactStrategy.cpp.o -c /home/dawid/Projects/C_C++/Aoc_2020/src/StrategyTaskSupport/doExactStrategy.cpp
 
 CMakeFiles/main.dir/src/StrategyTaskSupport/doExactStrategy.cpp.i: cmake_force
@@ -215,7 +228,7 @@ CMakeFiles/main.dir/src/StrategyTaskSupport/doExactStrategy.cpp.s: cmake_force
 
 CMakeFiles/main.dir/src/TaskFactory/task.cpp.o: CMakeFiles/main.dir/flags.make
 CMakeFiles/main.dir/src/TaskFactory/task.cpp.o: src/TaskFactory/task.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/dawid/Projects/C_C++/Aoc_2020/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object CMakeFiles/main.dir/src/TaskFactory/task.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/dawid/Projects/C_C++/Aoc_2020/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object CMakeFiles/main.dir/src/TaskFactory/task.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/main.dir/src/TaskFactory/task.cpp.o -c /home/dawid/Projects/C_C++/Aoc_2020/src/TaskFactory/task.cpp
 
 CMakeFiles/main.dir/src/TaskFactory/task.cpp.i: cmake_force
@@ -228,7 +241,7 @@ CMakeFiles/main.dir/src/TaskFactory/task.cpp.s: cmake_force
 
 CMakeFiles/main.dir/src/TaskFactory/taskFactory.cpp.o: CMakeFiles/main.dir/flags.make
 CMakeFiles/main.dir/src/TaskFactory/taskFactory.cpp.o: src/TaskFactory/taskFactory.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/dawid/Projects/C_C++/Aoc_2020/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object CMakeFiles/main.dir/src/TaskFactory/taskFactory.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/dawid/Projects/C_C++/Aoc_2020/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building CXX object CMakeFiles/main.dir/src/TaskFactory/taskFactory.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/main.dir/src/TaskFactory/taskFactory.cpp.o -c /home/dawid/Projects/C_C++/Aoc_2020/src/TaskFactory/taskFactory.cpp
 
 CMakeFiles/main.dir/src/TaskFactory/taskFactory.cpp.i: cmake_force
@@ -241,7 +254,7 @@ CMakeFiles/main.dir/src/TaskFactory/taskFactory.cpp.s: cmake_force
 
 CMakeFiles/main.dir/src/TaskFactory/taskFeatureFactory.cpp.o: CMakeFiles/main.dir/flags.make
 CMakeFiles/main.dir/src/TaskFactory/taskFeatureFactory.cpp.o: src/TaskFactory/taskFeatureFactory.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/dawid/Projects/C_C++/Aoc_2020/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building CXX object CMakeFiles/main.dir/src/TaskFactory/taskFeatureFactory.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/dawid/Projects/C_C++/Aoc_2020/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building CXX object CMakeFiles/main.dir/src/TaskFactory/taskFeatureFactory.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/main.dir/src/TaskFactory/taskFeatureFactory.cpp.o -c /home/dawid/Projects/C_C++/Aoc_2020/src/TaskFactory/taskFeatureFactory.cpp
 
 CMakeFiles/main.dir/src/TaskFactory/taskFeatureFactory.cpp.i: cmake_force
@@ -254,7 +267,7 @@ CMakeFiles/main.dir/src/TaskFactory/taskFeatureFactory.cpp.s: cmake_force
 
 CMakeFiles/main.dir/tests/tests.cpp.o: CMakeFiles/main.dir/flags.make
 CMakeFiles/main.dir/tests/tests.cpp.o: tests/tests.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/dawid/Projects/C_C++/Aoc_2020/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building CXX object CMakeFiles/main.dir/tests/tests.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/dawid/Projects/C_C++/Aoc_2020/CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Building CXX object CMakeFiles/main.dir/tests/tests.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/main.dir/tests/tests.cpp.o -c /home/dawid/Projects/C_C++/Aoc_2020/tests/tests.cpp
 
 CMakeFiles/main.dir/tests/tests.cpp.i: cmake_force
@@ -273,11 +286,12 @@ main_OBJECTS = \
 "CMakeFiles/main.dir/src/declaration.cpp.o" \
 "CMakeFiles/main.dir/src/instructions.cpp.o" \
 "CMakeFiles/main.dir/src/task1.cpp.o" \
+"CMakeFiles/main.dir/src/bags.cpp.o" \
+"CMakeFiles/main.dir/src/solution.cpp.o" \
 "CMakeFiles/main.dir/src/Passport/passportFactory.cpp.o" \
 "CMakeFiles/main.dir/src/Passport/passportFeatureFactory.cpp.o" \
 "CMakeFiles/main.dir/src/Passport/passportFeatureStrategy.cpp.o" \
 "CMakeFiles/main.dir/src/Passport/passportSupport.cpp.o" \
-"CMakeFiles/main.dir/src/solution.cpp.o" \
 "CMakeFiles/main.dir/src/StrategyTaskSupport/doExactStrategy.cpp.o" \
 "CMakeFiles/main.dir/src/TaskFactory/task.cpp.o" \
 "CMakeFiles/main.dir/src/TaskFactory/taskFactory.cpp.o" \
@@ -293,11 +307,12 @@ main: CMakeFiles/main.dir/src/boarding_Pass.cpp.o
 main: CMakeFiles/main.dir/src/declaration.cpp.o
 main: CMakeFiles/main.dir/src/instructions.cpp.o
 main: CMakeFiles/main.dir/src/task1.cpp.o
+main: CMakeFiles/main.dir/src/bags.cpp.o
+main: CMakeFiles/main.dir/src/solution.cpp.o
 main: CMakeFiles/main.dir/src/Passport/passportFactory.cpp.o
 main: CMakeFiles/main.dir/src/Passport/passportFeatureFactory.cpp.o
 main: CMakeFiles/main.dir/src/Passport/passportFeatureStrategy.cpp.o
 main: CMakeFiles/main.dir/src/Passport/passportSupport.cpp.o
-main: CMakeFiles/main.dir/src/solution.cpp.o
 main: CMakeFiles/main.dir/src/StrategyTaskSupport/doExactStrategy.cpp.o
 main: CMakeFiles/main.dir/src/TaskFactory/task.cpp.o
 main: CMakeFiles/main.dir/src/TaskFactory/taskFactory.cpp.o
@@ -305,7 +320,7 @@ main: CMakeFiles/main.dir/src/TaskFactory/taskFeatureFactory.cpp.o
 main: CMakeFiles/main.dir/tests/tests.cpp.o
 main: CMakeFiles/main.dir/build.make
 main: CMakeFiles/main.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/dawid/Projects/C_C++/Aoc_2020/CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Linking CXX executable main"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/dawid/Projects/C_C++/Aoc_2020/CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Linking CXX executable main"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/main.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

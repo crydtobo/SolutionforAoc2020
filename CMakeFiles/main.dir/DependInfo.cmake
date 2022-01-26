@@ -13,6 +13,7 @@ set(CMAKE_DEPENDS_CHECK_CXX
   "/home/dawid/Projects/C_C++/Aoc_2020/src/TaskFactory/task.cpp" "/home/dawid/Projects/C_C++/Aoc_2020/CMakeFiles/main.dir/src/TaskFactory/task.cpp.o"
   "/home/dawid/Projects/C_C++/Aoc_2020/src/TaskFactory/taskFactory.cpp" "/home/dawid/Projects/C_C++/Aoc_2020/CMakeFiles/main.dir/src/TaskFactory/taskFactory.cpp.o"
   "/home/dawid/Projects/C_C++/Aoc_2020/src/TaskFactory/taskFeatureFactory.cpp" "/home/dawid/Projects/C_C++/Aoc_2020/CMakeFiles/main.dir/src/TaskFactory/taskFeatureFactory.cpp.o"
+  "/home/dawid/Projects/C_C++/Aoc_2020/src/bags.cpp" "/home/dawid/Projects/C_C++/Aoc_2020/CMakeFiles/main.dir/src/bags.cpp.o"
   "/home/dawid/Projects/C_C++/Aoc_2020/src/boarding_Pass.cpp" "/home/dawid/Projects/C_C++/Aoc_2020/CMakeFiles/main.dir/src/boarding_Pass.cpp.o"
   "/home/dawid/Projects/C_C++/Aoc_2020/src/declaration.cpp" "/home/dawid/Projects/C_C++/Aoc_2020/CMakeFiles/main.dir/src/declaration.cpp.o"
   "/home/dawid/Projects/C_C++/Aoc_2020/src/instructions.cpp" "/home/dawid/Projects/C_C++/Aoc_2020/CMakeFiles/main.dir/src/instructions.cpp.o"

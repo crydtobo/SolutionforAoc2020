@@ -366,6 +366,33 @@ src/TaskFactory/taskFeatureFactory.cpp.s:
 	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/TaskFactory/taskFeatureFactory.cpp.s
 .PHONY : src/TaskFactory/taskFeatureFactory.cpp.s
 
+src/bags.o: src/bags.cpp.o
+
+.PHONY : src/bags.o
+
+# target to build an object file
+src/bags.cpp.o:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/bags.cpp.o
+.PHONY : src/bags.cpp.o
+
+src/bags.i: src/bags.cpp.i
+
+.PHONY : src/bags.i
+
+# target to preprocess a source file
+src/bags.cpp.i:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/bags.cpp.i
+.PHONY : src/bags.cpp.i
+
+src/bags.s: src/bags.cpp.s
+
+.PHONY : src/bags.s
+
+# target to generate assembly for a file
+src/bags.cpp.s:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/bags.cpp.s
+.PHONY : src/bags.cpp.s
+
 src/boarding_Pass.o: src/boarding_Pass.cpp.o
 
 .PHONY : src/boarding_Pass.o
@@ -591,6 +618,9 @@ help:
 	@echo "... src/TaskFactory/taskFeatureFactory.o"
 	@echo "... src/TaskFactory/taskFeatureFactory.i"
 	@echo "... src/TaskFactory/taskFeatureFactory.s"
+	@echo "... src/bags.o"
+	@echo "... src/bags.i"
+	@echo "... src/bags.s"
 	@echo "... src/boarding_Pass.o"
 	@echo "... src/boarding_Pass.i"
 	@echo "... src/boarding_Pass.s"

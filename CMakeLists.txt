@@ -17,11 +17,12 @@ SET(SRC
         src/declaration.cpp 
         src/instructions.cpp 
         src/task1.cpp
+        src/bags.cpp
+        src/solution.cpp
         src/Passport/passportFactory.cpp
         src/Passport/passportFeatureFactory.cpp
         src/Passport/passportFeatureStrategy.cpp
         src/Passport/passportSupport.cpp
-        src/solution.cpp
         src/StrategyTaskSupport/doExactStrategy.cpp
         src/TaskFactory/task.cpp
         src/TaskFactory/taskFactory.cpp
