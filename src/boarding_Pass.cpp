@@ -1,20 +1,18 @@
 #include "../include/boarding_Pass.h"
 #include <iostream>
 
+#define MULTIPLY_SEAT 8
 std::vector<std::string> decodeInput(std::fstream &file)
 {
 	std::string line;
 	std::vector<std::string> pass_data;
 	while (getline(file, line))
 	{
-		if (!line.empty())
-		{
-			pass_data.push_back(line);
-		}
-		else
+		if (line.empty())
 		{
 			break;
 		}
+		pass_data.push_back(line);
 	}
 	return pass_data;
 }
@@ -37,7 +35,7 @@ uint32_t BoardingPass::changeL(){
 
 void BoardingPass::rowReveal(std::string first)
 {
-	for (int i = 0; i < int(first.size()); i++)
+	for (int i = 0; i < first.size(); i++)
 	{
 		if (first.at(i) == 'F')
 			upper = changeUpper();
@@ -50,7 +48,7 @@ void BoardingPass::rowReveal(std::string first)
 
 void BoardingPass::columnReveal(std::string first)
 {
-	for (int i = 0; i < int(first.size()); i++)
+	for (int i = 0; i < first.size(); i++)
 	{
 		if (first.at(i) == 'R')
 			l = changeL();
@@ -59,6 +57,11 @@ void BoardingPass::columnReveal(std::string first)
 		column = (l == r) ? r : column;
 	}
 }
+
+int multiplyObject(const BoardingPass &object){
+	return MULTIPLY_SEAT * object.row + object.column;
+}
+
 int decodeSeat(std::string i)
 {
 	std::string first, second;
@@ -69,6 +72,6 @@ int decodeSeat(std::string i)
 	object.rowReveal(first);
 	object.columnReveal(second);
 	
-	int seat = 8 * object.row + object.column;
+	int seat = multiplyObject(object);
 	return seat;
 }
